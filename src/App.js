@@ -1,6 +1,4 @@
 import RecipesButton from './components/RecipesButton';
-import Dropdown from 'react-bootstrap/Dropdown';
-import Card from './components/Card';
 import React from 'react';
 import './App.css';
 
