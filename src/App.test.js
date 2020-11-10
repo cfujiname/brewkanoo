@@ -7,3 +7,8 @@ test('renders BrewKanoo title', () => {
   expect(linkElement).toBeInTheDocument();
 });
 
+test('renders a dropdown called Recipes', () => {
+  render(<App />);
+  const linkElement = screen.getByText("BrewnotKanoo");
+  expect(linkElement).toBeInTheDocument();
+});
