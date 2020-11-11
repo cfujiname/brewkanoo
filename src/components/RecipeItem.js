@@ -1,18 +1,36 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
+import Walkthrough from './Walkthrough';
 
 export class RecipeItem extends Component {
-  // getStyle = () => {
-  //   if(this.props.recipe.completed) {
-  //     return {
-  //       textDecoration: 'line-through'
-  //     }
-  //   }
+  state = {
+    showWalkthrough: false
+  }
+
+  handleClickTitle = () => {
+    this.setState({
+      showWalkthrough: !this.showWalkthrough
+    })
+  }
+
+  handleClickOffTitle = () => {
+    this.setState({
+      showWalkthrough: false
+    })
+  }
+
+  // walkthroughMount() {
+
   // }
+
+  //insert item here for clicking off the title - to remove the walkthrough 
+
   render() {
     return (
-      <div style={itemStyle}>
-        <p>{ this.props.recipe.title }</p>
+      <div class='menu' ref={node => this.node = node}>
+        <button onClick={this.handleClickTitle}>{ this.props.recipeProp.title }</button>
+        <button onClick={this.handleClickOffTitle}>Hide</button>
+        {this.state.showWalkthrough ? <Walkthrough key={this.props.recipeProp.id} walkthrough={this.props.recipeProp.walkthrough} /> : null}
       </div>
     )
   }
@@ -20,11 +38,11 @@ export class RecipeItem extends Component {
 
 //PropTypes
 RecipeItem.propTypes = {
-  recipe: PropTypes.object.isRequired
+  recipeProp: PropTypes.object.isRequired
 }
 
-const itemStyle = {
-  backgroundColor: '#f4f4f4'
-}
+// const itemStyle = {
+//   backgroundColor: '#f4f4f4',
+// }
 
 export default RecipeItem
