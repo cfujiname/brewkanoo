@@ -35,7 +35,7 @@ export class RecipeItem extends Component {
         <div>
           <button onClick={this.handleClickOffTitle}>Hide</button>
           <Walkthrough key={this.props.recipeProp.id} walkthrough={this.props.recipeProp.walkthrough} />
-          <Ingredients key={this.props.recipeProp.id} ingredients={this.props.recipeProp.walkthrough}/>
+          <Ingredients key={this.props.recipeProp.id} ingredients={this.props.recipeProp.ingredients}/>
         </div>
       );
     } else {
