@@ -22,6 +22,7 @@ class RecipesSlideOver extends Component {
   }
 
   toggleMenu() {
+    // showLeftMenu state this be visible
     this.setState({
         visible: !this.state.visible
     });

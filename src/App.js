@@ -35,7 +35,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>BrewKanoo</h1>
-          {/* <Recipes recipes={this.state.recipes} /> */}
+           <Recipes recipes={this.state.recipes} /> 
            <RecipesButton1 /> 
          {/* <RecipesButton /> */}
       </div>
