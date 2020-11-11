@@ -7,7 +7,7 @@ import Equipment from './Equipment'
 export class RecipeItem extends Component {
   state = {
     showDetails: false
-      }
+  }
 
   handleClickTitle = () => {
     this.setState({
