@@ -9,22 +9,42 @@ class App extends Component {
       {
         id: 1,
         title: "Ollie's Big Flavor Non-Descript Homebrew",
-        walkthrough: "Make beer"
+        walkthrough: "Make beer",
+        ingredients: {
+          grains: ["chocolate malt", "crystal malt"],
+          hops: ["Bramling Cross", "Citra"],
+          yeast: "Safeale"
+        }
       },
       {
         id: 2,
         title: "Richard's No Nonsense Pale Ale",
-        walkthrough: "Make more beer"
+        walkthrough: "Make more beer",
+        ingredients: {
+          grains: ["chocolate malt", "crystal malt"],
+          hops: ["Bramling Cross", "Citra"],
+          yeast: "Safeale"
+        }
       },
       {
         id: 3,
         title: "Linus's Lagom Hard Hitting Lager (NOT FOR KIDS)",
-        walkthrough: "no Hygge!"
+        walkthrough: "no Hygge!",
+        ingredients: {
+          grains: ["chocolate malt", "crystal malt"],
+          hops: ["Bramling Cross", "Citra"],
+          yeast: "Safeale"
+        }
       },
       {
         id: 4,
         title: "Cristina's Big Boy (PREMIUM)",
-        walkthrough: "Make big boy beer"
+        walkthrough: "Make big boy beer",
+        ingredients: {
+          grains: ["chocolate malt", "crystal malt"],
+          hops: ["Bramling Cross", "Citra"],
+          yeast: "Safeale"
+        }
       }
     ]
   }
