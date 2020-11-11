@@ -6,8 +6,8 @@ export class RecipeItem extends Component {
   render() {
     return (
       <div style={itemStyle}>
-        <h4>{ this.props.recipe.title }</h4>
-        <Walkthrough key={this.props.recipe.id} walkthrough={this.props.recipe.walkthrough} />
+        <h4>{ this.props.recipeProp.title }</h4>
+        <Walkthrough key={this.props.recipeProp.id} walkthrough={this.props.recipeProp.walkthrough} />
       </div>
     )
   }
@@ -15,7 +15,7 @@ export class RecipeItem extends Component {
 
 //PropTypes
 RecipeItem.propTypes = {
-  recipe: PropTypes.object.isRequired
+  recipeProp: PropTypes.object.isRequired
 }
 
 const itemStyle = {

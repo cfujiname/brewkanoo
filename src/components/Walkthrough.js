@@ -12,6 +12,10 @@ export class Walkthrough extends Component {
 }
 
 // be good to add prop types checker when possible
+//PropTypes
+Walkthrough.propTypes = {
+    walkthrough: PropTypes.string.isRequired
+  }
 
 
 export default Walkthrough

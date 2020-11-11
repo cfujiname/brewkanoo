@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 class Recipes extends Component {
   render() {
     return this.props.recipes.map((recipe) => (
-      <RecipeItem key={recipe.id} recipe={recipe} />
+      <RecipeItem key={recipe.id} recipeProp={recipe} />
     ));
   };
 };
