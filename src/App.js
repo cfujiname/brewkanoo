@@ -18,7 +18,7 @@ class App extends Component {
       },
       {
         id: 3,
-        title: "Linus's Hygge Winter Warmer",
+        title: "Linus's Lagom Hard Hitting Lager (NOT FOR KIDS)",
         rating: 6
       },
       {
