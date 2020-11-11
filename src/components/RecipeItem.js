@@ -1,18 +1,13 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
+import Walkthrough from './Walkthrough';
 
 export class RecipeItem extends Component {
-  // getStyle = () => {
-  //   if(this.props.recipe.completed) {
-  //     return {
-  //       textDecoration: 'line-through'
-  //     }
-  //   }
-  // }
   render() {
     return (
       <div style={itemStyle}>
-        <p>{ this.props.recipe.title }</p>
+        <h4>{ this.props.recipe.title }</h4>
+        <Walkthrough key={this.props.recipe.id} walkthrough={this.props.recipe.walkthrough} />
       </div>
     )
   }

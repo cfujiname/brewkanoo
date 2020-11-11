@@ -9,22 +9,22 @@ class App extends Component {
       {
         id: 1,
         title: "Ollie's Big Flavor Non-Descript Homebrew",
-        rating: 4
+        walkthrough: "Make beer"
       },
       {
         id: 2,
         title: "Richard's No Nonsense Pale Ale",
-        rating: 8
+        walkthrough: "Make more beer"
       },
       {
         id: 3,
         title: "Linus's Lagom Hard Hitting Lager (NOT FOR KIDS)",
-        rating: 6
+        walkthrough: "no Hygge!"
       },
       {
         id: 4,
         title: "Cristina's Big Boy (PREMIUM)",
-        rating: 9
+        walkthrough: "Make big boy beer"
       }
     ]
   }
