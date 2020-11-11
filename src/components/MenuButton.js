@@ -12,3 +12,5 @@ class MenuButton extends Component {
 }
  
 export default MenuButton;
+
+<Recipes recipes={this.state.recipes} />
