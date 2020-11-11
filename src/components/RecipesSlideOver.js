@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from "react";
-import MenuButton from './MenuButton';
+import RecipesButton1 from './RecipesButton1';
 import Menu from './Menu';
  
-class MenuContainer extends Component {
+class RecipesSlideOver extends Component {
   constructor(props, context) {
     super(props, context);
    
@@ -29,11 +29,11 @@ class MenuContainer extends Component {
   render() {
     return (
       <Fragment>
-        <MenuButton handleMouseDown={this.handleMouseDown} />
+        <RecipesButton1 handleMouseDown={this.handleMouseDown} />
         <Menu handleMouseDown={this.handleMouseDown} menuVisibility={this.state.visible} />
       </Fragment>
     );
   }
 }
  
-export default MenuContainer;
+export default RecipesSlideOver;

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import MenuContainer from "./components/MenuContainer";
+import RecipesSlideOver from "./components/RecipesSlideOver";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -13,7 +13,7 @@ ReactDOM.render(
 );
 
 ReactDOM.render(
-  <MenuContainer/>, 
+  <RecipesSlideOver />, 
   document.querySelector("#container")
 );
 

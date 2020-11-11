@@ -2,7 +2,7 @@ import RecipesButton from './components/RecipesButton';
 import Recipes from './components/Recipes';
 import React, { Component } from 'react';
 import './App.css';
-import MenuButton from './components/MenuButton';
+import RecipesButton1 from './components/RecipesButton1';
 
 class App extends Component {
   state = {
@@ -36,7 +36,7 @@ class App extends Component {
       <div className="App">
         <h1>BrewKanoo</h1>
           {/* <Recipes recipes={this.state.recipes} /> */}
-          <MenuButton />
+           <RecipesButton1 /> 
          {/* <RecipesButton /> */}
       </div>
     );
