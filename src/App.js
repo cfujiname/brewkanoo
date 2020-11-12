@@ -9,11 +9,11 @@ class App extends Component {
         id: 1,
         title: "Ollie's Big Flavor Non-Descript Homebrew",
         walkthrough: [
-          "Boil the water",
-          "Add the teabag",
-          "Stir",
-          "Remove the teabag",
-          "Enjoy!"
+          { description: "Boil the water", time: 10},
+          { description: "Add the teabag", time: 0},
+          { description: "Stir", tiem: 3 },
+          { description: "Remove the teabag", time: 0 },
+         { description: "Enjoy!", time: 0}
         ],
         ingredients: {
           grains: ["chocolate malt", "crystal malt"],
@@ -26,10 +26,11 @@ class App extends Component {
         id: 2,
         title: "Richard's No Nonsense Pale Ale",
         walkthrough: [
-          "Boil the water",
-          "Add the teabag",
-          "Stir",
-          "Enjoy!"
+          { description: "Boil the water", time: 10},
+          { description: "Add the teabag", time: 0},
+          { description: "Stir", tiem: 3 },
+          { description: "Remove the teabag", time: 0 },
+         { description: "Enjoy!", time: 0}
         ],
         ingredients: {
           grains: ["chocolate malt", "crystal malt"],
@@ -42,10 +43,11 @@ class App extends Component {
         id: 3,
         title: "Linus's Lagom Hard Hitting Lager (NOT FOR KIDS)",
         walkthrough: [
-          "Boil the water",
-          "Add the teabag",
-          "Stir",
-          "Enjoy!"
+          { description: "Boil the water", time: 10},
+          { description: "Add the teabag", time: 0},
+          { description: "Stir", tiem: 3 },
+          { description: "Remove the teabag", time: 0 },
+         { description: "Enjoy!", time: 0}
         ],
         ingredients: {
           grains: ["chocolate malt", "crystal malt"],
@@ -58,10 +60,11 @@ class App extends Component {
         id: 4,
         title: "Cristina's Big Boy (PREMIUM)",
         walkthrough: [
-          "Boil the water",
-          "Add the teabag",
-          "Stir",
-          "Enjoy!"
+          { description: "Boil the water", time: 10},
+          { description: "Add the teabag", time: 0},
+          { description: "Stir", tiem: 3 },
+          { description: "Remove the teabag", time: 0 },
+         { description: "Enjoy!", time: 0}
         ],
         ingredients: {
           grains: ["chocolate malt", "crystal malt"],

@@ -25,7 +25,7 @@ export class Walkthrough extends Component {
         <h2>Method:</h2>
         <p>
           {console.log(this.state.counter)}
-          <Step key={this.state.counter} stepNumber={this.state.counter + 1} stepContent={this.props.walkthrough[this.state.counter]}/>
+          <Step key={this.state.counter} stepNumber={this.state.counter + 1} stepContent={this.props.walkthrough[this.state.counter].description}/>
           {/* { this.props.walkthrough.map((step) => (
             <Step key={this.props.walkthrough.indexOf(step)} stepNumber={this.props.walkthrough.indexOf(step) + 1} stepContent={step} />
           ))} */}
