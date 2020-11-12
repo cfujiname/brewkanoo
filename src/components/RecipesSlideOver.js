@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
 import RecipesButton1 from './RecipesButton1';
 import Menu from './Menu';
+import Recipes from "./Recipes";
  
 class RecipesSlideOver extends Component {
   constructor(props, context) {
@@ -32,6 +33,7 @@ class RecipesSlideOver extends Component {
       <Fragment>
         <RecipesButton1 handleMouseDown={this.handleMouseDown} />
         <Menu handleMouseDown={this.handleMouseDown} menuVisibility={this.state.visible} />
+        
       </Fragment>
     );
   }
