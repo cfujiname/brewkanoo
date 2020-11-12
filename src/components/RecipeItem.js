@@ -37,8 +37,8 @@ export class RecipeItem extends Component {
       );
     } else {
       return (
-        <div>
-          <button onClick={this.handleClickTitle}>{ this.props.recipeProp.title }</button>
+        <div id="linus">
+          <button  onClick={this.handleClickTitle}>{ this.props.recipeProp.title }</button>
         </div>
       );
     };
