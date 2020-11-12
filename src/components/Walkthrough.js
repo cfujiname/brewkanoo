@@ -12,6 +12,9 @@ export class Walkthrough extends Component {
     this.setState(prev => ({ counter: prev.counter + 1 }));
     //this.stepIndex = this.stepIndex + 1
   }
+  handlePreviousStep = () => {
+    this.setState(prev => ({ counter: prev.counter  - 1 }));
+  }
 
   render() {
     return (
@@ -24,7 +27,9 @@ export class Walkthrough extends Component {
             <Step key={this.props.walkthrough.indexOf(step)} stepNumber={this.props.walkthrough.indexOf(step) + 1} stepContent={step} />
           ))} */}
         </p>
+        <button onClick={this.handlePreviousStep}>Previous Step</button>
         <button onClick={this.handleNextStep}>Next Step</button>
+       
       </div>
     )
   }
