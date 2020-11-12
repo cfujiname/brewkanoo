@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Component } from 'react';
+import PropTypes from 'prop-types';
 
-const Timer = () => {
-  const [seconds, setSeconds] = useState(0);
+
+  const Timer = () => { 
+  const [seconds, setSeconds] = useState(10);
   const [isActive, setIsActive] = useState(false);
 
   function toggle() {
@@ -9,19 +11,24 @@ const Timer = () => {
   }
 
   function reset() {
-    setSeconds(0);
+    setSeconds(3);
     setIsActive(false);
   }
 
   useEffect(() => {
     let interval = null;
+    if (seconds == 0) {
+    reset()
+    }
     if (isActive) {
       interval = setInterval(() => {
-        setSeconds(seconds => seconds + 1);
+        setSeconds(banana => banana - 1);
       }, 1000);
-    } else if (!isActive && seconds !== 0) {
-      clearInterval(interval);
+    } if (seconds == 0) {
+      reset()
     }
+
+
     return () => clearInterval(interval);
   }, [isActive, seconds]);
 
