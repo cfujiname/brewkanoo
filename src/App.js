@@ -1,8 +1,6 @@
 import RecipesButton from './components/RecipesButton';
-import Recipes from './components/Recipes';
 import React, { Component } from 'react';
 import './App.css';
-import RecipesButton from './components/RecipesButton';
 
 class App extends Component {
   state = {
@@ -35,14 +33,10 @@ class App extends Component {
     return (
       <div className="App">
         <h1>BrewKanoo</h1>
-           {/* <Recipes recipes={this.state.recipes} />  */}
-           {/* <Menu /> */}
            <RecipesButton recipes={this.state.recipes} /> 
-         {/* <RecipesButton /> */}
       </div>
     );
   }
-  
 }
 
 
