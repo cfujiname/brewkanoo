@@ -26,14 +26,17 @@ class App extends Component {
         id: 2,
         title: "Richard's No Nonsense Pale Ale",
         walkthrough: [
-          { description: "Boil the water", time: 10},
+          { tasks: [
+            { task: "Start heating the strike water", comment: "Strike water is the brewing water initially added to the mash." },
+            { task: "Measure out the grains" } 
+            ]
           { description: "Add the teabag", time: 0},
           { description: "Stir", time: 3 },
           { description: "Remove the teabag", time: 0 },
          { description: "Enjoy!", time: 0}
         ],
         ingredients: {
-          grains: ["chocolate malt", "crystal malt"],
+          grains: [{ grain: "chocolate malt", quantity: 0.5}, { grain: "crystal malt", quantity: 3 }],
           hops: ["Bramling Cross", "Citra"],
           yeast: "Safeale"
         },
@@ -75,6 +78,8 @@ class App extends Component {
       }
     ]
   }
+
+  // multiply the grain weight in kg by 2.7 to get the amount of strike water required in L.
 
   render() {
     console.log(this.state.recipes)
