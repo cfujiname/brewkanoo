@@ -1,6 +1,5 @@
-import RecipesButton from './components/RecipesButton';
-import Recipes from './components/Recipes';
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
+import Basic from './components/basic test/basic_test';
 import './App.css';
 import RecipesButton from './components/RecipesButton';
 
@@ -30,15 +29,14 @@ class App extends Component {
     ]
   }
 
+  //move the recipe data to Recipes where it can be held as a state
+
   render() {
-    console.log(this.state.recipes)
     return (
       <div className="App">
+        <Basic />
         <h1>BrewKanoo</h1>
-           {/* <Recipes recipes={this.state.recipes} />  */}
-           {/* <Menu /> */}
-           <RecipesButton recipes={this.state.recipes} /> 
-         {/* <RecipesButton /> */}
+        <RecipesButton recipes={this.state.recipes} /> 
       </div>
     );
   }

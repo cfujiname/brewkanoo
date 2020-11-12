@@ -19,8 +19,6 @@ export class RecipeItem extends Component {
     })
   }
 
-  // walkthroughMount() {
-
   // }
 
   //insert item here for clicking off the title - to remove the walkthrough 

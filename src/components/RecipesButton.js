@@ -15,11 +15,10 @@ class RecipesButton extends Component {
   }
   
   render() {
-    console.log(this.state.recipeButtonClicked)
     return (
     <div>      
       {this.state.recipeButtonClicked ? <Recipes recipes={this.props.recipes} /> : null}
-      {this.state.recipeButtonClicked ? null : <button id="recipesButton" style={btnStyle} onClick={this.clickButton}>Recipes</button>  }
+      {this.state.recipeButtonClicked ? null : <button id="recipesButton" style={btnStyle} onClick={this.clickButton}>Recipes</button> }
     </div>
     );
   }
@@ -40,5 +39,3 @@ const btnStyle = {
  
 export default RecipesButton;
 
-{/* <Recipes recipes={this.state.recipes} />
-<button onClick={this.handleClickTitle}>{ this.props.recipes }</button> */}

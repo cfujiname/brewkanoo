@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
+// import ReactDOM from 'react-dom';
 
 test('renders BrewKanoo title', () => {
   render(<App />);
@@ -7,8 +8,8 @@ test('renders BrewKanoo title', () => {
   expect(linkElement).toBeInTheDocument();
 });
 
-test('renders a dropdown called Recipes', () => {
+test('renders a button called Recipes', () => {
   render(<App />);
-  const linkElement = screen.getByText("BrewnotKanoo");
+  const linkElement = screen.getByText("Recipes");
   expect(linkElement).toBeInTheDocument();
 });
