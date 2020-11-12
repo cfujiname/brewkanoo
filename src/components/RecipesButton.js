@@ -15,9 +15,8 @@ class RecipesButton extends Component {
   }
   
   render() {
-    console.log(this.state.recipeButtonClicked)
     return (
-    <div>      
+    <div className='recipesButtonClicked'>      
       {this.state.recipeButtonClicked ? <Recipes recipes={this.props.recipes} /> : null}
       {this.state.recipeButtonClicked ? null : <button id="recipesButton" style={btnStyle} onClick={this.clickButton}>Recipes</button>  }
     </div>

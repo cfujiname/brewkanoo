@@ -24,14 +24,14 @@ export class Walkthrough extends Component {
       <div>
         <h2>Method:</h2>
         <p>
-          {console.log(this.state.counter)}
+          
           <Step key={this.state.counter} stepNumber={this.state.counter + 1} stepContent={this.props.walkthrough[this.state.counter]}/>
           {/* { this.props.walkthrough.map((step) => (
             <Step key={this.props.walkthrough.indexOf(step)} stepNumber={this.props.walkthrough.indexOf(step) + 1} stepContent={step} />
           ))} */}
         </p>
-        <button onClick={this.handlePreviousStep}>Previous Step</button>
-        <button onClick={this.handleNextStep}>Next Step</button>
+        <button id='previousButton' onClick={this.handlePreviousStep}>Previous Step</button>
+        <button id='nextButton' onClick={this.handleNextStep}>Next Step</button>
        
       </div>
     )

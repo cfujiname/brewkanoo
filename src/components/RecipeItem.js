@@ -17,9 +17,7 @@ export class RecipeItem extends Component {
 
   handleClickOffTitle = () => {
     this.setState({
-      
       showDetails: false
-      
     })
   }
 

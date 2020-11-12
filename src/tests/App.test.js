@@ -7,6 +7,13 @@ test('renders BrewKanoo title', () => {
   expect(linkElement).toBeInTheDocument();
 });
 
+test('renders Recipes button', () => {
+  render(<App />);
+  const linkElement = screen.getByText("Recipes");
+  expect(linkElement).toBeInTheDocument();
+});
+
+
 // test('renders a dropdown called Recipes', () => {
 //   render(<App />);
 //   const linkElement = screen.getByText("BrewnotKanoo");
