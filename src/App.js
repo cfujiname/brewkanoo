@@ -13,6 +13,7 @@ class App extends Component {
           "Boil the water",
           "Add the teabag",
           "Stir",
+          "Remove the teabag",
           "Enjoy!"
         ],
         ingredients: {

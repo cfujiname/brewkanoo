@@ -9,10 +9,13 @@ export class Walkthrough extends Component {
   }
 
   handleNextStep = () => {
+      if (this.state.counter < this.props.walkthrough.length - 1) {
     this.setState(prev => ({ counter: prev.counter + 1 }));
+      } 
     //this.stepIndex = this.stepIndex + 1
   }
   handlePreviousStep = () => {
+      if (this.state.counter > 0)
     this.setState(prev => ({ counter: prev.counter  - 1 }));
   }
 
