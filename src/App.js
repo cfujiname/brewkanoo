@@ -9,22 +9,67 @@ class App extends Component {
       {
         id: 1,
         title: "Ollie's Big Flavor Non-Descript Homebrew",
-        rating: 4
+        walkthrough: [
+          "Boil the water",
+          "Add the teabag",
+          "Stir",
+          "Remove the teabag",
+          "Enjoy!"
+        ],
+        ingredients: {
+          grains: ["chocolate malt", "crystal malt"],
+          hops: ["Bramling Cross", "Citra"],
+          yeast: "Safeale",
+        },
+        equipment: ["A bucket","Thermometer"]
       },
       {
         id: 2,
         title: "Richard's No Nonsense Pale Ale",
-        rating: 8
+        walkthrough: [
+          "Boil the water",
+          "Add the teabag",
+          "Stir",
+          "Enjoy!"
+        ],
+        ingredients: {
+          grains: ["chocolate malt", "crystal malt"],
+          hops: ["Bramling Cross", "Citra"],
+          yeast: "Safeale"
+        },
+        equipment: ["A bucket","Thermometer"]
       },
       {
         id: 3,
         title: "Linus's Lagom Hard Hitting Lager (NOT FOR KIDS)",
-        rating: 6
+        walkthrough: [
+          "Boil the water",
+          "Add the teabag",
+          "Stir",
+          "Enjoy!"
+        ],
+        ingredients: {
+          grains: ["chocolate malt", "crystal malt"],
+          hops: ["Bramling Cross", "Citra"],
+          yeast: "Safeale"
+        },
+        equipment: ["A bucket","Thermometer"]
       },
       {
         id: 4,
         title: "Cristina's Big Boy (PREMIUM)",
-        rating: 9
+        walkthrough: [
+          "Boil the water",
+          "Add the teabag",
+          "Stir",
+          "Enjoy!"
+        ],
+        ingredients: {
+          grains: ["chocolate malt", "crystal malt"],
+          hops: ["Bramling Cross", "Citra"],
+          yeast: "Safeale"
+        },
+        equipment: ["A bucket","Thermometer"]
       }
     ]
   }
@@ -35,11 +80,13 @@ class App extends Component {
       <div className="App">
         <h1>BrewKanoo</h1>
           <Recipes recipes={this.state.recipes} />
+          
          {/* <RecipesButton /> */}
       </div>
     );
   }
   
 }
+
 
 export default App;
