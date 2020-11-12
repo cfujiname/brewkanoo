@@ -21,19 +21,13 @@ export class Walkthrough extends Component {
 
   render() {
     return (
-      <div>
+      <span>
         <h2>Method:</h2>
-        <p>
           {console.log(this.state.counter)}
-          <Step key={this.state.counter} stepNumber={this.state.counter + 1} stepContent={this.props.walkthrough[this.state.counter]}/>
-          {/* { this.props.walkthrough.map((step) => (
-            <Step key={this.props.walkthrough.indexOf(step)} stepNumber={this.props.walkthrough.indexOf(step) + 1} stepContent={step} />
-          ))} */}
-        </p>
+          <Step stepNumber={this.state.counter + 1} stepContent={this.props.walkthrough[this.state.counter]}/>
         <button onClick={this.handlePreviousStep}>Previous Step</button>
         <button onClick={this.handleNextStep}>Next Step</button>
-       
-      </div>
+      </span>
     )
   }
 }

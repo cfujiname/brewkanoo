@@ -28,17 +28,17 @@ export class RecipeItem extends Component {
   render() {
     if (this.state.showDetails) {
       return (
-        <div>
-          <button onClick={this.handleClickOffTitle}>Hide</button>
+        <span>
+          <button onClick={this.handleClickOffTitle} data-testid="hide-details">Hide</button>
           <Walkthrough key={this.props.recipeProp.id} walkthrough={this.props.recipeProp.walkthrough} />
           <Ingredients key={this.props.recipeProp.id} ingredients={this.props.recipeProp.ingredients}/>
           <Equipment key={this.props.recipeProp.id} equipment={this.props.recipeProp.equipment}/>
-        </div>
+        </span>
       );
     } else {
       return (
-        <div id="linus">
-          <button  onClick={this.handleClickTitle}>{ this.props.recipeProp.title }</button>
+        <div>
+          <button onClick={this.handleClickTitle} data-testid="show-details">{ this.props.recipeProp.title }</button>
         </div>
       );
     };
