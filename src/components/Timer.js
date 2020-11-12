@@ -1,7 +1,6 @@
 import React, { useState, useEffect, Component } from 'react';
 import PropTypes from 'prop-types';
 
-
   const Timer = () => { 
   const [seconds, setSeconds] = useState(10);
   const [isActive, setIsActive] = useState(false);
@@ -22,7 +21,7 @@ import PropTypes from 'prop-types';
     }
     if (isActive) {
       interval = setInterval(() => {
-        setSeconds(banana => banana - 1);
+        setSeconds(seconds => seconds - 1);
       }, 1000);
     } if (seconds == 0) {
       reset()
@@ -49,4 +48,5 @@ import PropTypes from 'prop-types';
   );
 };
 
-export default Timer;
+
+export default Timer; 
