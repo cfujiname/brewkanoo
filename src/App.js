@@ -1,5 +1,4 @@
 import RecipesButton from './components/RecipesButton';
-import Recipes from './components/Recipes';
 import React, { Component } from 'react';
 import './App.css';
 
@@ -79,13 +78,10 @@ class App extends Component {
     return (
       <div className="App">
         <h1>BrewKanoo</h1>
-          <Recipes recipes={this.state.recipes} />
-          
-         {/* <RecipesButton /> */}
+           <RecipesButton recipes={this.state.recipes} /> 
       </div>
     );
   }
-  
 }
 
 

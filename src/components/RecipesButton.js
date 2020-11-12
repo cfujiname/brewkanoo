@@ -1,23 +1,44 @@
-// import React, { Component } from 'react';
-// import Dropdown from 'react-bootstrap/Dropdown';
+import React, { Component } from "react";
+import Recipes from './Recipes';
 
-// class RecipesButton extends Component {
-//   render() {
+ 
+class RecipesButton extends Component {
   
-//     return <Dropdown>
-//   <Dropdown.Toggle variant="success" id="dropdown-basic">
-//     Select a beer
-//   </Dropdown.Toggle>
+  state = {
+    recipeButtonClicked: false  
+  }
 
-//   <Dropdown.Menu>
-//     <Dropdown.Item href="#/action-1">IPA</Dropdown.Item>
-//     <Dropdown.Item href="#/action-2">Pale Ale </Dropdown.Item>
-//     <Dropdown.Item href="#/action-3">Homebrew</Dropdown.Item>
-//     <Dropdown.Item href="#/action-4">Hazy Jane</Dropdown.Item>
-//   </Dropdown.Menu>
-// </Dropdown>
+  clickButton = () => {
+    this.setState({
+      recipeButtonClicked: true
+    }) 
+  }
   
-// }
-// }
+  render() {
+    console.log(this.state.recipeButtonClicked)
+    return (
+    <div>      
+      {this.state.recipeButtonClicked ? <Recipes recipes={this.props.recipes} /> : null}
+      {this.state.recipeButtonClicked ? null : <button id="recipesButton" style={btnStyle} onClick={this.clickButton}>Recipes</button>  }
+    </div>
+    );
+  }
+}
 
-// export default RecipesButton; 
+const btnStyle = {
+  fontSize: '30px',
+  position: 'absolute',
+  top: 'auto',
+  left: '45%',
+  backgroundColor: '#96D9FF',
+  margin: '0',
+  width: 'auto',
+  height: 'auto',
+  border: '8px solid #003557',
+  outline: 'none'
+}
+ 
+export default RecipesButton;
+
+{/* <Recipes recipes={this.state.recipes} />
+<button onClick={this.handleClickTitle}>{ this.props.recipes }</button> */}
