@@ -11,7 +11,7 @@ class App extends Component {
         walkthrough: [
           { description: "Boil the water", time: 10},
           { description: "Add the teabag", time: 0},
-          { description: "Stir", tiem: 3 },
+          { description: "Stir", time: 3 },
           { description: "Remove the teabag", time: 0 },
          { description: "Enjoy!", time: 0}
         ],
@@ -28,7 +28,7 @@ class App extends Component {
         walkthrough: [
           { description: "Boil the water", time: 10},
           { description: "Add the teabag", time: 0},
-          { description: "Stir", tiem: 3 },
+          { description: "Stir", time: 3 },
           { description: "Remove the teabag", time: 0 },
          { description: "Enjoy!", time: 0}
         ],
@@ -45,7 +45,7 @@ class App extends Component {
         walkthrough: [
           { description: "Boil the water", time: 10},
           { description: "Add the teabag", time: 0},
-          { description: "Stir", tiem: 3 },
+          { description: "Stir", time: 3 },
           { description: "Remove the teabag", time: 0 },
          { description: "Enjoy!", time: 0}
         ],
@@ -62,7 +62,7 @@ class App extends Component {
         walkthrough: [
           { description: "Boil the water", time: 10},
           { description: "Add the teabag", time: 0},
-          { description: "Stir", tiem: 3 },
+          { description: "Stir", time: 3 },
           { description: "Remove the teabag", time: 0 },
          { description: "Enjoy!", time: 0}
         ],

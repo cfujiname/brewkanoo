@@ -2,7 +2,7 @@ import React, { useState, useEffect, Component } from 'react';
 import PropTypes from 'prop-types';
 
   const Timer = () => { 
-  const [seconds, setSeconds] = useState(10);
+  const [seconds, setSeconds] = useState(3); // to be changed this.props.startTime
   const [isActive, setIsActive] = useState(false);
 
   function toggle() {
@@ -10,20 +10,20 @@ import PropTypes from 'prop-types';
   }
 
   function reset() {
-    setSeconds(3);
+    setSeconds(3); //to be changed 
     setIsActive(false);
   }
 
   useEffect(() => {
     let interval = null;
-    if (seconds == 0) {
+    if (seconds === 0) {
     reset()
     }
     if (isActive) {
       interval = setInterval(() => {
         setSeconds(seconds => seconds - 1);
       }, 1000);
-    } if (seconds == 0) {
+    } if (seconds === 0) {
       reset()
     }
 

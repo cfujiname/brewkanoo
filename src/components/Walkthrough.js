@@ -32,7 +32,7 @@ export class Walkthrough extends Component {
           </p>
           <button onClick={this.handlePreviousStep}>Previous Step</button>
           <button onClick={this.handleNextStep}>Next Step</button>
-          <Timer />
+          <Timer startTime={this.props.walkthrough[this.state.counter.time]} />
         </div>
       )
     } else {
