@@ -1,5 +1,7 @@
 # BrewKanoo - Makers Final Project
 
+- Created in React, Express and PostgreSQL
+
 # Team goals
 
 - For this project, we have set up a daily stand up and retro with check in at 2pm to see how the couterparts of the team are doing
