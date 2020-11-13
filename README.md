@@ -1,3 +1,18 @@
+# BrewKanoo - Makers Final Project
+
+# Team goals
+
+- For this project, we have set up a daily stand up and retro with check in at 2pm to see how the couterparts of the team are doing
+- Pair programming is the method of choice to build this project
+- Each team member has also personal goals that we followed, to ensure that the team works harmoniously
+
+# MVP and definition of first 2 sprints
+
+- Definition of the project and first 2 sprints, creating MVP and the environment to work on
+- Self-learning time to understand the new concepts and languages used in the project
+
+[![MVP.jpg](https://i.postimg.cc/KYqFvH9y/MVP.jpg)](https://postimg.cc/06whVcRt)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
