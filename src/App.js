@@ -30,6 +30,7 @@ class App extends Component {
             { task: "Start heating the strike water", comment: "Strike water is the brewing water initially added to the mash." },
             { task: "Measure out the grains" } 
             ]
+          },
           { description: "Add the teabag", time: 0},
           { description: "Stir", time: 3 },
           { description: "Remove the teabag", time: 0 },
