@@ -1,52 +1,34 @@
-// import React, { useState, useEffect, Component } from 'react';
-// import PropTypes from 'prop-types';
-
-//   const Timer = () => { 
-//   const [seconds, setSeconds] = useState(3); // to be changed this.props.startTime
-//   const [isActive, setIsActive] = useState(false);
-
-//   function toggle() {
-//     setIsActive(!isActive);
-//   }
-
-//   function reset() {
-//     setSeconds(3); //to be changed 
-//     setIsActive(false);
-//   }
-
-//   useEffect(() => {
-//     let interval = null;
-//     if (seconds === 0) {
-//     reset()
-//     }
-//     if (isActive) {
-//       interval = setInterval(() => {
-//         setSeconds(seconds => seconds - 1);
-//       }, 1000);
-//     } if (seconds === 0) {
-//       reset()
-//     }
-
-
-//     return () => clearInterval(interval);
-//   }, [isActive, seconds]);
-
-//   return (
-//     <div className="app">
-//       <div className="time">
-//         {seconds}s
-//       </div>
-//       <div className="row">
-//         <button className={`button button-primary button-primary-${isActive ? 'active' : 'inactive'}`} onClick={toggle}>
-//           {isActive ? 'Pause' : 'Start'}
-//         </button>
-//         <button className="button" onClick={reset}>
-//           Reset
-//         </button>
-//       </div>
-//     </div>
-//   );
-// };
-
-
-// export default Timer; 
+import React from "react";
+ 
+class Timer extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        counter: this.props.timerStart
+      };
+      this.decreaseCounter = this.decreaseCounter.bind(this);
+      this.startCounter = this.startCounter.bind(this);
+    }
+  
+    decreaseCounter() {
+      if (this.state.counter === 0) {
+          return 
+      }
+      this.setState({counter: this.state.counter - 1});
+    }
+  
+    startCounter() {
+      setInterval(this.decreaseCounter, 1000);
+    }
+  
+    render() {
+      return (
+          <div>
+            
+          <button onClick={this.startCounter}>Start</button>
+          {this.state.counter}
+        </div>
+      );
+    }
+  }
+export default Timer

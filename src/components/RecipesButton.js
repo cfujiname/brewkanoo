@@ -38,6 +38,3 @@ const btnStyle = {
 }
  
 export default RecipesButton;
-
-{/* <Recipes recipes={this.state.recipes} />
-<button onClick={this.handleClickTitle}>{ this.props.recipes }</button> */}

@@ -1,17 +1,17 @@
 import React from 'react';
-import TestTimer from '../components/TestTimer';
+import Timer from '../components/Timer';
 import { render, fireEvent, screen } from '@testing-library/react';
 
 
 it("should render a timer with the correct starting time", () => {
-  render(<TestTimer timerStart={2}/>);
+  render(<Timer timerStart={2}/>);
   const startingTime = screen.getByText('2')
   expect(startingTime).toBeInTheDocument();
 });
 
 it("should show zero seconds after the timer has been run", () => {
   jest.useFakeTimers()
-  render(<TestTimer timerStart={2}/>);
+  render(<Timer timerStart={2}/>);
   const startingTime = screen.getByText('2');
   expect(startingTime).toBeInTheDocument();
   const startButton = screen.getByText('Start');
