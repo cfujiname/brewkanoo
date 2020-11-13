@@ -18,7 +18,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test:coverage": "npm test -- --coverage --watchAll=false"
   },
   "eslintConfig": {
     "extends": [
@@ -42,5 +43,7 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.5",
     "enzyme-to-json": "^3.6.1"
-  }
+  },
+  "jest": {  "collectCoverageFrom": [ "src/**/*.{js,jsx}","!src/index.js", "!src/reportWebVitals.js" ]}
+
 }
