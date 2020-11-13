@@ -63,9 +63,12 @@ it('should display Start value of the timer',() => {
 //   render(<Walkthrough walkthrough={[
 //     { description: "Add the teabag", time: 10}
 //   ]}/>);
-//   const startButton = (<Walkthrough start={false}/>);
+//   const timerBoolean = (<Walkthrough state={
+//      { start: false }
+//   }/>);
+//   console.log(timerBoolean);
 //   const startButton1 = screen.getByText('Start');
 //   startButton1.click();
-//   expect(startButton).toEqual(true)
+//   console.log(timerBoolean)
+//   expect(timerBoolean).toHaveValue(true)
 // });
-
