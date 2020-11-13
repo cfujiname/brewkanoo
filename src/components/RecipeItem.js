@@ -2,11 +2,13 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 import Walkthrough from './Walkthrough';
 import Ingredients from './Ingredients';
-import Equipment from './Equipment'
+import Equipment from './Equipment';
+import VolumeForm from './VolumeForm';
 
 export class RecipeItem extends Component {
   state = {
-    showDetails: false
+    showDetails: false,
+    potVolume: 25
   }
 
   handleClickTitle = () => {
@@ -29,6 +31,7 @@ export class RecipeItem extends Component {
     if (this.state.showDetails) {
       return (
         <div>
+          <VolumeForm potVolume={this.state.potVolume} />
           <button onClick={this.handleClickOffTitle}>Hide</button>
           <Walkthrough key={this.props.recipeProp.id} walkthrough={this.props.recipeProp.walkthrough} />
           <Ingredients key={this.props.recipeProp.id} ingredients={this.props.recipeProp.ingredients}/>
