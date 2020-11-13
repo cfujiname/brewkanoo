@@ -1,23 +1,57 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Walkthrough from '../components/Walkthrough';
+import { render, fireEvent, screen } from '@testing-library/react';
 
-import Enzyme, { shallow, render, mount } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import Adapter from 'enzyme-adapter-react-16';
-import PropTypes from 'prop-types';
-import App from '../App';
-import RecipeItem from '../components/RecipeItem';
+it("should display the next step when the Next Step button is clicked", () => {
+  render(<Walkthrough walkthrough={[
+    { description: "Boil the water", time: 10},
+    { description: "Add the teabag", time: 0}
+  ]}/>);
+  const nextStepButton = screen.getByText('Next Step')
+  nextStepButton.click();
+  const secondStep = screen.getByText('2: Add the teabag');
+  expect(secondStep).toBeInTheDocument();
+});
 
-Enzyme.configure({ adapter: new Adapter() })
+it("should display the previous step when the Previous Step button is clicked", () => {
+  render(<Walkthrough walkthrough={[
+    { description: "Boil the water", time: 10},
+    { description: "Add the teabag", time: 0}
+  ]}/>);
+  const nextStepButton = screen.getByText('Next Step')
+  const prevStepButton = screen.getByText('Previous Step')
+  nextStepButton.click();
+  prevStepButton.click();
 
-// incorrect function assignment in the onClick method
-// will still pass the tests.
+  const firstStep = screen.getByText('1: Boil the water');
+  expect(firstStep).toBeInTheDocument();
+});
 
-test('the beer button is present', () => {
-  const wrapper = mount(<App />)
-
-  expect(wrapper.find('button').text).toContain("Linus's Lagom Hard Hitting Lager (NOT FOR KIDS)")
-
+it("should display the last step when the Next Step button is clicked multiple times", () => {
+  render(<Walkthrough walkthrough={[
+    { description: "Boil the water", time: 10},
+    { description: "Add the teabag", time: 0}
+  ]}/>);
+  const nextStepButton = screen.getByText('Next Step')
+    var array = [1,2,3]
+  array.forEach(function () { nextStepButton.click() })
   
-})
+  const secondStep = screen.getByText('2: Add the teabag');
+  expect(secondStep).toBeInTheDocument();
+});
+
+it("should display the timer when the time data is > 0", () => {
+  render(<Walkthrough walkthrough={[
+    { description: "Boil the water", time: 0},
+    { description: "Add the teabag", time: 10}
+  ]}/>);
+  const nextStepButton = screen.getByText('Next Step')
+  
+  nextStepButton.click();
+  const startButton = screen.getByText('Start')
+  expect(startButton).toBeInTheDocument()
+  
+});
+
+
+
