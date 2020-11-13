@@ -1,6 +1,6 @@
 import React from 'react';
 import Walkthrough from '../components/Walkthrough';
-import { render, fireEvent, screen } from '@testing-library/react';
+import { render, fireEvent, screen, getByLabelText } from '@testing-library/react';
 
 it("should display the next step when the Next Step button is clicked", () => {
   render(<Walkthrough walkthrough={[
@@ -52,6 +52,20 @@ it("should display the timer when the time data is > 0", () => {
   expect(startButton).toBeInTheDocument()
   
 });
-
-
+it('should display Start value of the timer',() => {
+  render(<Walkthrough walkthrough={[
+    { description: "Add the teabag", time: 10}
+  ]}/>);
+  const startTime = screen.getByText('10');
+  expect(startTime).toBeInTheDocument();
+});
+// it('finds start button and when clicked, changes the default state to true', () => {
+//   render(<Walkthrough walkthrough={[
+//     { description: "Add the teabag", time: 10}
+//   ]}/>);
+//   const startButton = (<Walkthrough start={false}/>);
+//   const startButton1 = screen.getByText('Start');
+//   startButton1.click();
+//   expect(startButton).toEqual(true)
+// });
 
