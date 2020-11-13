@@ -9,12 +9,13 @@ it("should render a timer with the correct starting time", () => {
 });
 
 it("should show zero seconds after the timer has been run", () => {
+  jest.useFakeTimers()
   render(<TestTimer timerStart={2}/>);
-  // const startingTime = screen.getByText('2');
-  // expect(startingTime).toBeInTheDocument();
+  const startingTime = screen.getByText('2');
+  expect(startingTime).toBeInTheDocument();
   const startButton = screen.getByText('Start');
   startButton.click();
+  jest.advanceTimersByTime(2000);
   const endingTime = screen.getByText('0')
   expect(endingTime).toBeInTheDocument();
-  screen.debug();
 });
