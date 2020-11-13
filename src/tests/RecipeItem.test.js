@@ -46,6 +46,4 @@ it("should show the beer buttons after the hide button is clicked.",() => {
       hideButton.click();
       const button1 = screen.getAllByRole('button');
       expect(button1).toHaveLength(1);
-      
-
 });

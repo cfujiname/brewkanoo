@@ -30,6 +30,5 @@ it("should show 0 after 3 seconds have elapsed when the start timer was set to 2
   startButton.click();
   jest.advanceTimersByTime(3000);
   const endingTime = screen.getByText('0');
-  screen.debug();
   expect(endingTime).toBeInTheDocument();
 });
