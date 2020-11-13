@@ -28,13 +28,11 @@ export class Walkthrough extends Component {
       return (
         <div>
           <h2>Method:</h2>
-          <p>
             {console.log(this.state.counter)}
             <Step key={this.state.counter} stepNumber={this.state.counter + 1} stepContent={this.props.walkthrough[this.state.counter].description} />
           
-          </p>
           <button onClick={this.handlePreviousStep}>Previous Step</button>
-          <button onClick={this.handleNextStep}>Next Step</button>
+          <button onClick={this.handleNextStep} >Next Step</button>
 
         
          <TestTimer timerStart={this.props.walkthrough[this.state.counter].time}/>    
@@ -46,11 +44,8 @@ export class Walkthrough extends Component {
       return (
         <div>
           <h2>Method:</h2>
-          <p>
             {console.log(this.state.counter)}
             <Step key={this.state.counter} stepNumber={this.state.counter + 1} stepContent={this.props.walkthrough[this.state.counter].description} />
-          
-          </p>
           <button onClick={this.handlePreviousStep}>Previous Step</button>
           <button onClick={this.handleNextStep}>Next Step</button>
         </div>

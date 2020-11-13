@@ -1,23 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Walkthrough from '../components/Walkthrough';
+import { render, fireEvent, screen } from '@testing-library/react';
 
-import Enzyme, { shallow, render, mount } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import Adapter from 'enzyme-adapter-react-16';
-import PropTypes from 'prop-types';
-import App from '../App';
-import RecipeItem from '../components/RecipeItem';
+it("should display the next step when the Next Step button is clicked", () => {
+  render(<Walkthrough walkthrough={[
+    { description: "Boil the water", time: 10},
+    { description: "Add the teabag", time: 0}
+  ]}/>);
+  const nextStepButton = screen.getByText('Next Step')
+  nextStepButton.click();
+  const secondStep = screen.getByText('2: Add the teabag');
+  expect(secondStep).toBeInTheDocument();
+});
 
-Enzyme.configure({ adapter: new Adapter() })
-
-// incorrect function assignment in the onClick method
-// will still pass the tests.
-
-test('the beer button is present', () => {
-  const wrapper = mount(<App />)
-
-  expect(wrapper.find('button').text).toContain("Linus's Lagom Hard Hitting Lager (NOT FOR KIDS)")
-
-  
-})

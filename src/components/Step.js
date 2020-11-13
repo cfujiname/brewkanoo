@@ -4,7 +4,7 @@ export class Step extends Component {
   render() {
     return (
       <div>
-        <p>{this.props.stepNumber}: {this.props.stepContent}</p>
+        {this.props.stepNumber}: {this.props.stepContent}
       </div>
     )
   }
