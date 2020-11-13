@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 import Step from './Step'
-import Timer from './Timer'
+import TestTimer from './TestTimer'
 
 export class Walkthrough extends Component {
   constructor(props){
     super(props);
-    this.state = { counter: 0 } //stepIndex = 0
+    this.state = { counter: 0, start: false } //stepIndex = 0
   }
 
   handleNextStep = () => {
@@ -18,6 +18,9 @@ export class Walkthrough extends Component {
   handlePreviousStep = () => {
       if (this.state.counter > 0)
     this.setState(prev => ({ counter: prev.counter  - 1 }));
+  }
+  startTimer() {
+    this.setState({ start: true })
   }
 
   render() {
@@ -32,7 +35,11 @@ export class Walkthrough extends Component {
           </p>
           <button onClick={this.handlePreviousStep}>Previous Step</button>
           <button onClick={this.handleNextStep}>Next Step</button>
-          <Timer startTime={this.props.walkthrough[this.state.counter.time]} />
+
+        
+         <TestTimer timerStart={this.props.walkthrough[this.state.counter].time}/>    
+      
+          
         </div>
       )
     } else {
