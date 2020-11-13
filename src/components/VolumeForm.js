@@ -23,6 +23,7 @@ export class VolumeForm extends Component {
     this.setState({
       potVolume: event.target.value
     })
+    
   }
 
   render() {

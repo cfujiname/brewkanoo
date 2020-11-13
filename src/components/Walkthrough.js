@@ -6,8 +6,9 @@ import TestTimer from './TestTimer'
 export class Walkthrough extends Component {
   constructor(props){
     super(props);
-    this.state = { counter: 0, start: false } //stepIndex = 0
+    this.state = { counter: 0, start: false} //stepIndex = 0
   }
+
 
   handleNextStep = () => {
       if (this.state.counter < this.props.walkthrough.length - 1) {
@@ -29,8 +30,7 @@ export class Walkthrough extends Component {
         <div>
           <h1>{this.props.potVolume}</h1>
           <h2>Method:</h2>
-            {console.log(this.state.counter)}
-            <Step key={this.state.counter} stepNumber={this.state.counter + 1} stepContent={this.props.walkthrough[this.state.counter].description} />
+            <Step key={this.state.counter} stepNumber={this.state.counter + 1} stepContent={this.props.walkthrough[this.state.counter]} strikeWater={this.props.potVolume} />
           
           <button onClick={this.handlePreviousStep}>Previous Step</button>
           <button onClick={this.handleNextStep} >Next Step</button>
@@ -45,8 +45,7 @@ export class Walkthrough extends Component {
       return (
         <div>
           <h2>Method:</h2>
-            {console.log(this.state.counter)}
-            <Step key={this.state.counter} stepNumber={this.state.counter + 1} stepContent={this.props.walkthrough[this.state.counter].description} />
+          <Step key={this.state.counter} stepNumber={this.state.counter + 1} stepContent={this.props.walkthrough[this.state.counter]} strikeWater={this.props.potVolume} />
           <button onClick={this.handlePreviousStep}>Previous Step</button>
           <button onClick={this.handleNextStep}>Next Step</button>
         </div>
