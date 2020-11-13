@@ -14,7 +14,7 @@
 - Self-learning time to understand the new concepts and languages used in the project
 - Creating basic User Stories to implement functionality
 
-[![MVP.jpg](https://i.postimg.cc/KYqFvH9y/MVP.jpg)](https://postimg.cc/06whVcRt)
+[![MVP.jpg](https://i.postimg.cc/KYqFvH9y/MVP.jpg)](
 [![Screenshot-2020-11-13-at-08-04-47.png](https://i.postimg.cc/yNVYN9s0/Screenshot-2020-11-13-at-08-04-47.png)](https://postimg.cc/BjVGYj8v)
 
 # Getting Started with Create React App
