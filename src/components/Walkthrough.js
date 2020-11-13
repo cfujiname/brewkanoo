@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 import Step from './Step'
-import TestTimer from './TestTimer'
+import Timer from './Timer'
 
 export class Walkthrough extends Component {
   constructor(props){
@@ -24,7 +24,7 @@ export class Walkthrough extends Component {
 
   timer() {
     if (this.props.walkthrough[this.state.counter].time !== 0) {
-      return <TestTimer timerStart={this.props.walkthrough[this.state.counter].time}/> 
+      return <Timer timerStart={this.props.walkthrough[this.state.counter].time}/> 
     } else {
       return null
     }
@@ -42,13 +42,6 @@ export class Walkthrough extends Component {
     )
   }
 }
-
-// be good to add prop types checker when possible
-//PropTypes
-// Walkthrough.propTypes = {
-//     walkthrough: PropTypes.string.isRequired
-//   }
-
 
 export default Walkthrough
 
