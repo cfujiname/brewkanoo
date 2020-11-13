@@ -27,6 +27,7 @@ export class Walkthrough extends Component {
     if (this.props.walkthrough[this.state.counter].time !== 0) {
       return (
         <div>
+          <h1>{this.props.potVolume}</h1>
           <h2>Method:</h2>
             {console.log(this.state.counter)}
             <Step key={this.state.counter} stepNumber={this.state.counter + 1} stepContent={this.props.walkthrough[this.state.counter].description} />
