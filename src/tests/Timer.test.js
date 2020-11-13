@@ -23,7 +23,7 @@ it("should show zero seconds after the timer has been run", () => {
 
 it("should show 0 after 3 seconds have elapsed when the start timer was set to 2 seconds", () => {
   jest.useFakeTimers()
-  render(<TestTimer timerStart={2}/>);
+  render(<Timer timerStart={2}/>);
   const startingTime = screen.getByText('2');
   expect(startingTime).toBeInTheDocument();
   const startButton = screen.getByText('Start');

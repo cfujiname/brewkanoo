@@ -22,7 +22,7 @@ it("should show a clickable hide button after a recipe is clicked", () => {
     const button = screen.getByRole('button');
     button.click();
     const buttons = screen.getAllByRole('button');
-    expect(buttons).toHaveLength(4);
+    expect(buttons).toHaveLength(2);
 });
 
 it("should show the beer buttons after the hide button is clicked.",() => {
