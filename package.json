@@ -9,6 +9,7 @@
     "bootstrap": "^4.5.3",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.0",
+    "react-compound-timer": "^1.2.0",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.0",
     "react-select": "^3.1.0",
@@ -44,6 +45,11 @@
     "enzyme-adapter-react-16": "^1.15.5",
     "enzyme-to-json": "^3.6.1"
   },
-  "jest": {  "collectCoverageFrom": [ "src/**/*.{js,jsx}","!src/index.js", "!src/reportWebVitals.js" ]}
-
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/index.js",
+      "!src/reportWebVitals.js"
+    ]
+  }
 }

@@ -32,3 +32,10 @@ it("should show 0 after 3 seconds have elapsed when the start timer was set to 2
   const endingTime = screen.getByText('0');
   expect(endingTime).toBeInTheDocument();
 });
+
+it("should show '09' when timer is started with 9", () => {
+  render(<Timer timerStart={9}/>);
+  const startingTime = screen.getByAltText('09');
+  expect(startingTime).toBeInTheDocument();
+ 
+});

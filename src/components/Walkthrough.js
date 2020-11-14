@@ -8,18 +8,16 @@ export class Walkthrough extends Component {
     super(props);
     this.state = { counter: 0, start: false} 
   }
-  /* istanbul ignore next */
+
   handleNextStep = () => {
       if (this.state.counter < this.props.walkthrough.length - 1) {
     this.setState(prev => ({ counter: prev.counter + 1 }));
       } 
   }
-  /* istanbul ignore next */
   handlePreviousStep = () => {
       if (this.state.counter > 0)
     this.setState(prev => ({ counter: prev.counter  - 1 }));
   }
-  /* istanbul ignore next */
   startTimer() {
     this.setState({ start: true })
   }

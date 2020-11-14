@@ -18,7 +18,12 @@ class Timer extends React.Component {
     }
   
     startCounter() {
+      
       setInterval(this.decreaseCounter, 1000);
+    }
+  
+    completed() {
+    return <div>All Done!!</div>
     }
   
     render() {
@@ -26,7 +31,8 @@ class Timer extends React.Component {
           <div>
             
           <button onClick={this.startCounter}>Start</button>
-          {this.state.counter}
+          {Math.floor(this.state.counter / 60) < 10 ? `0${Math.floor(this.state.counter / 60)}`: Math.floor(this.state.counter / 60)} : {this.state.counter % 60 < 10 ? `0${this.state.counter % 60}`: this.state.counter % 60}
+          {this.state.counter === 0 ? this.completed() : null}
         </div>
       );
     }
