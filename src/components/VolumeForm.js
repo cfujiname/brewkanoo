@@ -28,7 +28,7 @@ export class VolumeForm extends Component {
 
   render() {
     let details = <div>
-                    <Walkthrough key={this.props.recipe.id} walkthrough={this.props.recipe.walkthrough} potVolume={this.state.potVolume}/>
+                    <Walkthrough key={this.props.recipe.id} walkthrough={this.props.recipe.walkthrough} potVolume={this.state.potVolume} specs={this.props.recipe.specs} ingredients={this.props.recipe.ingredients}/>
                     <Ingredients key={this.props.recipe.id} ingredients={this.props.recipe.ingredients}/>
                     <Equipment key={this.props.recipe.id} equipment={this.props.recipe.equipment}/>
                   </div>

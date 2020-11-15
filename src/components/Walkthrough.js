@@ -25,8 +25,8 @@ export class Walkthrough extends Component {
   }
 
   timer() {
-    if (this.props.walkthrough[this.state.counter].time !== 0) {
-      return <Timer timerStart={this.props.walkthrough[this.state.counter].time}/> 
+    if (this.props.walkthrough[this.state.counter][0].time) {
+      return <Timer timerStart={this.props.walkthrough[this.state.counter][0].time}/> 
     } else {
       return null
     }
@@ -36,10 +36,10 @@ export class Walkthrough extends Component {
     return (
       <div>
         <h2>Method:</h2>
-          <Step key={this.state.counter} stepNumber={this.state.counter + 1} stepContent={this.props.walkthrough[this.state.counter]} strikeWater={this.props.potVolume} />  
+        <Step key={this.state.counter} stepNumber={this.state.counter + 1} stepContent={this.props.walkthrough[this.state.counter]} strikeWater={this.props.potVolume} specs={this.props.specs} ingredients={this.props.ingredients}/>  
         <button onClick={this.handlePreviousStep}>Previous Step</button>
-        <button onClick={this.handleNextStep} >Next Step</button>
-        {this.timer()}   
+        <button onClick={this.handleNextStep} >Next Step</button>  
+        {this.timer()} 
       </div>
     )
   }

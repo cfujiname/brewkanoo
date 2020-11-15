@@ -1,18 +1,22 @@
 import React, { Component } from 'react'
+import Task from './Task'
 
 export class Step extends Component {
-  hasStrikeWater() {
-    if (this.props.stepContent.strikeWater) {
-      return ": " + (this.props.strikeWater * 0.8).toFixed(2) + " Litres"
-    }
-  }
 
   render() {
     return (
       <div>
-        {this.props.stepNumber}: {this.props.stepContent.description} {this.hasStrikeWater()}
+        Step {this.props.stepNumber} <br>
+        </br>
+        {this.tasks()}
       </div>
     )
+  }
+
+  tasks() {
+    return this.props.stepContent.map((task) => (
+      <Task description={task.description} strikeWater={task.strikeWater} specs={this.props.specs} stepNumber={this.props.stepNumber} ingredients={this.props.ingredients}/>
+    ))
   }
 }
 

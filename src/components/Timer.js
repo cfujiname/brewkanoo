@@ -23,8 +23,7 @@ class Timer extends React.Component {
   
     render() {
       return (
-          <div>
-            
+        <div>     
           <button onClick={this.startCounter}>Start</button>
           {this.state.counter}
         </div>
