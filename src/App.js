@@ -10,7 +10,7 @@ class App extends Component {
     console.log(recipes)
     return (
       <div className="App">
-        <h1>BrewKanoo</h1>
+        <h1 className="title"> BrewKanoo</h1>
            <RecipesButton recipes={recipes} /> 
       </div>
     );

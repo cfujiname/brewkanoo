@@ -1,5 +1,6 @@
 import React from "react";
- 
+
+
 class Timer extends React.Component {
     constructor(props) {
       super(props);
@@ -8,6 +9,7 @@ class Timer extends React.Component {
       };
       this.decreaseCounter = this.decreaseCounter.bind(this);
       this.startCounter = this.startCounter.bind(this);
+      
     }
   
     decreaseCounter() {
@@ -22,8 +24,11 @@ class Timer extends React.Component {
       setInterval(this.decreaseCounter, 1000);
     }
   
-    completed() {
-    return <div>All Done!!</div>
+  
+  completed() {
+    
+   return <div id="alert"> <a class="alert" href="#alert">All Done!</a> </div>
+   
     }
   
     render() {
@@ -36,5 +41,7 @@ class Timer extends React.Component {
         </div>
       );
     }
-  }
+}
+  
+
 export default Timer
