@@ -6,11 +6,38 @@ import Equipment from './Equipment';
 export class VolumeForm extends Component {
   constructor(props) {
     super(props);
-    this.state = {showDetails: false, potVolume: 25, showForm: true};
+    this.state = {showDetails: false, potVolume: 25, showForm: true, showWalkthrough: true, showIngredients: false, showEquipment: false};
 
     this.onSubmit = this.onSubmit.bind(this);
     this.handlePotVolumeChange = this.handlePotVolumeChange.bind(this);
     this.handleClickShowForm = this.handleClickShowForm.bind(this);
+    this.handleClickWalkthrough = this.handleClickWalkthrough.bind(this);
+    this.handleClickIngredients = this.handleClickIngredients.bind(this);
+    this.handleClickEquipment = this.handleClickEquipment.bind(this);
+  }
+
+  handleClickWalkthrough() {
+    this.setState({
+      showWalkthrough: true,
+      showIngredients: false,
+      showEquipment: false
+    })
+  }
+
+  handleClickIngredients() {
+    this.setState({
+      showWalkthrough: false,
+      showIngredients: true,
+      showEquipment: false
+    })
+  }
+
+  handleClickEquipment() {
+    this.setState({
+      showWalkthrough: false,
+      showIngredients: false,
+      showEquipment: true
+    })
   }
 
   onSubmit(event) {
@@ -21,7 +48,7 @@ export class VolumeForm extends Component {
     })
   }
 
-  handleClickShowForm(event) {
+  handleClickShowForm() {
     this.setState({
       showForm: !this.state.showForm
     })
@@ -36,9 +63,12 @@ export class VolumeForm extends Component {
 
   render() {
     let details = <div>
-                    <Walkthrough key={this.props.recipe.id} walkthrough={this.props.recipe.walkthrough} potVolume={this.state.potVolume} specs={this.props.recipe.specs} ingredients={this.props.recipe.ingredients}/>
-                    <Ingredients key={this.props.recipe.id} ingredients={this.props.recipe.ingredients}/>
-                    <Equipment key={this.props.recipe.id} equipment={this.props.recipe.equipment}/>
+                    <button onClick={this.handleClickWalkthrough}>Walkthrough</button>
+                    <button onClick={this.handleClickIngredients}>Ingredients</button>
+                    <button onClick={this.handleClickEquipment}>Equipment</button>
+                    {this.state.showWalkthrough ? <Walkthrough key={this.props.recipe.id} walkthrough={this.props.recipe.walkthrough} potVolume={this.state.potVolume} specs={this.props.recipe.specs} ingredients={this.props.recipe.ingredients}/> : null }
+                    {this.state.showIngredients ? <Ingredients key={this.props.recipe.id} ingredients={this.props.recipe.ingredients}/> : null }
+                    {this.state.showEquipment ? <Equipment key={this.props.recipe.id} equipment={this.props.recipe.equipment}/> : null }
                   </div>
     let form =  <form >
                   <label>
