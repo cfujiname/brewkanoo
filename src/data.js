@@ -5,7 +5,7 @@ export const recipes = [
     walkthrough: [
       { description: "Amount of water to boil", time: 0, strikeWater: 25},
       { description: "Add the teabag", time: 0},
-      { description: "Stir", time: 3 },
+      { description: "Stir", time: 90 },
       { description: "Remove the teabag", time: 0 },
      { description: "Enjoy!", time: 0}
     ],
