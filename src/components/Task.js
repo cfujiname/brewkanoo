@@ -14,7 +14,6 @@ export class Task extends Component {
   render() {
     return (
       <div>
-        {console.log(this.divisor)}
         {this.whichStep()}
       </div>
     )
