@@ -6,16 +6,24 @@ import Equipment from './Equipment';
 export class VolumeForm extends Component {
   constructor(props) {
     super(props);
-    this.state = {showDetails: false, potVolume: 25};
+    this.state = {showDetails: false, potVolume: 25, showForm: true};
 
     this.onSubmit = this.onSubmit.bind(this);
     this.handlePotVolumeChange = this.handlePotVolumeChange.bind(this);
+    this.handleClickShowForm = this.handleClickShowForm.bind(this);
   }
 
   onSubmit(event) {
     event.preventDefault();
     this.setState({
-      showDetails: true
+      showDetails: true,
+      showForm: !this.state.showForm
+    })
+  }
+
+  handleClickShowForm(event) {
+    this.setState({
+      showForm: !this.state.showForm
     })
   }
 
@@ -28,19 +36,20 @@ export class VolumeForm extends Component {
 
   render() {
     let details = <div>
-                    <Walkthrough key={this.props.recipe.id} walkthrough={this.props.recipe.walkthrough} potVolume={this.state.potVolume}/>
+                    <Walkthrough key={this.props.recipe.id} walkthrough={this.props.recipe.walkthrough} potVolume={this.state.potVolume} specs={this.props.recipe.specs} ingredients={this.props.recipe.ingredients}/>
                     <Ingredients key={this.props.recipe.id} ingredients={this.props.recipe.ingredients}/>
                     <Equipment key={this.props.recipe.id} equipment={this.props.recipe.equipment}/>
                   </div>
+    let form =  <form >
+                  <label>
+                    Boiling water pot volume:
+                    <input type="number" name="pot-volume" value={this.state.potVolume} onChange={this.handlePotVolumeChange}/>
+                  </label>
+                  <input onClick={this.onSubmit} type="submit" value="Submit" />
+                </form>
     return (
       <div>
-        <form >
-          <label>
-            Boiling water pot volume:
-            <input type="number" name="pot-volume" value={this.state.potVolume} onChange={this.handlePotVolumeChange}/>
-          </label>
-          <input onClick={this.onSubmit} type="submit" value="Submit" />
-        </form>
+        {this.state.showForm ? form : <button onClick={this.handleClickShowForm}>Show Form</button>}
         {this.state.showDetails ? details : null} 
       </div>
     )

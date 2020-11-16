@@ -63,12 +63,14 @@ class Timer extends React.Component {
        }
   
     render() {
+
       return(
         <div>
           <button onClick={this.startTimer}>Start</button>
           {(this.state.seconds ===0) ? this.completed : null }
           m: {this.state.time.m} s: {this.state.time.s}
           <button onClick={this.resetTimer}>Reset</button>
+
         </div>
       );
     }
