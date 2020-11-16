@@ -10,12 +10,19 @@ export class VolumeForm extends Component {
 
     this.onSubmit = this.onSubmit.bind(this);
     this.handlePotVolumeChange = this.handlePotVolumeChange.bind(this);
+    this.handleClickShowForm = this.handleClickShowForm.bind(this);
   }
 
   onSubmit(event) {
     event.preventDefault();
     this.setState({
       showDetails: true,
+      showForm: !this.state.showForm
+    })
+  }
+
+  handleClickShowForm(event) {
+    this.setState({
       showForm: !this.state.showForm
     })
   }
@@ -42,7 +49,7 @@ export class VolumeForm extends Component {
                 </form>
     return (
       <div>
-        {this.state.showForm ? form : null}
+        {this.state.showForm ? form : <button onClick={this.handleClickShowForm}>Show Form</button>}
         {this.state.showDetails ? details : null} 
       </div>
     )
