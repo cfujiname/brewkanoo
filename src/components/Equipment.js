@@ -5,8 +5,8 @@ export class Equipment extends Component {
         return (
             <div>
                 <h2>Equipment:</h2>
-                <p>{this.props.equipment.map((equipment) =>(
-                    equipment + "\r\n"))}</p>
+                {this.props.equipment.map((equipment) =>(
+                    <p> {equipment} <input type="checkbox"></input> </p>))}
             </div>
         )
     }

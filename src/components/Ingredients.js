@@ -7,13 +7,13 @@ export class Ingredients extends Component {
       <div>
         <h2>Ingredients List: </h2>
         <h4>Yeast:</h4>
-        <p>{this.props.ingredients.yeast}<input type="checkbox"></input></p>
+        <p>{this.props.ingredients.yeast.quantity} packets of {this.props.ingredients.yeast.item}<input type="checkbox"></input></p>
         <h4>Grains:</h4>
-        <p>{this.props.ingredients.grains.map((grain) =>(
-          grain + " ")) }<input type="checkbox"></input></p>
+        {this.props.ingredients.grains.map((grain) =>(
+          <p>{grain.quantity} kg's of {grain.item}<input type="checkbox"></input></p>))}
         <h4>Hops:</h4>
-        <p>{this.props.ingredients.hops.map((hop) => (
-          hop + " " ))}<input type="checkbox"></input></p>
+        {this.props.ingredients.hops.map((hop) => (
+       <p> {hop.quantity} g's of {hop.item } <input type="checkbox"></input> </p>))}
       </div>
     )
   }
