@@ -1,4 +1,3 @@
-import toJson from 'enzyme-to-json';
 import React, { Component } from 'react'
 
 export class Task extends Component {
@@ -57,81 +56,60 @@ export class Task extends Component {
   }
 
   step1() {
-    return (
-      <div>
-        <table>
-          <tr>
-            <th>Task</th>
-            <th>Details</th>
-            <th>Completed</th>
-          </tr>
-          <tr>
-            <td>{this.props.task.description}</td>
-            <td>{this.formatStrikeWater(this.props.task.strikeWater)} {this.formatMashTemp(this.props.specs.mashTemp)} {this.formatGrains()}</td>
-            <td>{this.formatCompleted()}</td>
-          </tr>
-        </table>
-        <button onClick={this.completed}>{this.state.complete ? "Uncomplete" : "Complete"}</button>
-      </div>
-    )
+    var a = this.formatStrikeWater(this.props.task.strikeWater)
+    var b = this.formatMashTemp(this.props.specs.mashTemp)
+    var c = this.formatGrains()
+    return this.formatTable(a, b, c)
   }
 
   step2() {
-    return (
-      <div>
-        <table>
-          <tr>
-            <th>Task</th>
-            <th>Details</th>
-            <th>Completed</th>
-          </tr>
-          <tr>
-            <td>{this.props.task.description}</td>
-            <td>{this.formatSpargeWater(this.props.task.spargeWater)}</td>
-            <td>{this.formatCompleted()}</td>
-          </tr>
-        </table>
-        <button onClick={this.completed}>{this.state.complete ? "Uncomplete" : "Complete"}</button>
-      </div>
-    )
+    return this.formatTable(this.formatSpargeWater(this.props.task.spargeWater))
   }
   
   step3() {
-    return (
-      <div>
-        <table>
-          <tr>
-            <th>Task</th>
-            <th>Details</th>
-            <th>Completed</th>
-          </tr>
-          <tr>
-            <td>{this.props.task.description}</td>
-            <td></td>
-            <td>{this.formatCompleted()}</td>
-          </tr>
-        </table>
-        <button onClick={this.completed}>{this.state.complete ? "Uncomplete" : "Complete"}</button>
-      </div>
-    )
+    return this.formatTable()
   }
 
   step4() {
+    return this.formatTable(this.formatBitteringHops())
+  }
+
+  step5() {
+    return this.formatTable(this.formatFlavouringHops())
+  }
+
+  step6() {
+    return this.formatTable(this.formatAromaHops())
+  }
+
+  step7() {
+    return this.formatTable()
+  }
+
+  step8() {
+    return this.formatTable()
+  }
+
+  step9() {
+    return this.formatTable()
+  }
+
+  formatTable(details, details2=null, details3=null) {
     return (
-      <div>
-        <table>
+      <div class="table">
+        <table class="inner">
           <tr>
             <th>Task</th>
-            <th>Details</th>
+            {details ? <th>Details</th> : null}
             <th>Completed</th>
           </tr>
           <tr>
             <td>{this.props.task.description}</td>
-            <td>{this.formatBitteringHops()}</td>
+            {details ? <td>{details}{details2}{details3}</td> : null}
             <td>{this.formatCompleted()}</td>
           </tr>
         </table>
-        <button onClick={this.completed}>{this.state.complete ? "Uncomplete" : "Complete"}</button>
+        <button onClick={this.completed} class="inner">{this.state.complete ? "Uncomplete" : "Complete"}</button>
       </div>
     )
   }
@@ -139,58 +117,58 @@ export class Task extends Component {
   formatGrains() {
     if (this.props.task.description.includes("grain")) {
       return this.props.ingredients.grains.map(grain => {
-        return (<p>{grain.item}, {grain.quantity} kg </p>)
+        return (<p>{grain.item}, {grain.quantity} kg</p>)
       })
-
-
-      // for (let i = 0; i < this.props.ingredients.grains.length; i++) {
-      //   return (this.props.ingredients.grains[i].item + " , " + this.props.ingredients.grains[i].quantity.toString() + " kg")
-      // }
     }
   }
 
-  formatBitteringHops(){
-
+  formatBitteringHops() {
     if (this.props.task.description.includes("Weigh")) {
       return this.props.ingredients.hops.map(hop => {
-        if (hop.type === "Bittering"){
-          return (<p>{hop.item},  {hop.quantity} g </p>)
+        if (hop.type === "Bittering") {
+          return (<p>{hop.item}, {hop.quantity} g</p>)
         }
-    
       })
     }
+  }
 
+  formatFlavouringHops() {
+    if (this.props.task.description.includes("Weigh")) {
+      return this.props.ingredients.hops.map(hop => {
+        if (hop.type === "Flavouring") {
+          return (<p>{hop.item}, {hop.quantity} g</p>)
+        }
+      })
     }
+  }
 
-
+  formatAromaHops() {
+    if (this.props.task.description.includes("Weigh")) {
+      return this.props.ingredients.hops.map(hop => {
+        if (hop.type === "Aroma") {
+          return (<p>{hop.item}, {hop.quantity} g</p>)
+        }
+      })
+    }
+  }
 
   formatStrikeWater(volume) {
-    if (this.props.task.description.includes("strike")) {
-      return volume.toString() + " Litres"
+    if (this.props.task.description.includes("water")) {
+      return (<p>{volume.toString()} Litres</p>)
     }
   }
 
   formatSpargeWater(volume) {
     if (this.props.task.description.includes("sparge")) {
-      return volume.toString() + " Litres"
+      return (<p>{volume.toString()} Litres</p>)
     }
   }
 
   formatMashTemp(temp) {
     if (this.props.task.description.includes("water")) {
       temp += 8
-      return temp.toString() + " degrees C "
+      return (<p>{temp.toString()} degrees C</p>)
     }
-  }
-
-  
-
-  step5() {
-      return this.props.description
-  }
-
-  step6() {
-      return this.props.description
   }
 }
 
