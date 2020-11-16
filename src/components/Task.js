@@ -8,6 +8,7 @@ export class Task extends Component {
       complete: false
     };
     this.completed= this.completed.bind(this);
+    this.divisor = this.props.potVolume/25;
   }
 
   render() {
@@ -117,7 +118,7 @@ export class Task extends Component {
   formatGrains() {
     if (this.props.task.description.includes("grain")) {
       return this.props.ingredients.grains.map(grain => {
-        return (<p>{grain.item}, {grain.quantity} kg</p>)
+        return (<p>{grain.item}, {grain.quantity*this.divisor} kg</p>)
       })
     }
   }
@@ -126,7 +127,7 @@ export class Task extends Component {
     if (this.props.task.description.includes("Weigh")) {
       return this.props.ingredients.hops.map(hop => {
         if (hop.type === "Bittering") {
-          return (<p>{hop.item}, {hop.quantity} g</p>)
+          return (<p>{hop.item}, {hop.quantity*this.divisor} g</p>)
         }
       })
     }
@@ -136,7 +137,7 @@ export class Task extends Component {
     if (this.props.task.description.includes("Weigh")) {
       return this.props.ingredients.hops.map(hop => {
         if (hop.type === "Flavouring") {
-          return (<p>{hop.item}, {hop.quantity} g</p>)
+          return (<p>{hop.item}, {hop.quantity*this.divisor} g</p>)
         }
       })
     }
@@ -146,7 +147,7 @@ export class Task extends Component {
     if (this.props.task.description.includes("Weigh")) {
       return this.props.ingredients.hops.map(hop => {
         if (hop.type === "Aroma") {
-          return (<p>{hop.item}, {hop.quantity} g</p>)
+          return (<p>{hop.item}, {hop.quantity*this.divisor} g</p>)
         }
       })
     }
@@ -154,13 +155,13 @@ export class Task extends Component {
 
   formatStrikeWater(volume) {
     if (this.props.task.description.includes("water")) {
-      return (<p>{volume.toString()} Litres</p>)
+      return (<p>{(volume*this.divisor).toString()} Litres</p>)
     }
   }
 
   formatSpargeWater(volume) {
     if (this.props.task.description.includes("sparge")) {
-      return (<p>{volume.toString()} Litres</p>)
+      return (<p>{(volume*this.divisor).toString()} Litres</p>)
     }
   }
 
