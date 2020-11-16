@@ -1,3 +1,4 @@
+import toJson from 'enzyme-to-json';
 import React, { Component } from 'react'
 
 export class Task extends Component {
@@ -94,14 +95,74 @@ export class Task extends Component {
       </div>
     )
   }
+  
+  step3() {
+    return (
+      <div>
+        <table>
+          <tr>
+            <th>Task</th>
+            <th>Details</th>
+            <th>Completed</th>
+          </tr>
+          <tr>
+            <td>{this.props.task.description}</td>
+            <td></td>
+            <td>{this.formatCompleted()}</td>
+          </tr>
+        </table>
+        <button onClick={this.completed}>{this.state.complete ? "Uncomplete" : "Complete"}</button>
+      </div>
+    )
+  }
+
+  step4() {
+    return (
+      <div>
+        <table>
+          <tr>
+            <th>Task</th>
+            <th>Details</th>
+            <th>Completed</th>
+          </tr>
+          <tr>
+            <td>{this.props.task.description}</td>
+            <td>{this.formatBitteringHops()}</td>
+            <td>{this.formatCompleted()}</td>
+          </tr>
+        </table>
+        <button onClick={this.completed}>{this.state.complete ? "Uncomplete" : "Complete"}</button>
+      </div>
+    )
+  }
 
   formatGrains() {
     if (this.props.task.description.includes("grain")) {
-      for (let i = 0; i < this.props.ingredients.grains.length; i++) {
-        return (this.props.ingredients.grains[i].item + " , " + this.props.ingredients.grains[i].quantity.toString() + " kg")
-      }
+      return this.props.ingredients.grains.map(grain => {
+        return (<p>{grain.item}, {grain.quantity} kg </p>)
+      })
+
+
+      // for (let i = 0; i < this.props.ingredients.grains.length; i++) {
+      //   return (this.props.ingredients.grains[i].item + " , " + this.props.ingredients.grains[i].quantity.toString() + " kg")
+      // }
     }
   }
+
+  formatBitteringHops(){
+
+    if (this.props.task.description.includes("Weigh")) {
+      return this.props.ingredients.hops.map(hop => {
+        if (hop.type === "Bittering"){
+          return (<p>{hop.item},  {hop.quantity} g </p>)
+        }
+    
+      })
+    }
+
+    }
+
+
 
   formatStrikeWater(volume) {
     if (this.props.task.description.includes("strike")) {
@@ -122,13 +183,7 @@ export class Task extends Component {
     }
   }
 
-  step3() {
-    return this.props.description
-  }
-
-  step4() {
-      return this.props.description
-  }
+  
 
   step5() {
       return this.props.description
