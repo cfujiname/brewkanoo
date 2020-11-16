@@ -15,7 +15,7 @@ export class Step extends Component {
 
   tasks() {
     return this.props.stepContent.map((task) => (
-      <Task description={task.description} strikeWater={task.strikeWater} specs={this.props.specs} stepNumber={this.props.stepNumber} ingredients={this.props.ingredients}/>
+      <Task task={task} specs={this.props.specs} stepNumber={this.props.stepNumber} ingredients={this.props.ingredients}/>
     ))
   }
 }

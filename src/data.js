@@ -8,7 +8,7 @@ export const recipes = [
       ],
       [ { description: "Add the water to the grains and start the timer", time: 3600}, 
         { description: "Check the temperature of the liquid - Add boiling or cold water to adjust the temperature to between 65-68 degrees C."},
-        { description: "Heat the sparge water to 77 degrees C", spargeWater: 12}
+        { description: "Heat the following amount of sparge water to 77 degrees C", spargeWater: 12}
       ],
       [ { description: "Strain the liquid back into the boiling pot" },
         { description: "In a few batches rinse the grains with the sparge water, each time pouring the amber liquid into the boiling pot" }

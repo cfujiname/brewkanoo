@@ -32,6 +32,12 @@ export class Task extends Component {
       return this.step5();
     } else if (this.props.stepNumber === 6) {
       return this.step6();
+    } else if (this.props.stepNumber === 7) {
+      return this.step7();
+    } else if (this.props.stepNumber === 8) {
+      return this.step8();
+    } else if (this.props.stepNumber === 9) {
+      return this.step9();
     }
   }
 
@@ -59,8 +65,28 @@ export class Task extends Component {
             <th>Completed</th>
           </tr>
           <tr>
-            <td>{this.props.description}</td>
-            <td>{this.formatStrikeWater(this.props.strikeWater)} {this.formatMashTemp(this.props.specs.mashTemp)} {this.formatGrains()}</td>
+            <td>{this.props.task.description}</td>
+            <td>{this.formatStrikeWater(this.props.task.strikeWater)} {this.formatMashTemp(this.props.specs.mashTemp)} {this.formatGrains()}</td>
+            <td>{this.formatCompleted()}</td>
+          </tr>
+        </table>
+        <button onClick={this.completed}>{this.state.complete ? "Uncomplete" : "Complete"}</button>
+      </div>
+    )
+  }
+
+  step2() {
+    return (
+      <div>
+        <table>
+          <tr>
+            <th>Task</th>
+            <th>Details</th>
+            <th>Completed</th>
+          </tr>
+          <tr>
+            <td>{this.props.task.description}</td>
+            <td>{this.formatSpargeWater(this.props.task.spargeWater)}</td>
             <td>{this.formatCompleted()}</td>
           </tr>
         </table>
@@ -70,7 +96,7 @@ export class Task extends Component {
   }
 
   formatGrains() {
-    if (this.props.description.includes("grain")) {
+    if (this.props.task.description.includes("grain")) {
       for (let i = 0; i < this.props.ingredients.grains.length; i++) {
         return (this.props.ingredients.grains[i].item + " , " + this.props.ingredients.grains[i].quantity.toString() + " kg")
       }
@@ -78,20 +104,22 @@ export class Task extends Component {
   }
 
   formatStrikeWater(volume) {
-    if (this.props.description.includes("water")) {
+    if (this.props.task.description.includes("strike")) {
+      return volume.toString() + " Litres"
+    }
+  }
+
+  formatSpargeWater(volume) {
+    if (this.props.task.description.includes("sparge")) {
       return volume.toString() + " Litres"
     }
   }
 
   formatMashTemp(temp) {
-    if (this.props.description.includes("water")) {
+    if (this.props.task.description.includes("water")) {
       temp += 8
       return temp.toString() + " degrees C "
     }
-  }
-
-  step2() {
-    return this.props.description
   }
 
   step3() {
