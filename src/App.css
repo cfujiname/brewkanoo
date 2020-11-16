@@ -23,12 +23,12 @@
 }
 
 .table {
-    width:100%;
-    text-align: center;
+  width: 100%;
+  text-align: center;
 }
 
 .inner {
-    display: inline-block;
+  display: inline-block;
 }
 
 @media (prefers-reduced-motion: no-preference) {

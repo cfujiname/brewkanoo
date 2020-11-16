@@ -1,13 +1,16 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types';
 import Step from './Step'
-//import Timer from './Timer'
+import { ProgressBar, Button } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Timer } from 'react-countdown-clock-timer'
 
 export class Walkthrough extends Component {
   constructor(props){
     super(props);
-    this.state = { counter: 0, start: false} 
+    this.state = { counter: 0, start: false } 
+    this.percentage = (this.props.walkthrough.length / 100) * this.state.counter
+    console.log(this.percentage)
   }
 
   handleNextStep = () => {
@@ -49,8 +52,11 @@ export class Walkthrough extends Component {
         <h2>Method:</h2>
         <Step key={this.state.counter} stepNumber={this.state.counter + 1} stepContent={this.props.walkthrough[this.state.counter]} potVolume={this.props.potVolume} specs={this.props.specs} ingredients={this.props.ingredients}/>  
         <button onClick={this.handlePreviousStep}>Previous Step</button>
+       
         <button onClick={this.handleNextStep} >Next Step</button>  
-        {/* {this.timer()}  */}
+        {console.log(this.state.counter)}
+
+        <ProgressBar animated now={(100 / this.props.walkthrough.length)  * (this.state.counter)} /> 
       </div>
     )
   }
