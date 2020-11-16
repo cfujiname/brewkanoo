@@ -89,6 +89,7 @@ export class Task extends Component {
 
   formatMashTemp(temp) {
     if (this.props.description.includes("water")) {
+      temp += 8
       return temp.toString() + " degrees C "
     }
   }
