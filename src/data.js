@@ -3,6 +3,7 @@ export const recipes = [
     id: 1,
     title: "Ollie's Big Flavor Non-Descript Homebrew",
     walkthrough: [
+
       [ { description: "Heat the following amount of water to the temperature provided", strikeWater: 15}, 
         { description: "Weigh out the following amount of grain and place inside the fermentation vessel"}
       ],
@@ -31,6 +32,7 @@ export const recipes = [
         { description: "Fit the airlock and close the container" }
       ],
       [ { description: "When the hydrometer reading has stabilised (around 1-2 weeks), bottle or keg the beer." }]
+
     ],
     ingredients: {
       grains: [{ item: "Maris Otter Pale Ale Malt", quantity: 4.7 }, { item: "Crystal Malt", quantity: 0.45 }],

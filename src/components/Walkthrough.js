@@ -1,35 +1,46 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 import Step from './Step'
-import Timer from './Timer'
+//import Timer from './Timer'
+import { Timer } from 'react-countdown-clock-timer'
 
 export class Walkthrough extends Component {
   constructor(props){
     super(props);
     this.state = { counter: 0, start: false} 
   }
-  /* istanbul ignore next */
+
   handleNextStep = () => {
       if (this.state.counter < this.props.walkthrough.length - 1) {
     this.setState(prev => ({ counter: prev.counter + 1 }));
       } 
   }
-  /* istanbul ignore next */
   handlePreviousStep = () => {
       if (this.state.counter > 0)
     this.setState(prev => ({ counter: prev.counter  - 1 }));
   }
-  /* istanbul ignore next */
   startTimer() {
     this.setState({ start: true })
   }
 
+  // timer() {
+  //   return this.props.walkthrough[this.state.counter].time !== 0 ?
+  //      <Timer timerStart={this.props.walkthrough[this.state.counter].time}></Timer> : null
+    
+  // }
+
   timer() {
-    if (this.props.walkthrough[this.state.counter][0].time) {
-      return <Timer timerStart={this.props.walkthrough[this.state.counter][0].time}/> 
-    } else {
-      return null
-    }
+
+      return this.props.walkthrough[this.state.counter].time !== 0 ? <div className='timer-container'>
+       <Timer
+       durationInSeconds={this.props.walkthrough[this.state.counter].time}
+       formatted={false}
+       isPaused={true}
+       showPauseButton={true}
+       showResetButton={true}
+       />
+     </div> : null;
+
   }
 
   render() {
