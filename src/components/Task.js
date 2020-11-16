@@ -72,14 +72,10 @@ export class Task extends Component {
   formatGrains() {
     if (this.props.description.includes("grain")) {
       for (let i = 0; i < this.props.ingredients.grains.length; i++) {
-        return this.props.ingredients.grains[i].item + " , " + this.props.ingredients.grains[i].quantity.toString() + " kg"
+        return (this.props.ingredients.grains[i].item + " , " + this.props.ingredients.grains[i].quantity.toString() + " kg")
       }
     }
   }
-
-  // formatGrain(grain) {
-  //   return grain.item + " ," + grain.quantity.toString() + " kg"
-  // }
 
   formatStrikeWater(volume) {
     if (this.props.description.includes("water")) {

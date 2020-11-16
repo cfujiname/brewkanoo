@@ -33,9 +33,13 @@ export const recipes = [
       [ { description: "When the hydrometer reading has stabilised (around 1-2 weeks), bottle or keg the beer." }]
     ],
     ingredients: {
-      grains: [{ item: "chocolate malt", quantity: 0.5 }, { item: "crystal malt", quantity: 3 }],
-      hops: ["Bramling Cross", "Citra"],
-      yeast: "Safeale",
+      grains: [{ item: "Maris Otter Pale Ale Malt", quantity: 4.7 }, { item: "Crystal Malt", quantity: 0.45 }],
+      hops: [ { item: "Magnum Hops", quantity: 12, type: "Bittering" },
+              { item: "Perle Hops", quantity: 14, type: "Bittering" },
+              { item: "Cascade Hops", quantity: 57, type: "Flavouring" },
+              { item: "Cascade Hops", quantity: 57, type: "Aroma" }
+            ],
+      yeast: "Safale US-05 yeast",
     },
     equipment: ["A fermentation vessel/bucket","Thermometer"],
     specs: {
