@@ -46,6 +46,18 @@
 .recipeList {
 }
 
+.pause-button {
+  text-indent: -9999px;
+  line-height: 0;
+}
+
+.pause-button::after {
+  content: "Start/Stop";
+  text-indent: 0;
+  display: block;
+  line-height: initial;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
