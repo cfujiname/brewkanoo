@@ -4,34 +4,34 @@ export const recipes = [
     title: "Ollie's Big Flavor Non-Descript Homebrew",
     walkthrough: [
 
-      [ { description: "Heat the following amount of water to the temperature provided", strikeWater: 15}, 
-        { description: "Weigh out the following amount of grain and place inside the fermentation vessel"}
+      [ { description: "Heat the following amount of water to the temperature provided", strikeWater: 15, time:0}, 
+        { description: "Weigh out the following amount of grain and place inside the fermentation vessel",time:0}
       ],
       [ { description: "Add the water to the grains and start the timer", time: 3600}, 
-        { description: "Check the temperature of the liquid - Add boiling or cold water to adjust the temperature to between 65-68 degrees C."},
-        { description: "Heat the following amount of sparge water to 77 degrees C", spargeWater: 12}
+        { description: "Check the temperature of the liquid - Add boiling or cold water to adjust the temperature to between 65-68 degrees C.",time:0},
+        { description: "Heat the following amount of sparge water to 77 degrees C", spargeWater: 12,time:0}
       ],
-      [ { description: "Strain the liquid back into the boiling pot" },
-        { description: "In a few batches rinse the grains with the sparge water, each time pouring the amber liquid into the boiling pot" }
+      [ { description: "Strain the liquid back into the boiling pot" ,time:0},
+        { description: "In a few batches rinse the grains with the sparge water, each time pouring the amber liquid into the boiling pot",time:0 }
       ],
-      [ { description: "Begin boiling - move to the next step when a rolling boil achieved" },
-        { description: "Weigh out the bittering hops" }
+      [ { description: "Begin boiling - move to the next step when a rolling boil achieved" ,time:0},
+        { description: "Weigh out the bittering hops" ,time:0}
       ],
       [ { description: "Add bittering hops and start the timer", time: 1800 },
-        { description: "Weigh out the flavouring hops" }
+        { description: "Weigh out the flavouring hops",time:0 }
       ],
       [ { description: "Add flavouring hops and start the timer", time: 1200 },
-        { description: "Weigh out the aroma hops" }
+        { description: "Weigh out the aroma hops" ,time:0}
       ],
       [ { description: "Add aroma hops and start the timer", time: 600 },
-        { description: "After the timer is complete, Add the Finings and begin to cool the liquid" }
+        { description: "After the timer is complete, Add the Finings and begin to cool the liquid" ,time:0}
       ],
-      [ { description: "Strain the wort into the fermentation vessel, leaving behind the cold break matter at the bottom" },
-        { description: "Take a hydrometer reading - this will allow you to know when your beer is ready and also to work out the ABV%" },
-        { description: "If the temp has reached 25 degrees, sprinkle the dried yeast on top" },
-        { description: "Fit the airlock and close the container" }
+      [ { description: "Strain the wort into the fermentation vessel, leaving behind the cold break matter at the bottom" ,time:0},
+        { description: "Take a hydrometer reading - this will allow you to know when your beer is ready and also to work out the ABV%",time:0 },
+        { description: "If the temp has reached 25 degrees, sprinkle the dried yeast on top" ,time:0},
+        { description: "Fit the airlock and close the container" ,time:0}
       ],
-      [ { description: "When the hydrometer reading has stabilised (around 1-2 weeks), bottle or keg the beer." }]
+      [ { description: "When the hydrometer reading has stabilised (around 1-2 weeks), bottle or keg the beer.",time:0 }]
 
     ],
     ingredients: {

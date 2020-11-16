@@ -30,8 +30,8 @@ export class Walkthrough extends Component {
   // }
 
   timer() {
-
-      return this.props.walkthrough[this.state.counter].time !== 0 ? <div className='timer-container'>
+      console.log(this.props.walkthrough[this.state.counter].time)
+      return this.props.walkthrough[this.state.counter][this.state.counter].time !== 0 ? <div className='timer-container'>
        <Timer
        durationInSeconds={this.props.walkthrough[this.state.counter].time}
        formatted={false}
@@ -50,7 +50,7 @@ export class Walkthrough extends Component {
         <Step key={this.state.counter} stepNumber={this.state.counter + 1} stepContent={this.props.walkthrough[this.state.counter]} strikeWater={this.props.potVolume} specs={this.props.specs} ingredients={this.props.ingredients}/>  
         <button onClick={this.handlePreviousStep}>Previous Step</button>
         <button onClick={this.handleNextStep} >Next Step</button>  
-        {this.timer()} 
+        {/* {this.timer()}  */}
       </div>
     )
   }
