@@ -6,7 +6,7 @@ import Equipment from './Equipment';
 export class VolumeForm extends Component {
   constructor(props) {
     super(props);
-    this.state = {showDetails: false, potVolume: 25};
+    this.state = {showDetails: false, potVolume: 25, showForm: true};
 
     this.onSubmit = this.onSubmit.bind(this);
     this.handlePotVolumeChange = this.handlePotVolumeChange.bind(this);
@@ -15,7 +15,8 @@ export class VolumeForm extends Component {
   onSubmit(event) {
     event.preventDefault();
     this.setState({
-      showDetails: true
+      showDetails: true,
+      showForm: !this.state.showForm
     })
   }
 
@@ -32,15 +33,16 @@ export class VolumeForm extends Component {
                     <Ingredients key={this.props.recipe.id} ingredients={this.props.recipe.ingredients}/>
                     <Equipment key={this.props.recipe.id} equipment={this.props.recipe.equipment}/>
                   </div>
+    let form =  <form >
+                  <label>
+                    Boiling water pot volume:
+                    <input type="number" name="pot-volume" value={this.state.potVolume} onChange={this.handlePotVolumeChange}/>
+                  </label>
+                  <input onClick={this.onSubmit} type="submit" value="Submit" />
+                </form>
     return (
       <div>
-        <form >
-          <label>
-            Boiling water pot volume:
-            <input type="number" name="pot-volume" value={this.state.potVolume} onChange={this.handlePotVolumeChange}/>
-          </label>
-          <input onClick={this.onSubmit} type="submit" value="Submit" />
-        </form>
+        {this.state.showForm ? form : null}
         {this.state.showDetails ? details : null} 
       </div>
     )
