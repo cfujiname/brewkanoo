@@ -98,19 +98,18 @@ export class Task extends Component {
   formatTable(details, details2=null, details3=null) {
     return (
       <div class="table">
-        <table class="inner">
+        <table style={tableStyle}>
           <tr>
             <th>Task</th>
             {details ? <th>Details</th> : null}
-            <th>Completed</th>
+            <th>Completed?</th>
           </tr>
           <tr>
             <td>{this.props.task.description}</td>
             {details ? <td>{details}{details2}{details3}</td> : null}
-            <td>{this.formatCompleted()}</td>
+            <td><button onClick={this.completed} class="inner">{this.state.complete ? "Certainly!" : "Working on it...."}</button></td>
           </tr>
         </table>
-        <button onClick={this.completed} class="inner">{this.state.complete ? "Uncomplete" : "Complete"}</button>
       </div>
     )
   }
@@ -171,6 +170,11 @@ export class Task extends Component {
       return (<p>{temp.toString()} degrees C</p>)
     }
   }
+}
+
+const tableStyle = {
+  border: 'none',
+  boxShadow: 'none'
 }
 
 export default Task

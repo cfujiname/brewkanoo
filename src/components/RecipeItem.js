@@ -4,37 +4,24 @@ import PropTypes from 'prop-types';
 import VolumeForm from './VolumeForm';
 
 export class RecipeItem extends Component {
-  state = {
-    showDetails: false,
-    potVolume: 25
-  }
-
   handleClickTitle = () => {
-    this.setState({
-      showDetails: true
-    })
+    this.props.sendData(this.props.recipe.title)
   }
 
   handleClickOffTitle = () => {
-    this.setState({
-      showDetails: false
-    })
+    this.props.sendData(null)
   }
 
   //insert item here for clicking off the title - to remove the Details 
   
   render() {
-      return this.state.showDetails ? 
-      <div className='hideButton' style={hideBtnStyle}>
-        <button onClick={this.handleClickOffTitle}>Hide</button>
-        <VolumeForm recipe={this.props.recipeProp}/>
-       
-      </div> :
-        <div id="linus" style={linusStyle}>
-
-      <button onClick={this.handleClickTitle}>{this.props.recipeProp.title}</button>
-        
-      </div>;
+    return (this.props.recipe.title === this.props.currentRecipe) ? 
+    <div style={formStyle}>
+      <VolumeForm recipe={this.props.recipe}/>
+    </div> :
+    <div style={titleBtnStyle}>
+      <button onClick={this.handleClickTitle}>{this.props.recipe.title}</button>
+    </div>;
   }
 }
 
@@ -43,17 +30,19 @@ RecipeItem.propTypes = {
   recipeProp: PropTypes.object.isRequired
 }
 
-const hideBtnStyle = {
-  margin: '0',
-  position: 'relative',
+const formStyle = {
+  position: 'absolute',
+  width: '50%',
+  margin: '0 auto',
   top: '150px',
-  left: '15px',
+  left: '400px',
 }
 
-const linusStyle = {
+const titleBtnStyle = {
   position: 'relative',
-  top: '250px',
-  left: '15px',
+  padding: '10px',
+  width: '350px'
+
 }
 
 export default RecipeItem

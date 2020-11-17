@@ -62,7 +62,7 @@ export class VolumeForm extends Component {
   }
 
   render() {
-    let details = <div>
+    let details = <div style={barStyle}>
                     <button onClick={this.handleClickWalkthrough}>Walkthrough</button>
                     <button onClick={this.handleClickIngredients}>Ingredients</button>
                     <button onClick={this.handleClickEquipment}>Equipment</button>
@@ -70,20 +70,39 @@ export class VolumeForm extends Component {
                     {this.state.showIngredients ? <Ingredients key={this.props.recipe.id} ingredients={this.props.recipe.ingredients}/> : null }
                     {this.state.showEquipment ? <Equipment key={this.props.recipe.id} equipment={this.props.recipe.equipment}/> : null }
                   </div>
-    let form =  <form >
+    let form =  <form style={barStyle}>
                   <label>
-                    Boiling water pot volume:
-                    <input type="number" name="pot-volume" value={this.state.potVolume} onChange={this.handlePotVolumeChange}/>
+                    <h2>How thirsty are you?</h2>
+                    <h4>
+                      Make {' '}
+                      <input type="number" style={textBoxStyle} value={this.state.potVolume} onChange={this.handlePotVolumeChange}/>
+                      {' '} Litres
+                    </h4>
                   </label>
-                  <input onClick={this.onSubmit} type="submit" value="Submit" />
+                  <div style={submitStyle}><input onClick={this.onSubmit} type="submit" value="Submit" /></div>
                 </form>
     return (
       <div>
-        {this.state.showForm ? form : <button onClick={this.handleClickShowForm}>Show Form</button>}
+        {this.state.showForm ? form : null}
         {this.state.showDetails ? details : null} 
       </div>
     )
   }
+}
+const barStyle = {
+  position: 'relative',
+
+  textAlign: 'center'
+}
+
+const textBoxStyle = {
+  position: 'relative',
+  textAlign: 'center'
+}
+
+const submitStyle = {
+  position: 'relative',
+  textAlign: 'center'
 }
 
 export default VolumeForm;
