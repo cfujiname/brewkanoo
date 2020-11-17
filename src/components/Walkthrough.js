@@ -64,7 +64,7 @@ export class Walkthrough extends Component {
 const steps = {
   position: 'relative',
   margin: '0',
-  width: '400px'
+  width: '800px'
 }
 export default Walkthrough
 

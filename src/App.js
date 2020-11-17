@@ -10,8 +10,7 @@ class App extends Component {
     return (
       
       <div className="App" style={appStyle}>
-        <img src="image.png" style={logoStyle}></img>
-        <h1 className="title" style={titleStyle}> BrewKanoo</h1>
+        <h1 className="title" style={titleStyle}><img src="image.png" style={logoStyle}></img> BrewKanoo</h1>
            <RecipesButton recipes={recipes} /> 
       </div>
      
@@ -20,23 +19,21 @@ class App extends Component {
 }
 
 const titleStyle = {
-  marginLeft: '300px',
+  textAlign: 'center',
   marginTop: '5px',
-  position: 'absolute',
+  position: 'relative',
   fontFamily: 'Big Shoulders Inline Text, cursive',
   fontSize: '100px',
 }
 
 const appStyle = {
-  margin: '0',
-  position: 'absolute',
+  position: 'relative',
   fontFamily: 'Big Shoulders Inline Text, cursive',
   
 }
 const logoStyle = {
-  marginTop: '25px',
-  marginLeft: '220px',
-  position: 'absolute',
+  textAlign: 'center',
+  position: 'relative',
   width: '80px',
   
 }

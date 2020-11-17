@@ -70,12 +70,16 @@ export class VolumeForm extends Component {
                     {this.state.showIngredients ? <Ingredients key={this.props.recipe.id} ingredients={this.props.recipe.ingredients}/> : null }
                     {this.state.showEquipment ? <Equipment key={this.props.recipe.id} equipment={this.props.recipe.equipment}/> : null }
                   </div>
-    let form =  <form >
+    let form =  <form style={barStyle}>
                   <label>
-                    Boiling water pot volume:
-                    <input type="number" name="pot-volume" value={this.state.potVolume} onChange={this.handlePotVolumeChange}/>
+                    <h2>How thirsty are you?</h2>
+                    <h4>
+                      Make {' '}
+                      <input type="number" style={textBoxStyle} value={this.state.potVolume} onChange={this.handlePotVolumeChange}/>
+                      {' '} Litres
+                    </h4>
                   </label>
-                  <input onClick={this.onSubmit} type="submit" value="Submit" />
+                  <div style={submitStyle}><input onClick={this.onSubmit} type="submit" value="Submit" /></div>
                 </form>
     return (
       <div>
@@ -87,8 +91,18 @@ export class VolumeForm extends Component {
 }
 const barStyle = {
   position: 'relative',
-  margin: '0',
-  width: '500px'
+
+  textAlign: 'center'
+}
+
+const textBoxStyle = {
+  position: 'relative',
+  textAlign: 'center'
+}
+
+const submitStyle = {
+  position: 'relative',
+  textAlign: 'center'
 }
 
 export default VolumeForm;
