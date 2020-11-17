@@ -9,8 +9,6 @@ export class Walkthrough extends Component {
   constructor(props){
     super(props);
     this.state = { counter: 0, start: false } 
-    this.percentage = (this.props.walkthrough.length / 100) * this.state.counter
-    console.log(this.percentage)
   }
 
   handleNextStep = () => {
