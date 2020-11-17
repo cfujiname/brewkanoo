@@ -16,9 +16,9 @@ class RecipesButton extends Component {
   
   render() {
     return (
-    <div className='heading' style={headingStyle}>      
-      {this.state.recipeButtonClicked ? <Recipes recipes={this.props.recipes} /> : null}
-      {this.state.recipeButtonClicked ? null : <button id="recipesButton"> <img src='button.png' style={btnStyle} onClick={this.clickButton}/>Recipes</button>  }
+    <div style={headingStyle}>      
+      {this.state.recipeButtonClicked ? <div style={allRecipes}><Recipes recipes={this.props.recipes} /> </div> : null  }
+      {this.state.recipeButtonClicked ? null :  <img src='button.png' style={btnStyle} onClick={this.clickButton}/> }
     </div>
     );
   }
@@ -35,7 +35,7 @@ const btnStyle = {
   outline: 'none',
   fontFamily: 'Big Shoulders Inline Text, cursive',
   padding: '10px',
-  width: '80px',
+  width: '180px',
 }
 
 const headingStyle = {
@@ -43,4 +43,9 @@ const headingStyle = {
   margin: '0',
 }
  
+const allRecipes = {
+  width: '50px',
+  height: '50%',
+  paddingTop: '200px'
+}
 export default RecipesButton;

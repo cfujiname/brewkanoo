@@ -16,11 +16,10 @@ export class RecipeItem extends Component {
   
   render() {
     return (this.props.recipe.title === this.props.currentRecipe) ? 
-    <div className='hideButton' style={hideBtnStyle}>
-      <button onClick={this.handleClickOffTitle}>Hide</button>
+    <div style={formStyle}>
       <VolumeForm recipe={this.props.recipe}/>
     </div> :
-    <div style={linusStyle}>
+    <div style={titleBtnStyle}>
       <button onClick={this.handleClickTitle}>{this.props.recipe.title}</button>
     </div>;
   }
@@ -31,17 +30,19 @@ RecipeItem.propTypes = {
   recipeProp: PropTypes.object.isRequired
 }
 
-const hideBtnStyle = {
-  margin: '0',
-  position: 'relative',
+const formStyle = {
+  position: 'absolute',
+  width: '50%',
+  margin: '0 auto',
   top: '150px',
-  left: '15px',
+  left: '400px',
 }
 
-const linusStyle = {
+const titleBtnStyle = {
   position: 'relative',
-  top: '250px',
-  left: '15px',
+  padding: '10px',
+  width: '350px'
+
 }
 
 export default RecipeItem

@@ -62,7 +62,7 @@ export class VolumeForm extends Component {
   }
 
   render() {
-    let details = <div>
+    let details = <div style={barStyle}>
                     <button onClick={this.handleClickWalkthrough}>Walkthrough</button>
                     <button onClick={this.handleClickIngredients}>Ingredients</button>
                     <button onClick={this.handleClickEquipment}>Equipment</button>
@@ -84,6 +84,11 @@ export class VolumeForm extends Component {
       </div>
     )
   }
+}
+const barStyle = {
+  position: 'relative',
+  margin: '0',
+  width: '500px'
 }
 
 export default VolumeForm;

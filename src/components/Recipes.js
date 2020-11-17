@@ -19,8 +19,9 @@ class Recipes extends Component {
 
   render() {
     return this.props.recipes.map((recipe) => (
-      // advised by alice to use arrow functions like below in react => gives you the correct "this"
+      <div>
       <RecipeItem key={recipe.id} recipe={recipe} sendData={this.getData} currentRecipe={this.state.recipe}/>
+      </div>
     ));
   };
 };
@@ -29,5 +30,6 @@ class Recipes extends Component {
 Recipes.propTypes = {
   recipes: PropTypes.array.isRequired
 }
+
 
 export default Recipes;
