@@ -11,7 +11,7 @@ class App extends Component {
     return (
       
       <div className="App" style={appStyle}>
-        <img src="image.png" style={logoStyle}></img>
+        <img src="logo1.png" style={logoStyle}></img>
         <h1 className="title" style={titleStyle}> BrewKanoo</h1>
            <RecipesButton recipes={recipes} /> 
       </div>
@@ -35,10 +35,10 @@ const appStyle = {
   
 }
 const logoStyle = {
-  marginTop: '25px',
-  marginLeft: '220px',
+  marginTop: '17px',
+  marginLeft: '170px',
   position: 'absolute',
-  width: '80px',
+  width: '180px',
   
 }
 

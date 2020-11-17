@@ -18,7 +18,7 @@ class RecipesButton extends Component {
     return (
     <div className='heading' style={headingStyle}>      
       {this.state.recipeButtonClicked ? <Recipes recipes={this.props.recipes} /> : null}
-      {this.state.recipeButtonClicked ? null : <button id="recipesButton"> <img src='button.png' style={btnStyle} onClick={this.clickButton}/>Recipes</button>  }
+      {this.state.recipeButtonClicked ? null : <img src='button.png' onMouseOver={e => ("Click Me for Recipes!")} style={btnStyle} onClick={this.clickButton}/>  }
     </div>
     );
   }
@@ -35,7 +35,7 @@ const btnStyle = {
   outline: 'none',
   fontFamily: 'Big Shoulders Inline Text, cursive',
   padding: '10px',
-  width: '80px',
+  width: '180px',
 }
 
 const headingStyle = {

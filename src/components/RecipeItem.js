@@ -25,6 +25,8 @@ export class RecipeItem extends Component {
   
   render() {
       return this.state.showDetails ? 
+
+      
       <div className='hideButton' style={hideBtnStyle}>
         <button onClick={this.handleClickOffTitle}>Hide</button>
         <VolumeForm recipe={this.props.recipeProp}/>
@@ -33,7 +35,6 @@ export class RecipeItem extends Component {
         <div id="linus" style={linusStyle}>
 
       <button onClick={this.handleClickTitle}>{this.props.recipeProp.title}</button>
-        
       </div>;
   }
 }
