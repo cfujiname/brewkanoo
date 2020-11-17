@@ -3,19 +3,30 @@
 }
 
 button {
-  background:rgb(255, 230, 5);
-  
-  outline: none;
-  border-radius: 8px;
+  background: rgb(247, 252, 0);
+  border-radius: 7.45px !important;
+  box-shadow: 50px, 100px, #ddddcb !important;
   color: black;
+  outline: none !important;
+  font-family: "Big Shoulders Inline Text" !important;
+}
+
+button:hover {
+  background: rgb(0, 0, 0); /* Green */
+  color: white;
 }
 
 input {
-  background:rgb(255, 230, 5);
-  
+  background: rgb(255, 230, 5);
+  border-radius: 7.45px !important;
   outline: none;
-  border-radius: 8px;
   color: black;
+  font-family: "Big Shoulders Inline Text" !important;
+}
+
+input:hover {
+  background: rgb(0, 0, 0); /* Green */
+  color: white;
 }
 
 .progress {
