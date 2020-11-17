@@ -79,7 +79,7 @@ export class VolumeForm extends Component {
                 </form>
     return (
       <div>
-        {this.state.showForm ? form : <button onClick={this.handleClickShowForm}>Show Form</button>}
+        {this.state.showForm ? form : null}
         {this.state.showDetails ? details : null} 
       </div>
     )
