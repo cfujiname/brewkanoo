@@ -24,7 +24,8 @@
                            
                            
 - Single-Page-App Created in React, Express and PostgreSQL
-![gif](https://media.giphy.com/media/1iv6vjtWqHUf4iwugF/giphy.gif)
+
+
 # Team goals
 
 - For this project, we have set up a daily stand up and retro with check in at 2pm to see how the couterparts of the team are doing
