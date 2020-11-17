@@ -7,7 +7,6 @@ class App extends Component {
   
 
   render() {
-    console.log(recipes)
     return (
       
       <div className="App" style={appStyle}>
