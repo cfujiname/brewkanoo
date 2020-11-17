@@ -5,14 +5,19 @@ import VolumeForm from './VolumeForm';
 
 export class RecipeItem extends Component {
   state = {
-    showDetails: false,
+    showDetails: !this.props.closeAllRecipes,
     potVolume: 25
   }
 
   handleClickTitle = () => {
+    console.log(this.props.closeAllRecipes)
+    this.props.sendData()
     this.setState({
       showDetails: true
     })
+    console.log("handleClickTitle")
+    console.log(this.props.closeAllRecipes)
+    this.forceUpdate()
   }
 
   handleClickOffTitle = () => {
