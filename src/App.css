@@ -2,6 +2,22 @@
   text-align: left;
 }
 
+button {
+  background:rgb(255, 230, 5);
+  
+  outline: none;
+  border-radius: 8px;
+  color: black;
+}
+
+input {
+  background:rgb(255, 230, 5);
+  
+  outline: none;
+  border-radius: 8px;
+  color: black;
+}
+
 .progress {
   background-color: #ffc107;
 }
