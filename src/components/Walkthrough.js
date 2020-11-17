@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types';
 import Step from './Step'
-import { ProgressBar, Button } from 'react-bootstrap';
+import { ProgressBar } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Timer } from 'react-countdown-clock-timer'
 
@@ -23,12 +23,6 @@ export class Walkthrough extends Component {
   startTimer() {
     this.setState({ start: true })
   }
-
-  // timer() {
-  //   return this.props.walkthrough[this.state.counter].time !== 0 ?
-  //      <Timer timerStart={this.props.walkthrough[this.state.counter].time}></Timer> : null
-    
-  // }
 
   timer() {
       console.log(this.props.walkthrough[this.state.counter].time)
@@ -56,7 +50,7 @@ export class Walkthrough extends Component {
 
         {console.log(this.props.walkthrough.length)}
         
-        <ProgressBar variant="warning" animated now={((100 / ((this.props.walkthrough.length - 1) * (this.props.walkthrough.length - 1)) * (this.props.walkthrough.length - 1)) * this.state.counter)} /> 
+        <ProgressBar variant="success" animated now={((100 / ((this.props.walkthrough.length - 1) * (this.props.walkthrough.length - 1)) * (this.props.walkthrough.length - 1)) * this.state.counter)} /> 
       </div>)
     }else{
       return (
@@ -64,11 +58,8 @@ export class Walkthrough extends Component {
         <h2>Method:</h2>
         <Step key={this.state.counter} stepNumber={this.state.counter + 1} stepContent={this.props.walkthrough[this.state.counter]} potVolume={this.props.potVolume} specs={this.props.specs} ingredients={this.props.ingredients}/>
         <button onClick={this.handlePreviousStep}>Previous Step</button>
-        {console.log(this.state.counter)}
-
-        {console.log(this.props.walkthrough.length)}
         
-        <ProgressBar variant="warning" animated now={((100 / ((this.props.walkthrough.length - 1) * (this.props.walkthrough.length - 1)) * (this.props.walkthrough.length - 1)) * this.state.counter)} /> 
+          <ProgressBar variant="success" animated now={((100 / ((this.props.walkthrough.length - 1) * (this.props.walkthrough.length - 1)) * (this.props.walkthrough.length - 1)) * this.state.counter)} /> 
       </div>)
     }
   }

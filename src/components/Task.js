@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import Alert from 'react-bootstrap/Alert'
+
+
 
 export class Task extends Component {
 
@@ -115,9 +118,12 @@ export class Task extends Component {
     )
   }
 
-  formatTableLastStep(details, details2=null, details3=null) {
+  formatTableLastStep(details, details2 = null, details3 = null) {
+    
     return (
+      
       <div class="table">
+        
         <table class="inner">
           <tr>
             <th>Task</th>
@@ -130,7 +136,7 @@ export class Task extends Component {
             <td>{this.formatCompleted()}</td>
           </tr>
         </table>
-        <button onClick={this.completed} class="inner">{this.state.complete ? "Uncomplete" : "Complete"}</button>
+        <button onClick={this.completed} class="inner">{this.state.complete ? <Alert.Heading>Well done - Enjoy your beer!</Alert.Heading> : "Complete"}</button>
       </div>
     )
   }
