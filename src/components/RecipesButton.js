@@ -16,25 +16,31 @@ class RecipesButton extends Component {
   
   render() {
     return (
-    <div>      
+    <div className='heading' style={headingStyle}>      
       {this.state.recipeButtonClicked ? <Recipes recipes={this.props.recipes} /> : null}
-      {this.state.recipeButtonClicked ? null : <button id="recipesButton" style={btnStyle} onClick={this.clickButton}>Recipes</button>  }
+      {this.state.recipeButtonClicked ? null : <button id="recipesButton"> <img src='button.png' style={btnStyle} onClick={this.clickButton}/>Recipes</button>  }
     </div>
     );
   }
 }
 
 const btnStyle = {
-  fontSize: '30px',
+  fontSize: '50px',
   position: 'absolute',
-  top: 'auto',
-  left: '45%',
-  backgroundColor: '#96D9FF',
-  margin: '0',
+  top: '200px',
+  marginLeft: '400px',
+  backgroundColor: '232, 128, 37, 1',
   width: 'auto',
   height: 'auto',
-  border: '8px solid #003557',
-  outline: 'none'
+  outline: 'none',
+  fontFamily: 'Big Shoulders Inline Text, cursive',
+  padding: '10px',
+  width: '80px',
+}
+
+const headingStyle = {
+  position: 'relative',
+  margin: '0',
 }
  
 export default RecipesButton;

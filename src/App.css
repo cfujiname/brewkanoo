@@ -1,20 +1,19 @@
 .App {
   text-align: left;
 }
-.title {
-  text-align: center;
-}
+
 
 .menu {
-  background-color: #f4f4f4;
   height: 100%;
   width: 160px;
   position: flex;
   top: 0;
   left: 0;
+  margin: 0;
 }
 .linus {
   font-size: large;
+  margin: 0;
 }
 
 .App-logo {
@@ -65,6 +64,7 @@
   text-indent: 0;
   display: block;
   line-height: initial;
+  font-family: 'Big Shoulders Inline Text', cursive;
 }
 
 .reset-button {
@@ -77,6 +77,12 @@
   text-indent: 0;
   display: block;
   line-height: initial;
+  font-family: 'Big Shoulders Inline Text', cursive;
+}
+
+.recipesButton {
+  font-size: 500px;
+  font-family: 'Big Shoulders Inline Text', cursive;
 }
 
 @keyframes App-logo-spin {
