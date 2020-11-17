@@ -23,7 +23,7 @@
                            |...............|
                            
                            
-- Created in React, Express and PostgreSQL
+- Single-Page-App Created in React, Express and PostgreSQL
 
 # Team goals
 
@@ -39,6 +39,13 @@
 
 ![MVP.jpg](https://i.postimg.cc/KYqFvH9y/MVP.jpg)
 ![Screenshot-2020-11-13-at-08-04-47.png](https://i.postimg.cc/yNVYN9s0/Screenshot-2020-11-13-at-08-04-47.png)
+
+# Last 2 sprints
+
+- Focus on testing and styling
+- Debugging functionality 
+
+![Screenshot-2020-11-17-at-17-27-53.png](https://i.postimg.cc/0NKB3WnP/Screenshot-2020-11-17-at-17-27-53.png)
 
 # Getting Started with Create React App
 
