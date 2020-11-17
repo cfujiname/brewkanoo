@@ -50,9 +50,9 @@ export class Task extends Component {
 
   formatCompleted() {
     if (this.state.complete) {
-      return "Tick"
+      return "✓"
     } else {
-      return "X"
+      return "✗"
     }
   }
 
@@ -92,10 +92,30 @@ export class Task extends Component {
   }
 
   step9() {
-    return this.formatTable()
+    return this.formatTableLastStep()
   }
 
   formatTable(details, details2=null, details3=null) {
+    return (
+      <div class="table">
+        <table class="inner">
+          <tr>
+            <th>Task</th>
+            {details ? <th>Details</th> : null}
+            <th>Completed</th>
+          </tr>
+          <tr>
+            <td>{this.props.task.description}</td>
+            {details ? <td>{details}{details2}{details3}</td> : null}
+            <td>{this.formatCompleted()}</td>
+          </tr>
+        </table>
+        <button onClick={this.completed} class="inner">{this.state.complete ? "Uncomplete" : "Complete"}</button>
+      </div>
+    )
+  }
+
+  formatTableLastStep(details, details2=null, details3=null) {
     return (
       <div class="table">
         <table class="inner">
