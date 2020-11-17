@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import Alert from 'react-bootstrap/Alert'
+
+
 
 export class Task extends Component {
 
@@ -50,9 +53,9 @@ export class Task extends Component {
 
   formatCompleted() {
     if (this.state.complete) {
-      return "Tick"
+      return "✓"
     } else {
-      return "X"
+      return "✗"
     }
   }
 
@@ -92,7 +95,7 @@ export class Task extends Component {
   }
 
   step9() {
-    return this.formatTable()
+    return this.formatTableLastStep()
   }
 
   formatTable(details, details2=null, details3=null) {
@@ -114,10 +117,33 @@ export class Task extends Component {
     )
   }
 
+  formatTableLastStep(details, details2 = null, details3 = null) {
+    
+    return (
+      
+      <div class="table">
+        
+        <table class="inner">
+          <tr>
+            <th>Task</th>
+            {details ? <th>Details</th> : null}
+            <th>Completed</th>
+          </tr>
+          <tr>
+            <td>{this.props.task.description}</td>
+            {details ? <td>{details}{details2}{details3}</td> : null}
+            <td>{this.formatCompleted()}</td>
+          </tr>
+        </table>
+        <button onClick={this.completed} class="inner">{this.state.complete ? <Alert.Heading>Well done - Enjoy your beer!</Alert.Heading> : "Complete"}</button>
+      </div>
+    )
+  }
+
   formatGrains() {
     if (this.props.task.description.includes("grain")) {
       return this.props.ingredients.grains.map(grain => {
-        return (<p>{grain.item}, {grain.quantity*this.divisor} kg</p>)
+        return (<p>{grain.item}, {grain.quantity*this.divisor.toFixed(2)} kg</p>)
       })
     }
   }
@@ -126,7 +152,7 @@ export class Task extends Component {
     if (this.props.task.description.includes("Weigh")) {
       return this.props.ingredients.hops.map(hop => {
         if (hop.type === "Bittering") {
-          return (<p>{hop.item}, {hop.quantity*this.divisor} g</p>)
+          return (<p>{hop.item}, {(hop.quantity*this.divisor).toFixed(2)} g</p>)
         }
       })
     }
@@ -136,7 +162,7 @@ export class Task extends Component {
     if (this.props.task.description.includes("Weigh")) {
       return this.props.ingredients.hops.map(hop => {
         if (hop.type === "Flavouring") {
-          return (<p>{hop.item}, {hop.quantity*this.divisor} g</p>)
+          return (<p>{hop.item}, {(hop.quantity*this.divisor).toFixed(2)} g</p>)
         }
       })
     }
@@ -146,7 +172,7 @@ export class Task extends Component {
     if (this.props.task.description.includes("Weigh")) {
       return this.props.ingredients.hops.map(hop => {
         if (hop.type === "Aroma") {
-          return (<p>{hop.item}, {hop.quantity*this.divisor} g</p>)
+          return (<p>{hop.item}, {(hop.quantity*this.divisor).toFixed(2)} g</p>)
         }
       })
     }
@@ -154,13 +180,13 @@ export class Task extends Component {
 
   formatStrikeWater(volume) {
     if (this.props.task.description.includes("water")) {
-      return (<p>{(volume*this.divisor).toString()} Litres</p>)
+      return (<p>{(volume*this.divisor).toFixed(2).toString()} Litres</p>)
     }
   }
 
   formatSpargeWater(volume) {
     if (this.props.task.description.includes("sparge")) {
-      return (<p>{(volume*this.divisor).toString()} Litres</p>)
+      return (<p>{(volume*this.divisor).toFixed(2).toString()} Litres</p>)
     }
   }
 

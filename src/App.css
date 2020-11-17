@@ -2,6 +2,40 @@
   text-align: left;
 }
 
+button {
+  background: rgb(247, 252, 0);
+  border-radius: 7.45px !important;
+  box-shadow: 50px, 100px, #ddddcb !important;
+  color: black;
+  outline: none !important;
+  font-family: "Big Shoulders Inline Text" !important;
+}
+
+button:hover {
+  background: rgb(0, 0, 0); /* Green */
+  color: white;
+}
+
+input {
+  background: rgb(255, 230, 5);
+  border-radius: 7.45px !important;
+  outline: none;
+  color: black;
+  font-family: "Big Shoulders Inline Text" !important;
+}
+
+input:hover {
+  background: rgb(0, 0, 0); /* Green */
+  color: white;
+}
+
+.progress {
+  background-color: #ffc107;
+}
+
+.bg-warning {
+  background-color: rgb(14, 136, 95);
+}
 
 .menu {
   height: 100%;
@@ -64,7 +98,7 @@
   text-indent: 0;
   display: block;
   line-height: initial;
-  font-family: 'Big Shoulders Inline Text', cursive;
+  font-family: "Big Shoulders Inline Text", cursive;
 }
 
 .reset-button {
@@ -77,12 +111,12 @@
   text-indent: 0;
   display: block;
   line-height: initial;
-  font-family: 'Big Shoulders Inline Text', cursive;
+  font-family: "Big Shoulders Inline Text", cursive;
 }
 
 .recipesButton {
   font-size: 500px;
-  font-family: 'Big Shoulders Inline Text', cursive;
+  font-family: "Big Shoulders Inline Text", cursive;
 }
 
 @keyframes App-logo-spin {
@@ -93,19 +127,19 @@
     transform: rotate(360deg);
   }
 }
-#alert {
-  position: relative;
+/* #alert {
+  position: fixed;
 }
 #alert:hover:after {
   background: hsla(0, 0%, 0%, 0.8);
   border-radius: 3px;
-  color: #f6f6f6;
+  color: #2e9b40;
   content: "Click to dismiss";
   font: bold 12px/30px sans-serif;
   height: 30px;
-  left: 50%;
-  margin-left: -60px;
-  position: absolute;
+  left: 5%;
+  margin-left: 0px;
+  position: left;
   text-align: center;
   top: 50px;
   width: 120px;
@@ -127,7 +161,7 @@
 }
 .alert {
   animation: alert 1s ease forwards;
-  background-color: #c4453c;
+  background-color: #bb3726;
   background-image: linear-gradient(
     135deg,
     transparent,
@@ -138,19 +172,19 @@
     transparent 75%,
     hsla(0, 0%, 0%, 0.1) 75%,
     hsla(0, 0%, 0%, 0.1)
-  );
-  background-size: 20px 20px;
+  ); */
+/* background-size: 20px 20px;
   box-shadow: 0 5px 0 hsla(0, 0%, 0%, 0.1);
   color: #f6f6f6;
   display: block;
   font: bold 16px/40px sans-serif;
   height: 40px;
-  position: absolute;
+  position: flex;
   text-align: center;
   text-decoration: none;
-  top: -45px;
+  top: 45px;
   width: 100%;
-}
+} */
 @keyframes alert {
   0% {
     opacity: 0;
