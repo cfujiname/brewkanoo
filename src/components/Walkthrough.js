@@ -45,7 +45,7 @@ export class Walkthrough extends Component {
 
   render() {
     return (
-      <div>
+      <div className='steps' style={steps}>
         <h2>Method:</h2>
         <Step key={this.state.counter} stepNumber={this.state.counter + 1} stepContent={this.props.walkthrough[this.state.counter]} potVolume={this.props.potVolume} specs={this.props.specs} ingredients={this.props.ingredients}/>  
         <button onClick={this.handlePreviousStep}>Previous Step</button>
@@ -56,6 +56,10 @@ export class Walkthrough extends Component {
   }
 }
 
+const steps = {
+  position: 'relative',
+  margin: '0',
+}
 export default Walkthrough
 
 
