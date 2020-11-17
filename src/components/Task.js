@@ -98,7 +98,7 @@ export class Task extends Component {
   formatTable(details, details2=null, details3=null) {
     return (
       <div class="table">
-        <table class="inner">
+        <table style={tableStyle}>
           <tr>
             <th>Task</th>
             {details ? <th>Details</th> : null}
@@ -170,6 +170,11 @@ export class Task extends Component {
       return (<p>{temp.toString()} degrees C</p>)
     }
   }
+}
+
+const tableStyle = {
+  border: 'none',
+  boxShadow: 'none'
 }
 
 export default Task

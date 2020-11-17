@@ -10,7 +10,7 @@ class App extends Component {
     return (
       
       <div className="App" style={appStyle}>
-        <h1 className="title" style={titleStyle}><img src="image.png" style={logoStyle}></img> BrewKanoo</h1>
+        <h1 className="title" style={titleStyle}><img src="logo1.png" style={logoStyle}></img> BrewKanoo</h1>
            <RecipesButton recipes={recipes} /> 
       </div>
      
@@ -34,7 +34,7 @@ const appStyle = {
 const logoStyle = {
   textAlign: 'center',
   position: 'relative',
-  width: '80px',
+  width: '120px',
   
 }
 
