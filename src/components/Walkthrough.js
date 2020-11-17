@@ -55,8 +55,9 @@ export class Walkthrough extends Component {
        
         <button onClick={this.handleNextStep} >Next Step</button>  
         {console.log(this.state.counter)}
-
-        <ProgressBar animated now={(100 / this.props.walkthrough.length)  * (this.state.counter)} /> 
+        {console.log(this.props.walkthrough.length)}
+        
+        <ProgressBar variant="warning" animated now={((100 / ((this.props.walkthrough.length - 1) * (this.props.walkthrough.length - 1)) * (this.props.walkthrough.length - 1)) * this.state.counter)} /> 
       </div>
     )
   }
