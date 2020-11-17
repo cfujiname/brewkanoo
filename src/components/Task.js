@@ -144,7 +144,7 @@ export class Task extends Component {
   formatGrains() {
     if (this.props.task.description.includes("grain")) {
       return this.props.ingredients.grains.map(grain => {
-        return (<p>{grain.item}, {grain.quantity*this.divisor} kg</p>)
+        return (<p>{grain.item}, {grain.quantity*this.divisor.toFixed(2)} kg</p>)
       })
     }
   }
@@ -153,7 +153,7 @@ export class Task extends Component {
     if (this.props.task.description.includes("Weigh")) {
       return this.props.ingredients.hops.map(hop => {
         if (hop.type === "Bittering") {
-          return (<p>{hop.item}, {hop.quantity*this.divisor} g</p>)
+          return (<p>{hop.item}, {(hop.quantity*this.divisor).toFixed(2)} g</p>)
         }
       })
     }
@@ -163,7 +163,7 @@ export class Task extends Component {
     if (this.props.task.description.includes("Weigh")) {
       return this.props.ingredients.hops.map(hop => {
         if (hop.type === "Flavouring") {
-          return (<p>{hop.item}, {hop.quantity*this.divisor} g</p>)
+          return (<p>{hop.item}, {(hop.quantity*this.divisor).toFixed(2)} g</p>)
         }
       })
     }
@@ -173,7 +173,7 @@ export class Task extends Component {
     if (this.props.task.description.includes("Weigh")) {
       return this.props.ingredients.hops.map(hop => {
         if (hop.type === "Aroma") {
-          return (<p>{hop.item}, {hop.quantity*this.divisor} g</p>)
+          return (<p>{hop.item}, {(hop.quantity*this.divisor).toFixed(2)} g</p>)
         }
       })
     }
@@ -181,13 +181,13 @@ export class Task extends Component {
 
   formatStrikeWater(volume) {
     if (this.props.task.description.includes("water")) {
-      return (<p>{(volume*this.divisor).toString()} Litres</p>)
+      return (<p>{(volume*this.divisor).toFixed(2).toString()} Litres</p>)
     }
   }
 
   formatSpargeWater(volume) {
     if (this.props.task.description.includes("sparge")) {
-      return (<p>{(volume*this.divisor).toString()} Litres</p>)
+      return (<p>{(volume*this.divisor).toFixed(2).toString()} Litres</p>)
     }
   }
 
