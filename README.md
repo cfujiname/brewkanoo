@@ -1,6 +1,7 @@
 # BrewKanoo - Makers Final Project
 
-https://media.giphy.com/media/lRq5moRRtgFlW4DUfh/giphy.gif
+![gif](https://media.giphy.com/media/lRq5moRRtgFlW4DUfh/giphy.gif)
+
 
                              .sssssssss.
                         .sssssssssssssssssss
