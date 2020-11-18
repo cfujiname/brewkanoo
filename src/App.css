@@ -153,11 +153,17 @@ input:hover {
     top: 0;
   }
 }
-.particles-js-canvas-el {
-  position: static;
 
+.title{
+  margin: 0 auto !important;
+  width: 325%;
+  position: relative;
+  font-size: 100px;
 }
 
-div {
-background-color: transparent;
+.logo{
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: 120px;
 }
