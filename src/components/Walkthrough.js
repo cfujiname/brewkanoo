@@ -47,8 +47,10 @@ export class Walkthrough extends Component {
       <div className='steps'>
         <h2>Method:</h2>
         <Step key={this.state.counter} stepNumber={this.state.counter + 1} stepContent={this.props.walkthrough[this.state.counter]} batchSize={this.props.batchSize} specs={this.props.specs} ingredients={this.props.ingredients}/>
+        <div class="walkthrough-buttons">
         <button onClick={this.handlePreviousStep}>Previous Step</button>
-        <button onClick={this.handleNextStep} >Next Step</button>  
+          <button onClick={this.handleNextStep} >Next Step</button> 
+          </div>  
         <div>
         <ProgressBar variant="success" animated now={((100 / ((this.props.walkthrough.length - 1) * (this.props.walkthrough.length - 1)) * (this.props.walkthrough.length - 1)) * this.state.counter)} /> 
         </div>
@@ -58,7 +60,9 @@ export class Walkthrough extends Component {
         <div className='steps'>
         <h2>Method:</h2>
         <Step key={this.state.counter} stepNumber={this.state.counter + 1} stepContent={this.props.walkthrough[this.state.counter]} batchSize={this.props.batchSize} specs={this.props.specs} ingredients={this.props.ingredients}/>
-        <button onClick={this.handlePreviousStep}>Previous Step</button>
+        <div class="walkthrough-buttons">
+            <button onClick={this.handlePreviousStep}>Previous Step</button>
+            </div>
         <ProgressBar variant="success" animated now={((100 / ((this.props.walkthrough.length - 1) * (this.props.walkthrough.length - 1)) * (this.props.walkthrough.length - 1)) * this.state.counter)} /> 
       </div>)
     }
