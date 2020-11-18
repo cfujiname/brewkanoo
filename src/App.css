@@ -34,8 +34,29 @@
   text-align: left;
 }
 
+.help-info {
+  background-color: #f5db7d;
+  text-align: center;
+  border-radius: 25px;
+  width: 80%;
+}
+
+.volumeForm {
+  position: absolute;
+  left: 50%; 
+  top: 20%;
+  text-align: center;
+  width: 400px;
+}
+
+.volumeFormInput {
+  position: relative;
+  text-align: center;
+  width: 20%;
+}
+
 button {
-  background: rgb(247, 252, 0);
+  background: #F3E139;
   border-radius: 7.45px !important;
   box-shadow: 50px, 100px, #ddddcb !important;
   color: black;

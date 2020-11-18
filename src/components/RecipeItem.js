@@ -18,7 +18,7 @@ export class RecipeItem extends Component {
     return (this.props.recipe.title === this.props.currentRecipe) ? 
     <div>
       <button class="current-recipe-button" style={{ backgroundColor: `${this.props.recipe.specs.colour}` }} onClick={this.handleClickTitle}>{this.props.recipe.title}</button>
-      <div style={formStyle}>
+      <div class="volumeForm">
         <VolumeForm recipe={this.props.recipe}/>
       </div>
     </div> :
@@ -33,13 +33,13 @@ RecipeItem.propTypes = {
   recipeProp: PropTypes.object.isRequired
 }
 
-const formStyle = {
-  position: 'absolute',
-  width: '50%',
-  margin: '0 auto',
-  top: '10px',
-  left: '400px',
-}
+// const formStyle = {
+//   position: 'absolute',
+//   width: '50%',
+//   margin: '0 auto',
+//   top: '10px',
+//   left: '400px',
+// }
 
 
 const titleBtnStyleDiv = {

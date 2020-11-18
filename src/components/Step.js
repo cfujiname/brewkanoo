@@ -20,12 +20,8 @@ export class Step extends Component {
 }
 
   render() {
-
-
     return (
       <div>
-        Step {this.props.stepNumber} <br>
-        </br>
         <table class="stepTable">
           <tr class="tableHeadings">
             <th>Task</th>

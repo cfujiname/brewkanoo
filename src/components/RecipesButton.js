@@ -16,10 +16,10 @@ class RecipesButton extends Component {
   
   render() {
     return (
-    <div style={headingStyle}>      
-      {this.state.recipeButtonClicked ? <div style={allRecipes}><Recipes recipes={this.props.recipes} /> </div> : null  }
-      {this.state.recipeButtonClicked ? null : <img src='button.png' style={btnStyle} onClick={this.clickButton}/> }
-    </div>
+      <div style={headingStyle}>      
+        {this.state.recipeButtonClicked ? <div style={allRecipes}><Recipes recipes={this.props.recipes} /> </div> : null  }
+        {this.state.recipeButtonClicked ? null : <img src='button.png' style={btnStyle} onClick={this.clickButton}/> }
+      </div>
     );
   }
 }
