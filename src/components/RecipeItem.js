@@ -17,6 +17,7 @@ export class RecipeItem extends Component {
   render() {
     return (this.props.recipe.title === this.props.currentRecipe) ? 
     <div style={formStyle}>
+      {this.props.currentRecipe}
       <VolumeForm recipe={this.props.recipe}/>
     </div> :
     <div style={titleBtnStyle}>

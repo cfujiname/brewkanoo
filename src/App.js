@@ -24,6 +24,7 @@ const titleStyle = {
   position: 'relative',
   fontFamily: 'Big Shoulders Inline Text, cursive',
   fontSize: '100px',
+  animation: 'ani1 1s infinite ease'
 }
 
 const appStyle = {
