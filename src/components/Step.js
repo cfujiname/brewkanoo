@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Task from './Task'
+import TaskDescription from './TaskDescription'
 import { Timer } from 'react-countdown-clock-timer'
 
 export class Step extends Component {
@@ -25,21 +26,33 @@ export class Step extends Component {
         Step {this.props.stepNumber} <br>
         </br>
         <table class="stepTable">
-          <tr>
+          <tr class="tableHeadings">
             <th>Task</th>
             <th>Details</th>
             <th>Completed?</th>
           </tr>
-          <tr>    
-            {this.tasks()}
+            <td>{this.taskDescription()}</td>
+            <td>{this.taskDetails()}</td>
+            <td>{this.completedButton()}</td>
             {this.timer()}
-          </tr>
         </table>
       </div>
     )
   }
 
-  tasks() {
+  taskDescription() {
+    return this.props.stepContent.map((task) => (
+      <TaskDescription task={task} />
+    ))
+  }
+
+  taskDetails() {
+    return this.props.stepContent.map((task) => (
+      <Task task={task} specs={this.props.specs} stepNumber={this.props.stepNumber} batchSize={this.props.batchSize} ingredients={this.props.ingredients}/>
+    ))
+  }
+
+  completedButton() {
     return this.props.stepContent.map((task) => (
       <Task task={task} specs={this.props.specs} stepNumber={this.props.stepNumber} batchSize={this.props.batchSize} ingredients={this.props.ingredients}/>
     ))

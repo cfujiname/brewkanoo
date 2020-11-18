@@ -115,9 +115,11 @@ export class Task extends Component {
   formatTable(details, details2=null, details3=null) {
     return (
       <div class="taskRow">
-        <td>{this.props.task.description}<br></br>{this.showButton()}</td>
-        {details ? <td>{details}{details2}{details3}</td> : null}
-        <td><button onClick={this.completed} class="inner">{this.state.complete ? "Certainly!" : "Working on it...."}</button></td>      
+        <tr>
+          <td>{this.props.task.description}<br></br>{this.showButton()}</td>
+          {details ? <td>{details}{details2}{details3}</td> : null}
+          <td><button onClick={this.completed} class="inner">{this.state.complete ? "Certainly!" : "Working on it...."}</button></td>   
+        </tr>   
       </div>
     )
   }

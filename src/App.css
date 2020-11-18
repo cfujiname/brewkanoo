@@ -2,6 +2,16 @@
   text-align: left;
 }
 
+.stepTable {
+  width: 100%;
+}
+
+.tableHeadings {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+}
+
 button {
   background: rgb(247, 252, 0);
   border-radius: 7.45px !important;
