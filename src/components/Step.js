@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
-import Task from './Task'
+import CompletedButton from './CompletedButton'
+import TaskDescription from './TaskDescription'
 import { Timer } from 'react-countdown-clock-timer'
+import TaskDetails from './TaskDetails'
+
 
 export class Step extends Component {
 
   timer() {
-   console.log(this.props.stepContent[0])
     return this.props.stepContent[0].time !== 0 ? <div className='timer-container'>
      <Timer
      durationInSeconds={this.props.stepContent[0].time}
@@ -24,15 +26,38 @@ export class Step extends Component {
       <div>
         Step {this.props.stepNumber} <br>
         </br>
-        {this.tasks()}
-        {this.timer()}
+        <table class="stepTable">
+          <tr class="tableHeadings">
+            <th>Task</th>
+            <th>Details</th>
+            <th>Completed?</th>
+          </tr>
+          <tr class="stepTableData">
+            <td>{this.taskDescription()}</td>
+            <td>{this.taskDetails()}</td>
+            <td>{this.completedButton()}</td>
+            {this.timer()}
+            </tr>
+        </table>
       </div>
     )
   }
 
-  tasks() {
+  taskDescription() {
     return this.props.stepContent.map((task) => (
-      <Task task={task} specs={this.props.specs} stepNumber={this.props.stepNumber} batchSize={this.props.batchSize} ingredients={this.props.ingredients}/>
+      <TaskDescription task={task} />
+    ))
+  }
+
+  taskDetails() {
+    return this.props.stepContent.map((task) => (
+      <TaskDetails task={task} specs={this.props.specs} stepNumber={this.props.stepNumber} batchSize={this.props.batchSize} ingredients={this.props.ingredients}/>
+    ))
+  }
+
+  completedButton() {
+    return this.props.stepContent.map((task) => (
+      <CompletedButton />
     ))
   }
 }

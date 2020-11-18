@@ -3,16 +3,15 @@ import Alert from 'react-bootstrap/Alert'
 
 
 
-export class Task extends Component {
+export class TaskDetails extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      complete: false, startGravity: 1.050 , endGravity: 1.010
+      startGravity: 1.050 , endGravity: 1.010
     };
     this.handleStartGravityChange = this.handleStartGravityChange.bind(this)
     this.handleEndGravityChange = this.handleEndGravityChange.bind(this)
-    this.completed= this.completed.bind(this);
     this.divisor = this.props.batchSize/25;
   }
 
@@ -47,19 +46,6 @@ export class Task extends Component {
     }
   }
 
-  completed() {
-    this.setState({
-      complete: !this.state.complete
-    })
-  }
-
-  formatCompleted() {
-    if (this.state.complete) {
-      return "✓"
-    } else {
-      return "✗"
-    }
-  }
 
   step1() {
     var a = this.formatStrikeWater(this.props.task.strikeWater)
@@ -114,21 +100,8 @@ export class Task extends Component {
 
   formatTable(details, details2=null, details3=null) {
     return (
-      <div class="table">
-        
-        <table style={tableStyle}>
-          <tr>
-            <th>Task</th>
-            {details ? <th>Details</th> : null}
-            <th>Completed?</th>
-          </tr>
-          <tr>    <td>{this.props.task.description}<br></br>{this.showButton()}</td>
-            {details ? <td>{details}{details2}{details3}</td> : null}
-            <td>
-              <button onClick={this.completed} class="inner">{this.state.complete ? "Certainly!" : "Working on it...."}</button></td>
-          </tr>
-        </table>
-        
+      <div class="taskDetails">
+          {details ? <td>{details}{details2}{details3}</td> : null}     
       </div>
     )
   }
@@ -229,4 +202,4 @@ const tableStyle = {
   boxShadow: 'none'
 }
 
-export default Task
+export default TaskDetails
