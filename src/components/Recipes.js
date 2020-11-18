@@ -19,7 +19,7 @@ class Recipes extends Component {
 
   render() {
     return this.props.recipes.map((recipe) => (
-      <div>
+      <div class="allRecipes">
       <RecipeItem key={recipe.id} recipe={recipe} sendData={this.getData} currentRecipe={this.state.recipe}/>
       </div>
     ));
