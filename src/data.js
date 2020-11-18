@@ -31,8 +31,7 @@ export const recipes = [
         { description: "If the temp has reached 25 degrees, sprinkle the dried yeast on top" ,time:0},
         { description: "Fit the airlock and close the container" ,time:0}
       ],
-      [ { description: "When the hydrometer reading has stabilised (around 1-2 weeks), bottle or keg the beer.",time:0 },
-        { description: "Calculate the ABV%"}
+      [ { description: "When the hydrometer reading has stabilised (around 1-2 weeks), bottle or keg the beer.",time:0 }
       ]
     ],
     ingredients: {
@@ -93,7 +92,7 @@ export const recipes = [
               { item: "Cascade Hops", quantity: 57, type: "Aroma" }
             ],
       yeast: {item: "Safale US-05 yeast", quantity: 1 },
-      primingSugar: 3.3
+      primingSugar: 2.9
     },
     equipment: ["A large stock pot","Thermometer", "Fermentation Vessel","Airlock","Hydrometer","Bottles(with caps and capper)/Keg","Siphon tube","Mashing/Sparging bag"],
     specs: {
@@ -143,7 +142,7 @@ export const recipes = [
               { item: "Cascade Hops", quantity: 57, type: "Aroma" }
             ],
       yeast: {item: "Safale US-05 yeast", quantity: 1 },
-      primingSugar: 3.3
+      primingSugar: 2.7
     },
     equipment: ["A large stock pot","Thermometer", "Fermentation Vessel","Airlock","Hydrometer","Bottles(with caps and capper)/Keg","Siphon tube","Mashing/Sparging bag"],
     specs: {
@@ -193,7 +192,7 @@ export const recipes = [
               { item: "Cascade Hops", quantity: 57, type: "Aroma" }
             ],
       yeast: {item: "Safale US-05 yeast", quantity: 1 },
-      primingSugar: 3.3
+      primingSugar: 3.7
     },
     equipment: ["A large stock pot","Thermometer", "Fermentation Vessel","Airlock","Hydrometer","Bottles(with caps and capper)/Keg","Siphon tube","Mashing/Sparging bag"],
     specs: {

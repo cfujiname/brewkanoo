@@ -12,7 +12,6 @@ export class Task extends Component {
     };
     this.handleStartGravityChange = this.handleStartGravityChange.bind(this)
     this.handleEndGravityChange = this.handleEndGravityChange.bind(this)
-    this.onSubmit = this.onSubmit.bind(this)
     this.completed= this.completed.bind(this);
     this.divisor = this.props.batchSize/25;
   }
@@ -98,9 +97,13 @@ export class Task extends Component {
   }
 
   step9() {
-    var a = this.formatPrimingSugar()
-    var b = this.formatABVForm()
-    return this.formatTableLastStep(a, b)
+    return (
+      <div>
+        {this.formatTable(this.formatPrimingSugar())}
+        {this.formatABVForm()}
+        <button onClick={this.completed} class="inner">{this.state.complete ? <Alert.Heading>Well done - Enjoy your beer!</Alert.Heading> : "Complete"}</button>
+      </div>
+    )
   }
 
   formatTable(details, details2=null, details3=null) {
@@ -121,26 +124,22 @@ export class Task extends Component {
       </div>
     )
   }
-  onSubmit(event) {
-    event.preventDefault();
-    this.setState({
-      startGravity: event.target.value
-    })
-  }
 
   formatABVForm() {
     return (
       <div>
         <form>
-          <label><h4>Enter starting hydrometer reading</h4>
-          <input type="number" step='0.001' value={this.state.startGravity} placeholder='1.000' onChange={this.handleStartGravityChange}></input>
-        </label>
-        <label> <h4>Enter final hydrometer reading</h4>
-        <input type="number" step='0.001' value={this.state.endGravity} placeholder='1.000' onChange={this.handleEndGravityChange}></input></label>
-        
-      </form>
+          <div>
+            <label><h4>Enter starting hydrometer reading </h4></label>{' '}
+            <input type="number" step='0.001' value={this.state.startGravity} placeholder='1.000' onChange={this.handleStartGravityChange}></input>
+          </div>
+          <div>
+            <label> <h4>Enter final hydrometer reading </h4></label>{' '}
+            <input type="number" step='0.001' value={this.state.endGravity} placeholder='1.000' onChange={this.handleEndGravityChange}></input>
+          </div>
+        </form>
         <h4>{((this.state.startGravity - this.state.endGravity) * 131.25).toFixed(1)}%ABV</h4>
-        </div>
+      </div>
     )
   }
 
@@ -154,9 +153,7 @@ export class Task extends Component {
   formatTableLastStep(details, details2 = null, details3 = null) {
     
     return (
-      
       <div class="table">
-        
         <table class="inner">
           <tr>
             <th>Task</th>
@@ -169,7 +166,6 @@ export class Task extends Component {
             <td>{this.formatCompleted()}</td>
           </tr>
         </table>
-        <button onClick={this.completed} class="inner">{this.state.complete ? <Alert.Heading>Well done - Enjoy your beer!</Alert.Heading> : "Complete"}</button>
       </div>
     )
   }
