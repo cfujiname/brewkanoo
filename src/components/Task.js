@@ -111,8 +111,8 @@ export class Task extends Component {
           <tr>    <td>{this.props.task.description}</td>
             {details ? <td>{details}{details2}{details3}</td> : null}
             <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title= {this.props.task.info} >
-  Help
-</button>
+              Help
+              </button>
             <td><button onClick={this.completed} class="inner">{this.state.complete ? "Certainly!" : "Working on it...."}</button></td>
           </tr>
         </table>

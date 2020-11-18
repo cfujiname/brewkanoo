@@ -5,7 +5,7 @@ export const recipes = [
     walkthrough: [
 
       [ { description: "Heat the following amount of water to the temperature provided", strikeWater: 15, time:0, info: "take a shit"}, 
-        { description: "Weigh out the following amount of grain and place inside the fermentation vessel",time:0}
+        { description: "Weigh out the following amount of grain and place inside the fermentation vessel",time:0, info: null}
       ],
       [ { description: "Add the water to the grains and start the timer", time: 3600}, 
         { description: "Check the temperature of the liquid - Add boiling or cold water to adjust the temperature to between 65-68 degrees C.",time:0},
