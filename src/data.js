@@ -42,6 +42,7 @@ export const recipes = [
               { item: "Cascade Hops", quantity: 57, type: "Aroma" }
             ],
       yeast: {item: "Safale US-05 yeast", quantity: 1 },
+      primingSugar: 3.3
     },
     equipment: ["A large stock pot","Thermometer", "Fermentation Vessel","Airlock","Hydrometer","Bottles(with caps and capper)/Keg","Siphon tube","Mashing/Sparging bag"],
     specs: {
@@ -91,6 +92,7 @@ export const recipes = [
               { item: "Cascade Hops", quantity: 57, type: "Aroma" }
             ],
       yeast: {item: "Safale US-05 yeast", quantity: 1 },
+      primingSugar: 3.3
     },
     equipment: ["A large stock pot","Thermometer", "Fermentation Vessel","Airlock","Hydrometer","Bottles(with caps and capper)/Keg","Siphon tube","Mashing/Sparging bag"],
     specs: {
@@ -140,6 +142,7 @@ export const recipes = [
               { item: "Cascade Hops", quantity: 57, type: "Aroma" }
             ],
       yeast: {item: "Safale US-05 yeast", quantity: 1 },
+      primingSugar: 3.3
     },
     equipment: ["A large stock pot","Thermometer", "Fermentation Vessel","Airlock","Hydrometer","Bottles(with caps and capper)/Keg","Siphon tube","Mashing/Sparging bag"],
     specs: {
@@ -189,6 +192,7 @@ export const recipes = [
               { item: "Cascade Hops", quantity: 57, type: "Aroma" }
             ],
       yeast: {item: "Safale US-05 yeast", quantity: 1 },
+      primingSugar: 3.3
     },
     equipment: ["A large stock pot","Thermometer", "Fermentation Vessel","Airlock","Hydrometer","Bottles(with caps and capper)/Keg","Siphon tube","Mashing/Sparging bag"],
     specs: {

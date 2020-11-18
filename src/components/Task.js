@@ -95,7 +95,7 @@ export class Task extends Component {
   }
 
   step9() {
-    return this.formatTableLastStep()
+    return this.formatTableLastStep(this.formatPrimingSugar())
   }
 
   formatTable(details, details2=null, details3=null) {
@@ -146,6 +146,10 @@ export class Task extends Component {
         return (<p>{grain.item}, {grain.quantity*this.divisor.toFixed(2)} kg</p>)
       })
     }
+  }
+
+  formatPrimingSugar() {
+    return (<p>{this.props.ingredients.primingSugar} g of priming sugar per 500mL bottle</p>)
   }
 
   formatBitteringHops() {
