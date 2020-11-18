@@ -1,8 +1,8 @@
-body {
+/* body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+} */
 
 
 code {
@@ -10,11 +10,8 @@ code {
 }
 /*Container*/
 body {
-  background-color: black;
+  background-color: transparent;
   font-family: 'Big Shoulders Inline Text', cursive;
-  font-size: 20px;
-  padding: 25px;
-  margin: 0;
   overflow: auto;
 }
  

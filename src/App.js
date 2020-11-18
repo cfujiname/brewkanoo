@@ -10,7 +10,11 @@ class App extends Component {
     return (
       
       <div className="App" style={appStyle}>
-        <h1 className="title" style={titleStyle}><img src="logo1.png" style={logoStyle}></img> BrewKanoo</h1>
+<<<<<<< HEAD
+        <div class="title" ><img class='logo' src="logo1.png"></img> BrewKanoo</div>
+=======
+        <h1 class="title"><img src="logo1.png" style={logoStyle}></img> BrewKanoo</h1>
+>>>>>>> b1e7a80e4b8c3fd52bbac26bb220dc1b054baaa0
            <RecipesButton recipes={recipes} /> 
       </div>
      
@@ -18,26 +22,10 @@ class App extends Component {
   }
 }
 
-const titleStyle = {
-  textAlign: 'center',
-  marginTop: '5px',
-  position: 'relative',
-  fontFamily: 'Big Shoulders Inline Text, cursive',
-  fontSize: '100px',
-  animation: 'ani1 1s infinite ease'
-}
 
 const appStyle = {
   position: 'relative',
   fontFamily: 'Big Shoulders Inline Text, cursive',
-  
-}
-const logoStyle = {
-  textAlign: 'center',
-  position: 'relative',
-  width: '120px',
-  
-}
 
-
+}
 export default App;
