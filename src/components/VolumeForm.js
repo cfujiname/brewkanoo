@@ -6,10 +6,10 @@ import Equipment from './Equipment';
 export class VolumeForm extends Component {
   constructor(props) {
     super(props);
-    this.state = {showDetails: false, potVolume: 25, showForm: true, showWalkthrough: true, showIngredients: false, showEquipment: false};
+    this.state = {showDetails: false, batchSize: 19, showForm: true, showWalkthrough: true, showIngredients: false, showEquipment: false};
 
     this.onSubmit = this.onSubmit.bind(this);
-    this.handlePotVolumeChange = this.handlePotVolumeChange.bind(this);
+    this.handleBatchSizeChange = this.handleBatchSizeChange.bind(this);
     this.handleClickShowForm = this.handleClickShowForm.bind(this);
     this.handleClickWalkthrough = this.handleClickWalkthrough.bind(this);
     this.handleClickIngredients = this.handleClickIngredients.bind(this);
@@ -54,9 +54,9 @@ export class VolumeForm extends Component {
     })
   }
 
-  handlePotVolumeChange(event) {
+  handleBatchSizeChange(event) {
     this.setState({
-      potVolume: event.target.value
+      batchSize: event.target.value
     })
     
   }
@@ -66,8 +66,8 @@ export class VolumeForm extends Component {
                     <button onClick={this.handleClickWalkthrough}>Walkthrough</button>
                     <button onClick={this.handleClickIngredients}>Ingredients</button>
                     <button onClick={this.handleClickEquipment}>Equipment</button>
-                    {this.state.showWalkthrough ? <Walkthrough key={this.props.recipe.id} walkthrough={this.props.recipe.walkthrough} potVolume={this.state.potVolume} specs={this.props.recipe.specs} ingredients={this.props.recipe.ingredients}/> : null }
-                    {this.state.showIngredients ? <Ingredients key={this.props.recipe.id} ingredients={this.props.recipe.ingredients}/> : null }
+                    {this.state.showWalkthrough ? <Walkthrough key={this.props.recipe.id} walkthrough={this.props.recipe.walkthrough} batchSize={this.state.batchSize} specs={this.props.recipe.specs} ingredients={this.props.recipe.ingredients}/> : null }
+      {this.state.showIngredients ? <Ingredients key={this.props.recipe.id} ingredients={this.props.recipe.ingredients} batchSize={this.state.batchSize}/> : null }
                     {this.state.showEquipment ? <Equipment key={this.props.recipe.id} equipment={this.props.recipe.equipment}/> : null }
                   </div>
     let form =  <form style={barStyle}>
@@ -75,7 +75,7 @@ export class VolumeForm extends Component {
                     <h2>How thirsty are you?</h2>
                     <h4>
                       Make {' '}
-                      <input type="number" style={textBoxStyle} value={this.state.potVolume} onChange={this.handlePotVolumeChange}/>
+                      <input type="number" min="4" style={textBoxStyle} value={this.state.batchSize} onChange={this.handleBatchSizeChange}/>
                       {' '} Litres
                     </h4>
                   </label>

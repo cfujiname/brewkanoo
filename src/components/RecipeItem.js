@@ -20,8 +20,8 @@ export class RecipeItem extends Component {
       {this.props.currentRecipe}
       <VolumeForm recipe={this.props.recipe}/>
     </div> :
-    <div style={titleBtnStyle}>
-      <button onClick={this.handleClickTitle}>{this.props.recipe.title}</button>
+    <div style={titleBtnStyleDiv}>
+        <button style={{ backgroundColor: `${this.props.recipe.specs.colour}` }} onClick={this.handleClickTitle}>{this.props.recipe.title}</button>
     </div>;
   }
 }
@@ -39,11 +39,11 @@ const formStyle = {
   left: '400px',
 }
 
-const titleBtnStyle = {
+
+const titleBtnStyleDiv = {
   position: 'relative',
   padding: '10px',
-  width: '350px'
-
+  width: '350px',
 }
 
 export default RecipeItem

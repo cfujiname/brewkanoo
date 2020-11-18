@@ -1,7 +1,7 @@
 export const recipes = [
   {
     id: 1,
-    title: "Ollie's Big Flavor Non-Descript Homebrew",
+    title: "Ollie's Big Flavor Non-Descript Wheat Beer",
     walkthrough: [
 
       [ { description: "Heat the following amount of water to the temperature provided", strikeWater: 15, time:0, info: "take a shit"}, 
@@ -31,21 +31,22 @@ export const recipes = [
         { description: "If the temp has reached 25 degrees, sprinkle the dried yeast on top" ,time:0, info: null},
         { description: "Fit the airlock and close the container" ,time:0, info: null}
       ],
+
       [ { description: "When the hydrometer reading has stabilised (around 1-2 weeks), bottle or keg the beer.",time:0 , info: null}]
 
     ],
     ingredients: {
-      grains: [{ item: "Maris Otter Pale Ale Malt", quantity: 4.7 }, { item: "Crystal Malt", quantity: 0.45 }],
-      hops: [ { item: "Magnum Hops", quantity: 12, type: "Bittering" },
-              { item: "Perle Hops", quantity: 14, type: "Bittering" },
+      grains: [{ item: "Great Western Wheat Malt", quantity: 2.2 }, { item: "Durst Pilsner Malt", quantity: 2.2 }],
+      hops: [ { item: "Hallertau Hops", quantity: 17, type: "Bittering" },
               { item: "Cascade Hops", quantity: 57, type: "Flavouring" },
               { item: "Cascade Hops", quantity: 57, type: "Aroma" }
             ],
       yeast: {item: "Safale US-05 yeast", quantity: 1 },
+      primingSugar: 3.3
     },
     equipment: ["A large stock pot","Thermometer", "Fermentation Vessel","Airlock","Hydrometer","Bottles(with caps and capper)/Keg","Siphon tube","Mashing/Sparging bag"],
     specs: {
-      mashTemp: 68 
+      mashTemp: 68, colour: '#FFF897'
     }
   },
   {
@@ -91,10 +92,11 @@ export const recipes = [
               { item: "Cascade Hops", quantity: 57, type: "Aroma" }
             ],
       yeast: {item: "Safale US-05 yeast", quantity: 1 },
+      primingSugar: 2.9
     },
     equipment: ["A large stock pot","Thermometer", "Fermentation Vessel","Airlock","Hydrometer","Bottles(with caps and capper)/Keg","Siphon tube","Mashing/Sparging bag"],
     specs: {
-      mashTemp: 68 
+      mashTemp: 68, colour: '#F6C101'
     }
   },
   {
@@ -102,12 +104,14 @@ export const recipes = [
     title: "Linus's Lagom Hard Hitting Lager (NOT FOR KIDS)",
     walkthrough: [
 
+
       [ { description: "Heat the following amount of water to the temperature provided", strikeWater: 15, info: null}, 
         { description: "Weigh out the following amount of grain and place inside the fermentation vessel", info: null}
       ],
       [ { description: "Add the water to the grains and start the timer", time: 3600, info: null}, 
         { description: "Check the temperature of the liquid - Add boiling or cold water to adjust the temperature to between 65-68 degrees C.", info: null},
         { description: "Heat the following amount of sparge water to 77 degrees C", spargeWater: 12, info: null}
+
       ],
       [ { description: "Strain the liquid back into the boiling pot", info: null },
         { description: "In a few batches rinse the grains with the sparge water, each time pouring the amber liquid into the boiling pot" , info: null}
@@ -140,16 +144,18 @@ export const recipes = [
               { item: "Cascade Hops", quantity: 57, type: "Aroma" }
             ],
       yeast: {item: "Safale US-05 yeast", quantity: 1 },
+      primingSugar: 2.7
     },
     equipment: ["A large stock pot","Thermometer", "Fermentation Vessel","Airlock","Hydrometer","Bottles(with caps and capper)/Keg","Siphon tube","Mashing/Sparging bag"],
     specs: {
-      mashTemp: 68 
+      mashTemp: 68, colour: '#ffe066' 
     }
   },
   {
     id: 4,
-    title: "Cristina's Big Boy (PREMIUM)",
+    title: "Cristina's Big Boy Porter (PREMIUM)",
     walkthrough: [
+
 
       [ { description: "Heat the following amount of water to the temperature provided", strikeWater: 15, info: null}, 
         { description: "Weigh out the following amount of grain and place inside the fermentation vessel", info: null}
@@ -189,10 +195,11 @@ export const recipes = [
               { item: "Cascade Hops", quantity: 57, type: "Aroma" }
             ],
       yeast: {item: "Safale US-05 yeast", quantity: 1 },
+      primingSugar: 3.7
     },
     equipment: ["A large stock pot","Thermometer", "Fermentation Vessel","Airlock","Hydrometer","Bottles(with caps and capper)/Keg","Siphon tube","Mashing/Sparging bag"],
     specs: {
-      mashTemp: 68 
+      mashTemp: 68, colour: '#DF8D03'
     }
   }]
 

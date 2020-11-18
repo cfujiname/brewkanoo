@@ -32,7 +32,7 @@ export class Step extends Component {
 
   tasks() {
     return this.props.stepContent.map((task) => (
-      <Task task={task} specs={this.props.specs} stepNumber={this.props.stepNumber} potVolume={this.props.potVolume} ingredients={this.props.ingredients}/>
+      <Task task={task} specs={this.props.specs} stepNumber={this.props.stepNumber} batchSize={this.props.batchSize} ingredients={this.props.ingredients}/>
     ))
   }
 }

@@ -32,7 +32,13 @@ export class Walkthrough extends Component {
        formatted={false}
        isPaused={true}
        showPauseButton={true}
-       showResetButton={true}
+          showResetButton={true}
+          onPause = {(remainingDuration)=> {
+        console.log('Triggered when the timer is paused', remainingDuration)
+      }}
+       onFinish = {()=> {
+        console.log('Triggered when the timer finishes')
+      }}
        />
      </div> : null;
 
@@ -43,7 +49,7 @@ export class Walkthrough extends Component {
     return (
       <div className='steps' style={steps}>
         <h2>Method:</h2>
-        <Step key={this.state.counter} stepNumber={this.state.counter + 1} stepContent={this.props.walkthrough[this.state.counter]} potVolume={this.props.potVolume} specs={this.props.specs} ingredients={this.props.ingredients}/>
+        <Step key={this.state.counter} stepNumber={this.state.counter + 1} stepContent={this.props.walkthrough[this.state.counter]} batchSize={this.props.batchSize} specs={this.props.specs} ingredients={this.props.ingredients}/>
         <button onClick={this.handlePreviousStep}>Previous Step</button>
         <button onClick={this.handleNextStep} >Next Step</button>  
         {console.log(this.state.counter)}
@@ -56,7 +62,7 @@ export class Walkthrough extends Component {
       return (
         <div className='steps' style={steps}>
         <h2>Method:</h2>
-        <Step key={this.state.counter} stepNumber={this.state.counter + 1} stepContent={this.props.walkthrough[this.state.counter]} potVolume={this.props.potVolume} specs={this.props.specs} ingredients={this.props.ingredients}/>
+        <Step key={this.state.counter} stepNumber={this.state.counter + 1} stepContent={this.props.walkthrough[this.state.counter]} batchSize={this.props.batchSize} specs={this.props.specs} ingredients={this.props.ingredients}/>
         <button onClick={this.handlePreviousStep}>Previous Step</button>
         
           <ProgressBar variant="success" animated now={((100 / ((this.props.walkthrough.length - 1) * (this.props.walkthrough.length - 1)) * (this.props.walkthrough.length - 1)) * this.state.counter)} /> 
