@@ -1,7 +1,7 @@
 export const recipes = [
   {
     id: 1,
-    title: "Ollie's Big Flavor Non-Descript Homebrew",
+    title: "Ollie's Big Flavor Non-Descript Wheat Beer",
     walkthrough: [
 
       [ { description: "Heat the following amount of water to the temperature provided", strikeWater: 13.4, time:5}, 
@@ -35,9 +35,8 @@ export const recipes = [
       ]
     ],
     ingredients: {
-      grains: [{ item: "Maris Otter Pale Ale Malt", quantity: 4.7 }, { item: "Crystal Malt", quantity: 0.45 }],
-      hops: [ { item: "Magnum Hops", quantity: 12, type: "Bittering" },
-              { item: "Perle Hops", quantity: 14, type: "Bittering" },
+      grains: [{ item: "Great Western Wheat Malt", quantity: 2.2 }, { item: "Durst Pilsner Malt", quantity: 2.2 }],
+      hops: [ { item: "Hallertau Hops", quantity: 17, type: "Bittering" },
               { item: "Cascade Hops", quantity: 57, type: "Flavouring" },
               { item: "Cascade Hops", quantity: 57, type: "Aroma" }
             ],
@@ -54,12 +53,12 @@ export const recipes = [
     title: "Richard's No Nonsense Pale Ale",
     walkthrough: [
 
-      [ { description: "Heat the following amount of water to the temperature provided", strikeWater: 15}, 
+      [ { description: "Heat the following amount of water to the temperature provided", strikeWater: 13.4}, 
         { description: "Weigh out the following amount of grain and place inside the fermentation vessel"}
       ],
       [ { description: "Add the water to the grains and start the timer", time: 3600}, 
         { description: "Check the temperature of the liquid - Add boiling or cold water to adjust the temperature to between 65-68 degrees C."},
-        { description: "Heat the following amount of sparge water to 77 degrees C", spargeWater: 12}
+        { description: "Heat the following amount of sparge water to 77 degrees C", spargeWater: 23}
       ],
       [ { description: "Strain the liquid back into the boiling pot" },
         { description: "In a few batches rinse the grains with the sparge water, each time pouring the amber liquid into the boiling pot" }
@@ -104,12 +103,12 @@ export const recipes = [
     title: "Linus's Lagom Hard Hitting Lager (NOT FOR KIDS)",
     walkthrough: [
 
-      [ { description: "Heat the following amount of water to the temperature provided", strikeWater: 15}, 
+      [ { description: "Heat the following amount of water to the temperature provided", strikeWater: 13.4}, 
         { description: "Weigh out the following amount of grain and place inside the fermentation vessel"}
       ],
       [ { description: "Add the water to the grains and start the timer", time: 3600}, 
         { description: "Check the temperature of the liquid - Add boiling or cold water to adjust the temperature to between 65-68 degrees C."},
-        { description: "Heat the following amount of sparge water to 77 degrees C", spargeWater: 12}
+        { description: "Heat the following amount of sparge water to 77 degrees C", spargeWater: 23}
       ],
       [ { description: "Strain the liquid back into the boiling pot" },
         { description: "In a few batches rinse the grains with the sparge water, each time pouring the amber liquid into the boiling pot" }
@@ -151,15 +150,15 @@ export const recipes = [
   },
   {
     id: 4,
-    title: "Cristina's Big Boy (PREMIUM)",
+    title: "Cristina's Big Boy Porter (PREMIUM)",
     walkthrough: [
 
-      [ { description: "Heat the following amount of water to the temperature provided", strikeWater: 15}, 
+      [ { description: "Heat the following amount of water to the temperature provided", strikeWater: 13.4}, 
         { description: "Weigh out the following amount of grain and place inside the fermentation vessel"}
       ],
       [ { description: "Add the water to the grains and start the timer", time: 3600}, 
         { description: "Check the temperature of the liquid - Add boiling or cold water to adjust the temperature to between 65-68 degrees C."},
-        { description: "Heat the following amount of sparge water to 77 degrees C", spargeWater: 12}
+        { description: "Heat the following amount of sparge water to 77 degrees C", spargeWater: 23}
       ],
       [ { description: "Strain the liquid back into the boiling pot" },
         { description: "In a few batches rinse the grains with the sparge water, each time pouring the amber liquid into the boiling pot" }
