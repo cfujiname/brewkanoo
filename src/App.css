@@ -85,7 +85,7 @@ input:hover {
 .steps {
   max-width: 500 px;
   max-height: 500;
-  position: fixed;
+  position: absolute;
   margin-top: 30px;
   margin-bottom: 50px;
   width: 800px;
@@ -94,7 +94,7 @@ input:hover {
 .stepTable {
   max-width: 500 px;
   max-height: 500;
-  position: fixed;
+  position: absolute;
   margin-top: 80px;
   margin-bottom: 50px;
   width: 800px;
@@ -219,6 +219,6 @@ input:hover {
 }
 
 .walkthrough-buttons {
-  position: fixed;
+  position: absolute;
   margin-top: 400px;
 }
