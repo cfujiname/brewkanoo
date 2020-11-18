@@ -101,7 +101,7 @@ export class Task extends Component {
       <div>
         {this.formatTable(this.formatPrimingSugar())}
         {this.formatABVForm()}
-        <button onClick={this.completed} class="inner">{this.state.complete ? <Alert.Heading>Well done - Enjoy your beer!</Alert.Heading> : "Complete"}</button>
+        {this.state.complete ? <Alert.Heading>Well done - Enjoy your beer!</Alert.Heading> : null }
       </div>
     )
   }
@@ -148,26 +148,6 @@ export class Task extends Component {
   }
   handleEndGravityChange(event) {
     this.setState({endGravity: event.target.value})
-  }
-
-  formatTableLastStep(details, details2 = null, details3 = null) {
-    
-    return (
-      <div class="table">
-        <table class="inner">
-          <tr>
-            <th>Task</th>
-            {details ? <th>Details</th> : null}
-            <th>Completed</th>
-          </tr>
-          <tr>
-            <td>{this.props.task.description}</td>
-            {details ? <td>{details}{details2}{details3}</td> : null}
-            <td>{this.formatCompleted()}</td>
-          </tr>
-        </table>
-      </div>
-    )
   }
 
   formatGrains() {
