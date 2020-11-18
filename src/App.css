@@ -2,22 +2,24 @@
   text-align: left;
 }
 
+
 .allRecipes {
   margin-left: 5px;
 
 }
 
-#particles-js{
+#particles-js {
+
   width: 100%;
   height: 100%;
   position: fixed;
-  background-color:rgb(255, 208, 0);
+  background-color: rgb(255, 208, 0);
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
 
-.body-particles{
+.body-particles {
   position: absolute;
   top: 0;
   left: 0;
@@ -120,9 +122,13 @@ input:hover {
 }
 
 .progress {
-  margin-top: 60px;
-  background-color: #ffc107;
+  margin-top: 550;
+  display: flex;
+  height: 40px;
+  overflow: hidden;
+  background-color: #d28f09 !important;
 }
+
 .timer-container {
   margin-left: 20px;
 }
@@ -148,8 +154,19 @@ input:hover {
 }
 
 .steps {
-  position: relative;
-  margin-top: 70px;
+  max-width: 500 px;
+  max-height: 500;
+  position: fixed;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  width: 800px;
+}
+
+.stepTable {
+  max-width: 500 px;
+  max-height: 500;
+  position: fixed;
+  margin-top: 80px;
   margin-bottom: 50px;
   width: 800px;
 }
@@ -258,16 +275,21 @@ input:hover {
   }
 }
 
-.title{
+.title {
   margin: 0 auto !important;
   width: 325%;
   position: relative;
   font-size: 100px;
 }
 
-.logo{
+.logo {
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  width: 120px; 
+  width: 120px;
+}
+
+.walkthrough-buttons {
+  position: fixed;
+  margin-top: 400px;
 }
