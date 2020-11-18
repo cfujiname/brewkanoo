@@ -106,21 +106,29 @@ export class Task extends Component {
     )
   }
 
+  showButton(){
+      if(this.props.task.info !== null ) {
+      return<button type="button" class="help-button" data-toggle="tooltip" data-placement="top" title= {this.props.task.info} > ? </button>
+    }
+  }
+
   formatTable(details, details2=null, details3=null) {
     return (
       <div class="table">
+        
         <table style={tableStyle}>
           <tr>
             <th>Task</th>
             {details ? <th>Details</th> : null}
             <th>Completed?</th>
           </tr>
-          <tr>
-            <td>{this.props.task.description}</td>
+          <tr>    <td>{this.props.task.description}<br></br>{this.showButton()}</td>
             {details ? <td>{details}{details2}{details3}</td> : null}
-            <td><button onClick={this.completed} class="inner">{this.state.complete ? "Certainly!" : "Working on it...."}</button></td>
+            <td>
+              <button onClick={this.completed} class="inner">{this.state.complete ? "Certainly!" : "Working on it...."}</button></td>
           </tr>
         </table>
+        
       </div>
     )
   }
@@ -213,6 +221,8 @@ export class Task extends Component {
     }
   }
 }
+
+ 
 
 const tableStyle = {
   border: 'none',
