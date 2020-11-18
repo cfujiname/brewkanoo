@@ -2,6 +2,10 @@
   text-align: left;
 }
 
+.allRecipes {
+  margin-left: 5px;
+
+}
 
 #particles-js{
   width: 100%;
@@ -62,11 +66,21 @@ button {
   color: black;
   outline: none !important;
   font-family: "Big Shoulders Inline Text" !important;
+  text-shadow:
+    -1px -1px 0 #F3E139,
+    1px -1px 0 #F3E139,
+    -1px 1px 0 #F3E139,
+    1px 1px 0 #F3E139;
 }
 
 button:hover {
-  background: rgb(0, 0, 0); /* Green */
-  color: white;
+  background: rgb(0, 0, 0);
+  color: rgb(39, 65, 17);
+  text-shadow:
+    -1px -1px 0 #f8cf5d,
+    1px -1px 0 #f8cf5d,
+    -1px 1px 0 #f8cf5d,
+    1px 1px 0 #f8cf5d; 
 }
 
 .current-recipe-button {
@@ -74,6 +88,22 @@ button:hover {
   padding: 10px;
   width: 350px;
   font-size: 30px; 
+  text-shadow:
+    -1px -1px 0 #F3E139,
+    1px -1px 0 #F3E139,
+    -1px 1px 0 #F3E139,
+    1px 1px 0 #F3E139; 
+}
+
+.recipe-button {
+  position: relative;
+  padding: 10px;
+  width: 350px;
+  text-shadow:
+    -1px -1px 0 #F3E139,
+    1px -1px 0 #F3E139,
+    -1px 1px 0 #F3E139,
+    1px 1px 0 #F3E139; 
 }
 
 input {
@@ -98,6 +128,7 @@ input:hover {
 }
 
 .completed-button {
+  margin-bottom: 15px;
   width: 110px;
 }
 .steps {
