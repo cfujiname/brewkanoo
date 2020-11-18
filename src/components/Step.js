@@ -24,8 +24,17 @@ export class Step extends Component {
       <div>
         Step {this.props.stepNumber} <br>
         </br>
-        {this.tasks()}
-        {this.timer()}
+        <table class="stepTable">
+          <tr>
+            <th>Task</th>
+            <th>Details</th>
+            <th>Completed?</th>
+          </tr>
+          <tr>    
+            {this.tasks()}
+            {this.timer()}
+          </tr>
+        </table>
       </div>
     )
   }

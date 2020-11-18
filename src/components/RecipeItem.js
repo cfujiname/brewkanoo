@@ -35,7 +35,7 @@ const formStyle = {
   position: 'absolute',
   width: '50%',
   margin: '0 auto',
-  top: '150px',
+  top: '10px',
   left: '400px',
 }
 
