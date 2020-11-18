@@ -8,7 +8,7 @@ export class TaskDescription extends Component {
   }
 }
   render() {
-    return <p>{this.props.task.description}</p>
+    return <p>{this.props.task.description}{'\n'}{this.showButton()}</p>
   }
 }
 
