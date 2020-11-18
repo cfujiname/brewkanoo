@@ -9,7 +9,7 @@ export const recipes = [
       ],
       [ { description: "Add the water to the grains and start the timer", time: 3600}, 
         { description: "Check the temperature of the liquid - Add boiling or cold water to adjust the temperature to between 65-68 degrees C.",time:0},
-        { description: "Heat the following amount of sparge water to 77 degrees C", spargeWater: 12,time:0}
+        { description: "Heat the following amount of sparge water to 77 degrees C", spargeWater: 23,time:0}
       ],
       [ { description: "Strain the liquid back into the boiling pot" ,time:0},
         { description: "In a few batches rinse the grains with the sparge water, each time pouring the amber liquid into the boiling pot",time:0 }
@@ -45,7 +45,7 @@ export const recipes = [
     },
     equipment: ["A large stock pot","Thermometer", "Fermentation Vessel","Airlock","Hydrometer","Bottles(with caps and capper)/Keg","Siphon tube","Mashing/Sparging bag"],
     specs: {
-      mashTemp: 68 
+      mashTemp: 68, colour: '#FFF897'
     }
   },
   {
@@ -94,7 +94,7 @@ export const recipes = [
     },
     equipment: ["A large stock pot","Thermometer", "Fermentation Vessel","Airlock","Hydrometer","Bottles(with caps and capper)/Keg","Siphon tube","Mashing/Sparging bag"],
     specs: {
-      mashTemp: 68 
+      mashTemp: 68, colour: '#F6C101'
     }
   },
   {
@@ -143,7 +143,7 @@ export const recipes = [
     },
     equipment: ["A large stock pot","Thermometer", "Fermentation Vessel","Airlock","Hydrometer","Bottles(with caps and capper)/Keg","Siphon tube","Mashing/Sparging bag"],
     specs: {
-      mashTemp: 68 
+      mashTemp: 68, colour: '#ffe066' 
     }
   },
   {
@@ -192,7 +192,7 @@ export const recipes = [
     },
     equipment: ["A large stock pot","Thermometer", "Fermentation Vessel","Airlock","Hydrometer","Bottles(with caps and capper)/Keg","Siphon tube","Mashing/Sparging bag"],
     specs: {
-      mashTemp: 68 
+      mashTemp: 68, colour: '#DF8D03'
     }
   }]
 
