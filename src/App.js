@@ -10,11 +10,7 @@ class App extends Component {
     return (
       
       <div className="App" style={appStyle}>
-<<<<<<< HEAD
         <div class="title" ><img class='logo' src="logo1.png"></img> BrewKanoo</div>
-=======
-        <h1 class="title"><img src="logo1.png" style={logoStyle}></img> BrewKanoo</h1>
->>>>>>> b1e7a80e4b8c3fd52bbac26bb220dc1b054baaa0
            <RecipesButton recipes={recipes} /> 
       </div>
      
