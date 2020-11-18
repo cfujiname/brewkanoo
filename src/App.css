@@ -9,6 +9,10 @@
 .tableHeadings {
   padding-top: 12px;
   padding-bottom: 12px;
+  text-align: center;
+}
+
+.stepTableData {
   text-align: left;
 }
 
@@ -40,7 +44,21 @@ input:hover {
 }
 
 .progress {
+  margin-top: 60px;
   background-color: #ffc107;
+}
+.timer-container {
+  margin-left: 20px;
+}
+
+.completed-button {
+  width: 110px;
+}
+.steps {
+  position: relative;
+  margin-top: 70px;
+  margin-bottom: 50px;
+  width: 800px;
 }
 
 .bg-warning {
@@ -221,7 +239,7 @@ input:hover {
   text-align: center;
   padding: 5px 0;
   border-radius: 6px;
- 
+
   /* Position the tooltip text - see examples below! */
   position: absolute;
   z-index: 1;

@@ -44,31 +44,31 @@ export class Walkthrough extends Component {
   render() {
     if(this.state.counter < this.props.walkthrough.length - 1){
     return (
-      <div className='steps' style={steps}>
+      <div className='steps'>
         <h2>Method:</h2>
         <Step key={this.state.counter} stepNumber={this.state.counter + 1} stepContent={this.props.walkthrough[this.state.counter]} batchSize={this.props.batchSize} specs={this.props.specs} ingredients={this.props.ingredients}/>
         <button onClick={this.handlePreviousStep}>Previous Step</button>
         <button onClick={this.handleNextStep} >Next Step</button>  
-        <ProgressBar variant="success" animated now={((100 / ((this.props.walkthrough.length - 1) * (this.props.walkthrough.length - 1)) * (this.props.walkthrough.length - 1)) * this.state.counter)} /> 
+        <br></br>
+        <div>
+          <ProgressBar variant="success" animated now={((100 / ((this.props.walkthrough.length - 1) * (this.props.walkthrough.length - 1)) * (this.props.walkthrough.length - 1)) * this.state.counter)} /> 
+          </div>
       </div>)
     }else{
       return (
-        <div className='steps' style={steps}>
+        <div className='steps'>
         <h2>Method:</h2>
         <Step key={this.state.counter} stepNumber={this.state.counter + 1} stepContent={this.props.walkthrough[this.state.counter]} batchSize={this.props.batchSize} specs={this.props.specs} ingredients={this.props.ingredients}/>
         <button onClick={this.handlePreviousStep}>Previous Step</button>
-        
-          <ProgressBar variant="success" animated now={((100 / ((this.props.walkthrough.length - 1) * (this.props.walkthrough.length - 1)) * (this.props.walkthrough.length - 1)) * this.state.counter)} /> 
+            
+               <ProgressBar variant="success" animated now={((100 / ((this.props.walkthrough.length - 1) * (this.props.walkthrough.length - 1)) * (this.props.walkthrough.length - 1)) * this.state.counter)} /> 
+            
       </div>)
     }
   }
 }
 
-const steps = {
-  position: 'relative',
-  margin: '0',
-  width: '800px'
-}
+
 export default Walkthrough
 
 
