@@ -4,7 +4,7 @@ export const recipes = [
     title: "Ollie's Big Flavor Non-Descript Homebrew",
     walkthrough: [
 
-      [ { description: "Heat the following amount of water to the temperature provided", strikeWater: 15, time:0}, 
+      [ { description: "Heat the following amount of water to the temperature provided", strikeWater: 15, time:0, info: "take a shit"}, 
         { description: "Weigh out the following amount of grain and place inside the fermentation vessel",time:0}
       ],
       [ { description: "Add the water to the grains and start the timer", time: 3600}, 
