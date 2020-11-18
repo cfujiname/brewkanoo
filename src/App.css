@@ -30,6 +30,13 @@ button:hover {
   color: white;
 }
 
+.current-recipe-button {
+  position: relative;
+  padding: 10px;
+  width: 350px;
+  font-size: 30px; 
+}
+
 input {
   background: rgb(255, 230, 5);
   border-radius: 7.45px !important;
