@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export class Ingredients extends Component {
   render() {
-    const divisor = this.props.potVolume/25
+    const divisor = this.props.batchSize/25
 
     return (
       

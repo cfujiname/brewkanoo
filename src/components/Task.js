@@ -11,7 +11,7 @@ export class Task extends Component {
       complete: false
     };
     this.completed= this.completed.bind(this);
-    this.divisor = this.props.potVolume/25;
+    this.divisor = this.props.batchSize/25;
   }
 
   render() {
