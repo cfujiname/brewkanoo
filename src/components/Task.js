@@ -100,7 +100,7 @@ export class Task extends Component {
 
   showButton(){
       if(this.props.task.info !== null ) {
-      return<button type="button" class="help-button" data-toggle="tooltip" data-placement="top" title= {this.props.task.info} > Help </button>
+      return<button type="button" class="help-button" data-toggle="tooltip" data-placement="top" title= {this.props.task.info} > ? </button>
     }
   }
 
