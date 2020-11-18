@@ -67,7 +67,7 @@ export class VolumeForm extends Component {
                     <button onClick={this.handleClickIngredients}>Ingredients</button>
                     <button onClick={this.handleClickEquipment}>Equipment</button>
                     {this.state.showWalkthrough ? <Walkthrough key={this.props.recipe.id} walkthrough={this.props.recipe.walkthrough} potVolume={this.state.potVolume} specs={this.props.recipe.specs} ingredients={this.props.recipe.ingredients}/> : null }
-                    {this.state.showIngredients ? <Ingredients key={this.props.recipe.id} ingredients={this.props.recipe.ingredients}/> : null }
+      {this.state.showIngredients ? <Ingredients key={this.props.recipe.id} ingredients={this.props.recipe.ingredients} potVolume={this.state.potVolume}/> : null }
                     {this.state.showEquipment ? <Equipment key={this.props.recipe.id} equipment={this.props.recipe.equipment}/> : null }
                   </div>
     let form =  <form style={barStyle}>
