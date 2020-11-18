@@ -31,8 +31,9 @@ export const recipes = [
         { description: "If the temp has reached 25 degrees, sprinkle the dried yeast on top" ,time:0},
         { description: "Fit the airlock and close the container" ,time:0}
       ],
-      [ { description: "When the hydrometer reading has stabilised (around 1-2 weeks), bottle or keg the beer.",time:0 }]
-
+      [ { description: "When the hydrometer reading has stabilised (around 1-2 weeks), bottle or keg the beer.",time:0 },
+        { description: "Calculate the ABV%"}
+      ]
     ],
     ingredients: {
       grains: [{ item: "Maris Otter Pale Ale Malt", quantity: 4.7 }, { item: "Crystal Malt", quantity: 0.45 }],

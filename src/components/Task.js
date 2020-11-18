@@ -95,7 +95,9 @@ export class Task extends Component {
   }
 
   step9() {
-    return this.formatTableLastStep(this.formatPrimingSugar())
+    var a = this.formatPrimingSugar()
+    var b = this.formatABVForm()
+    return this.formatTableLastStep(a, b)
   }
 
   formatTable(details, details2=null, details3=null) {
@@ -114,6 +116,12 @@ export class Task extends Component {
           </tr>
         </table>
       </div>
+    )
+  }
+
+  formatABVForm() {
+    return (
+      <h1> hi</h1>
     )
   }
 
@@ -149,7 +157,9 @@ export class Task extends Component {
   }
 
   formatPrimingSugar() {
-    return (<p>{this.props.ingredients.primingSugar} g of priming sugar per 500mL bottle</p>)
+    if (this.props.task.description.includes("bottle")) {
+      return (<p>{this.props.ingredients.primingSugar} g of priming sugar per 500mL bottle</p>)
+    }
   }
 
   formatBitteringHops() {
