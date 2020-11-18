@@ -2,6 +2,7 @@
   text-align: left;
 }
 
+
 #particles-js{
   width: 100%;
   height: 100%;
@@ -17,6 +18,19 @@
   top: 0;
   left: 0;
   z-index: 100;
+
+.stepTable {
+  width: 100%;
+}
+
+.tableHeadings {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+}
+
+.stepTableData {
+  text-align: left;
 }
 
 button {
@@ -33,6 +47,13 @@ button:hover {
   color: white;
 }
 
+.current-recipe-button {
+  position: relative;
+  padding: 10px;
+  width: 350px;
+  font-size: 30px; 
+}
+
 input {
   background: rgb(255, 230, 5);
   border-radius: 7.45px !important;
@@ -47,7 +68,21 @@ input:hover {
 }
 
 .progress {
+  margin-top: 60px;
   background-color: #ffc107;
+}
+.timer-container {
+  margin-left: 20px;
+}
+
+.completed-button {
+  width: 110px;
+}
+.steps {
+  position: relative;
+  margin-top: 70px;
+  margin-bottom: 50px;
+  width: 800px;
 }
 
 .bg-warning {
@@ -165,5 +200,5 @@ input:hover {
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  width: 120px;
+  width: 120px; 
 }
