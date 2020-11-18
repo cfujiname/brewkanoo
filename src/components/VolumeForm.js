@@ -75,7 +75,7 @@ export class VolumeForm extends Component {
                     <h2>How thirsty are you?</h2>
                     <h4>
                       Make {' '}
-                      <input type="number" style={textBoxStyle} value={this.state.potVolume} onChange={this.handlePotVolumeChange}/>
+                      <input type="number" min="0" style={textBoxStyle} value={this.state.potVolume} onChange={this.handlePotVolumeChange}/>
                       {' '} Litres
                     </h4>
                   </label>
