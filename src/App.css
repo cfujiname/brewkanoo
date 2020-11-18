@@ -211,21 +211,29 @@ input:hover {
 }
 
 .title {
-  margin: 0 auto !important;
-  width: 325%;
+  /* margin: 0 auto !important; */
+  /* width: 325%; */
   position: relative;
-  font-size: 100px;
-  font-family: "Big Shoulders Inline Text" !important;
-
+  font-size: 120px;
+  /* font-family: "Big Shoulders Inline Text" !important;  */
+  margin: auto !important;
+  width: 50% !important;
+  display: inline-flex;
 }
 
 .logo {
-  margin-left: auto;
-  margin-right: auto;
+  margin-top:35px;
   position: relative;
   width: 200px; 
+  display: block;
+
 }
 
 .buttonRecipes {
-
+  /* margin-top:35px; */
+  position: relative;
+  /* width: 50px;  */
+  display: inline-flex;
+  /* margin: auto !important; */
+  width: 50% !important;
 }
