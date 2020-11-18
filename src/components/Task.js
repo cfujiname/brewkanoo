@@ -8,9 +8,10 @@ export class Task extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      complete: false, startGravity: 0.001 , endGravity: 0
+      complete: false, startGravity: 1.050 , endGravity: 1.010
     };
     this.handleStartGravityChange = this.handleStartGravityChange.bind(this)
+    this.handleEndGravityChange = this.handleEndGravityChange.bind(this)
     this.onSubmit = this.onSubmit.bind(this)
     this.completed= this.completed.bind(this);
     this.divisor = this.props.batchSize/25;
@@ -129,17 +130,25 @@ export class Task extends Component {
 
   formatABVForm() {
     return (
+      <div>
         <form>
           <label><h4>Enter starting hydrometer reading</h4>
           <input type="number" step='0.001' value={this.state.startGravity} placeholder='1.000' onChange={this.handleStartGravityChange}></input>
         </label>
-        <input onClick={this.onSubmit} type="submit" value="Submit" />
-          </form>
+        <label> <h4>Enter final hydrometer reading</h4>
+        <input type="number" step='0.001' value={this.state.endGravity} placeholder='1.000' onChange={this.handleEndGravityChange}></input></label>
+        
+      </form>
+        <h4>{((this.state.startGravity - this.state.endGravity) * 131.25).toFixed(1)}%ABV</h4>
+        </div>
     )
   }
 
   handleStartGravityChange(event) {
     this.setState({startGravity: event.target.value})
+  }
+  handleEndGravityChange(event) {
+    this.setState({endGravity: event.target.value})
   }
 
   formatTableLastStep(details, details2 = null, details3 = null) {
