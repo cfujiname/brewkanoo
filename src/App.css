@@ -131,6 +131,22 @@ input:hover {
   margin-bottom: 15px;
   width: 110px;
 }
+
+.taskColumn {
+  font-size: 22px;
+  width: 800px;
+}
+
+.detailsColumn {
+  font-size: 22px;
+  width: 130px;
+}
+
+.completedColumn {
+  font-size: 22px;
+  width: 100px;
+}
+
 .steps {
   position: relative;
   margin-top: 70px;
