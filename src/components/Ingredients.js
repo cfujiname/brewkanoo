@@ -6,7 +6,7 @@ export class Ingredients extends Component {
     const divisor = this.props.batchSize/25
 
     return (
-      <div>
+      <div class="ingredients" >
         <h2>Ingredients List: </h2>
         <h4>Grains:</h4>
         {this.props.ingredients.grains.map((grain) =>(

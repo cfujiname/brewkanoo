@@ -10,6 +10,24 @@
   /* text-align: left; */
 }
 
+.ingredients{
+  font-family: "Big Shoulders Inline Text" !important;
+  font-size: 20px;
+  position: absolute;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  width: 800px;
+}
+
+.equipment{
+  font-family: "Big Shoulders Inline Text" !important;
+  font-size: 20px;
+  position: absolute;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  width: 800px;
+}
+
 
 
 h2 {
@@ -75,6 +93,12 @@ h4 {
   position: relative;
   text-align: center;
   width: 20%;
+}
+
+.tabButton{
+ font-size: 20px;
+ margin-left: 5px;
+ padding:5px;
 }
 
 button {
