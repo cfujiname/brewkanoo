@@ -199,7 +199,7 @@ export const recipes = [
     },
     equipment: ["A large stock pot","Thermometer", "Fermentation Vessel","Airlock","Hydrometer","Bottles(with caps and capper)/Keg","Siphon tube","Mashing/Sparging bag"],
     specs: {
-      mashTemp: 68, colour: '#DF8D03'
+      mashTemp: 68, colour: '#4d3319'
     }
   }]
 

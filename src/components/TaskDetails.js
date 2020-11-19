@@ -1,17 +1,9 @@
 import React, { Component } from 'react'
-import Alert from 'react-bootstrap/Alert'
-
-
 
 export class TaskDetails extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      startGravity: 1.050 , endGravity: 1.010
-    };
-    this.handleStartGravityChange = this.handleStartGravityChange.bind(this)
-    this.handleEndGravityChange = this.handleEndGravityChange.bind(this)
     this.divisor = this.props.batchSize/25;
   }
 
@@ -86,8 +78,6 @@ export class TaskDetails extends Component {
     return (
       <div>
         {this.formatTable(this.formatPrimingSugar())}
-        {this.formatABVForm()}
-        {this.state.complete ? <Alert.Heading>Well done - Enjoy your beer!</Alert.Heading> : null }
       </div>
     )
   }
@@ -104,31 +94,6 @@ export class TaskDetails extends Component {
           {details ? <td>{details}{details2}{details3}</td> : null}     
       </div>
     )
-  }
-
-  formatABVForm() {
-    return (
-      <div>
-        <form>
-          <div>
-            <label><h4>Enter starting hydrometer reading </h4></label>{' '}
-            <input type="number" step='0.001' value={this.state.startGravity} placeholder='1.000' onChange={this.handleStartGravityChange}></input>
-          </div>
-          <div>
-            <label> <h4>Enter final hydrometer reading </h4></label>{' '}
-            <input type="number" step='0.001' value={this.state.endGravity} placeholder='1.000' onChange={this.handleEndGravityChange}></input>
-          </div>
-        </form>
-        <h4>{((this.state.startGravity - this.state.endGravity) * 131.25).toFixed(1)}%ABV</h4>
-      </div>
-    )
-  }
-
-  handleStartGravityChange(event) {
-    this.setState({startGravity: event.target.value})
-  }
-  handleEndGravityChange(event) {
-    this.setState({endGravity: event.target.value})
   }
 
   formatGrains() {

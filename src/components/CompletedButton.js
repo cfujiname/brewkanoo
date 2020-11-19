@@ -1,4 +1,6 @@
-import React, { Component } from 'react'
+
+import React, { Component } from 'react';
+
 import Alert from 'react-bootstrap/Alert'
 
 export class CompletedButton extends Component {
@@ -8,7 +10,6 @@ export class CompletedButton extends Component {
       complete: false
     };    
     this.completed= this.completed.bind(this);
-    
   }
 
 
@@ -20,6 +21,7 @@ export class CompletedButton extends Component {
 
 
   render() {
+
     if (this.props.stepNumber !== 9) {
       return (
         <div class="completed-button">
@@ -36,6 +38,7 @@ export class CompletedButton extends Component {
       )
       
     }
+
   }
 }
 
