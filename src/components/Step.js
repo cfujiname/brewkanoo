@@ -43,7 +43,7 @@ export class Step extends Component {
             {this.timer()}
             </tr>
         </table>
-        <div>{this.props.stepNumber === 9 ? this.formatABVForm() : null }</div>
+        <div class="abv"> {this.props.stepNumber === 9 ? this.formatABVForm() : null }</div>
       </div>
     )
   }
@@ -61,7 +61,7 @@ export class Step extends Component {
             <input type="number" step='0.001' value={this.state.endGravity} placeholder='1.000' onChange={this.handleEndGravityChange}></input>
           </div>
         </form>
-        <h4>{((this.state.startGravity - this.state.endGravity) * 131.25).toFixed(1)}%ABV</h4>
+        <p class="abv-result" >{((this.state.startGravity - this.state.endGravity) * 131.25).toFixed(1)}%ABV</p>
       </div>
     )
   }
