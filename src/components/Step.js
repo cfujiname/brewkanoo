@@ -6,9 +6,17 @@ import TaskDetails from './TaskDetails'
 
 
 export class Step extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      startGravity: 1.050 , endGravity: 1.010
+    };
+    this.handleStartGravityChange = this.handleStartGravityChange.bind(this)
+    this.handleEndGravityChange = this.handleEndGravityChange.bind(this)
+  }
 
   timer() {
-    return this.props.stepContent[0].time !== 0 ? <div className='timer-container'>
+    return this.props.stepContent[0].time? <div className='timer-container'>
      <Timer
      durationInSeconds={this.props.stepContent[0].time}
      formatted={false}
@@ -20,17 +28,13 @@ export class Step extends Component {
 }
 
   render() {
-
-
     return (
       <div>
-        Step {this.props.stepNumber} <br>
-        </br>
         <table class="stepTable">
           <tr class="tableHeadings">
-            <th>Task</th>
-            <th>Details</th>
-            <th>Completed?</th>
+            <th class="taskColumn">Task</th>
+            <th class="detailsColumn">Details</th>
+            <th class="completedColumn">Completed?</th>
           </tr>
           <tr class="stepTableData">
             <td>{this.taskDescription()}</td>
@@ -39,8 +43,35 @@ export class Step extends Component {
             {this.timer()}
             </tr>
         </table>
+        <div>{this.props.stepNumber === 9 ? this.formatABVForm() : null }</div>
       </div>
     )
+  }
+
+  formatABVForm() {
+    return (
+      <div>
+        <form>
+          <div>
+            <label><h4>Enter starting hydrometer reading </h4></label>{' '}
+            <input type="number" step='0.001' value={this.state.startGravity} placeholder='1.000' onChange={this.handleStartGravityChange}></input>
+          </div>
+          <div>
+            <label> <h4>Enter final hydrometer reading </h4></label>{' '}
+            <input type="number" step='0.001' value={this.state.endGravity} placeholder='1.000' onChange={this.handleEndGravityChange}></input>
+          </div>
+        </form>
+        <h4>{((this.state.startGravity - this.state.endGravity) * 131.25).toFixed(1)}%ABV</h4>
+      </div>
+    )
+  }
+
+  handleStartGravityChange(event) {
+    this.setState({startGravity: event.target.value})
+  }
+  
+  handleEndGravityChange(event) {
+    this.setState({endGravity: event.target.value})
   }
 
   taskDescription() {
@@ -56,8 +87,8 @@ export class Step extends Component {
   }
 
   completedButton() {
-    return this.props.stepContent.map((task) => (
-      <CompletedButton />
+    return this.props.stepContent.map(() => (
+      <CompletedButton stepNumber={this.props.stepNumber}/>
     ))
   }
 }

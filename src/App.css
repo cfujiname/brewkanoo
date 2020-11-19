@@ -11,6 +11,7 @@
 }
 
 
+
 h2 {
   font-family: "Big Shoulders Inline Text" !important;
 }
@@ -18,17 +19,23 @@ h2 {
 h4 {
   font-family: "Big Shoulders Inline Text" !important;
 }
-#particles-js{
+
+
+.allRecipes {
+  margin-left: 5px;
+}
+
+#particles-js {
   width: 100%;
   height: 100%;
   position: fixed;
-  background-color:rgb(255, 208, 0);
+  background-color: rgb(255, 208, 0);
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
 
-.body-particles{
+.body-particles {
   position: absolute;
   top: 0;
   left: 0;
@@ -49,18 +56,49 @@ h4 {
   text-align: left;
 }
 
+.help-info {
+  background-color: #f5db7d;
+  text-align: center;
+  border-radius: 25px;
+  width: 80%;
+}
+
+.volumeForm {
+  position: absolute;
+  left: 50%; 
+  top: 20%;
+  text-align: center;
+  width: 400px;
+}
+
+.volumeFormInput {
+  position: relative;
+  text-align: center;
+  width: 20%;
+}
+
 button {
-  background: rgb(247, 252, 0);
+  background: #F3E139;
   border-radius: 7.45px !important;
   box-shadow: 50px, 100px, #ddddcb !important;
   color: black;
   outline: none !important;
   font-family: "Big Shoulders Inline Text" !important;
+  text-shadow:
+    -1px -1px 0 #F3E139,
+    1px -1px 0 #F3E139,
+    -1px 1px 0 #F3E139,
+    1px 1px 0 #F3E139;
 }
 
 button:hover {
-  background: rgb(0, 0, 0); /* Green */
-  color: white;
+  background: rgb(0, 0, 0);
+  color: rgb(39, 65, 17);
+  text-shadow:
+    -1px -1px 0 #f8cf5d,
+    1px -1px 0 #f8cf5d,
+    -1px 1px 0 #f8cf5d,
+    1px 1px 0 #f8cf5d; 
 }
 
 .current-recipe-button {
@@ -68,6 +106,22 @@ button:hover {
   padding: 10px;
   width: 350px;
   font-size: 30px; 
+  text-shadow:
+    -1px -1px 0 #F3E139,
+    1px -1px 0 #F3E139,
+    -1px 1px 0 #F3E139,
+    1px 1px 0 #F3E139; 
+}
+
+.recipe-button {
+  position: relative;
+  padding: 10px;
+  width: 350px;
+  text-shadow:
+    -1px -1px 0 #F3E139,
+    1px -1px 0 #F3E139,
+    -1px 1px 0 #F3E139,
+    1px 1px 0 #F3E139; 
 }
 
 input {
@@ -86,19 +140,51 @@ input:hover {
 }
 
 .progress {
-  margin-top: 60px;
-  background-color: #ffc107;
+  margin-top: 550;
+  display: flex;
+  height: 40px;
+  overflow: hidden;
+  background-color: #d28f09 !important;
 }
+
 .timer-container {
   margin-left: 20px;
 }
 
 .completed-button {
+  margin-bottom: 15px;
   width: 110px;
 }
+
+.taskColumn {
+  font-size: 22px;
+  width: 800px;
+}
+
+.detailsColumn {
+  font-size: 22px;
+  width: 130px;
+}
+
+.completedColumn {
+  font-size: 22px;
+  width: 100px;
+}
+
 .steps {
-  position: relative;
-  margin-top: 70px;
+  max-width: 500 px;
+  max-height: 500;
+  position: absolute;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  width: 800px;
+}
+
+.stepTable {
+  max-width: 500 px;
+  max-height: 500;
+  position: absolute;
+  margin-top: 80px;
   margin-bottom: 50px;
   width: 800px;
   font-family: "Big Shoulders Inline Text" !important;
@@ -248,6 +334,12 @@ input:hover {
   /* margin-left: 50%;
   margin-right: 50%; */
   text-align: center;
+}
+
+
+.walkthrough-buttons {
+  position: absolute;
+  margin-top: 400px;
 }
 
 /* .outerRecipesButtonLayer {
