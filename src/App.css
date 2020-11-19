@@ -167,9 +167,17 @@ input:hover {
 }
 
 .timer-container {
-  margin-left: 20px;
+  margin-left: 500px;
+  position: absolute;
+  margin-top: 300px;
+  text-align: left;
+  font-family: "Big Shoulders Inline Text" !important;
 }
 
+.timer-wrapper {
+  font-family: "Big Shoulders Inline Text" !important;
+  font-size: 50px
+}
 .completed-button {
   margin-bottom: 15px;
   width: 110px;

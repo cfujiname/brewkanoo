@@ -1,9 +1,11 @@
 import { render, screen } from '@testing-library/react';
 import React from 'react';
 import RecipeItem from '../components/RecipeItem.js';
+import data from '../data.js';
 
 
-it("should show a clickable hide button after a recipe is clicked", () => {
+
+it("should show a the volume form after a recipe title is clicked", () => {
     const mockRecipe = {
         id: 1,
         title: "Mock Recipe 1",
@@ -19,7 +21,7 @@ it("should show a clickable hide button after a recipe is clicked", () => {
       }
     render(<RecipeItem recipeProp={mockRecipe}/>)
 
-    const button = screen.getByRole('button');
+    const button = screen.getByText('Submit');
     button.click();
     const buttons = screen.getAllByRole('button');
     expect(buttons).toHaveLength(2);
