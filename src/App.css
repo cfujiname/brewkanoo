@@ -82,7 +82,7 @@ h4 {
 
 .volumeForm {
   position: absolute;
-  left: 28%;
+  left: 30%;
   top: 20%;
   text-align: center;
   width: 400px;
@@ -170,7 +170,7 @@ input:hover {
 .timer-container {
   margin-left: 500px;
   position: absolute;
-  margin-top: 300px;
+  margin-top: 295px;
   text-align: left;
   font-family: "Big Shoulders Inline Text" !important;
 }
@@ -291,6 +291,7 @@ input:hover {
 .reset-button {
   text-indent: -9999px;
   line-height: 0;
+  margin-left: 5px;
 }
 
 .reset-button::after {
@@ -360,7 +361,14 @@ input:hover {
 
 .walkthrough-buttons {
   position: absolute;
-  margin-top: 382px;
+  margin-top: 375px;
+  margin-right: 10px;
+  margin-left: 20px;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+.previous {
+  margin-right: 5px;
 }
 
 /* .outerRecipesButtonLayer {
