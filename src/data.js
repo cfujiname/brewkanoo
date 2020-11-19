@@ -4,12 +4,12 @@ export const recipes = [
     title: "Ollie's Big Flavor Non-Descript Wheat Beer",
     walkthrough: [
 
-      [ { description: "Heat the following amount of water to the temperature provided", strikeWater: 15, time:0, info: "take a shit"}, 
+      [ { description: "Heat the following amount of water to the temperature provided", strikeWater: 15, time:0, info: "Strike water, when heated up properly, will activate enzymes to change the starch of the grains into sugar - which will cause fermentation"}, 
         { description: "Weigh out the following amount of grain and place inside the fermentation vessel",time:0, info: null}
       ],
       [ { description: "Add the water to the grains and start the timer", time: 3600, info: null}, 
-        { description: "Check the temperature of the liquid - Add boiling or cold water to adjust the temperature to between 65-68 degrees C.",time:0, info: "Have lunch"},
-        { description: "Heat the following amount of sparge water to 77 degrees C", spargeWater: 12,time:0, info: null}
+        { description: "Check the temperature of the liquid - Add boiling or cold water to adjust the temperature to between 65-68 degrees C.",time:0, info: null },
+        { description: "Heat the following amount of sparge water to 77 degrees C", spargeWater: 12,time:0, info: 'Sparge water is used to rinse your grains to extract the sugars and keep the tannins - beware of not heating up above the recommended temperature as it would make tannin husks soluble!'}
       ],
       [ { description: "Strain the liquid back into the boiling pot" ,time:0, info: null},
         { description: "In a few batches rinse the grains with the sparge water, each time pouring the amber liquid into the boiling pot",time:0, info: null }
