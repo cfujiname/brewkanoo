@@ -38,8 +38,8 @@ export const recipes = [
     ingredients: {
       grains: [{ item: "Great Western Wheat Malt", quantity: 2.2 }, { item: "Durst Pilsner Malt", quantity: 2.2 }],
       hops: [ { item: "Hallertau Hops", quantity: 17, type: "Bittering" },
-              { item: "Cascade Hops", quantity: 57, type: "Flavouring" },
-              { item: "Cascade Hops", quantity: 57, type: "Aroma" }
+              { item: "Cascade Hops", quantity: 50, type: "Flavouring" },
+              { item: "Citra Hops", quantity: 57, type: "Aroma" }
             ],
       yeast: {item: "Safale US-05 yeast", quantity: 1 },
       primingSugar: 3.3
