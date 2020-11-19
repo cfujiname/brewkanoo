@@ -14,6 +14,7 @@
   font-family: "Big Shoulders Inline Text" !important;
   font-size: 20px;
   position: absolute;
+  right: -53%;
   margin-top: 30px;
   margin-bottom: 50px;
   width: 800px;
@@ -23,6 +24,7 @@
   font-family: "Big Shoulders Inline Text" !important;
   font-size: 20px;
   position: absolute;
+  right: -53%;
   margin-top: 30px;
   margin-bottom: 50px;
   width: 800px;
@@ -80,7 +82,7 @@ h4 {
 
 .volumeForm {
   position: absolute;
-  left: 25%;
+  left: 28%;
   top: 20%;
   text-align: center;
   width: 400px;
