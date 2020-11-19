@@ -62,9 +62,9 @@ export class VolumeForm extends Component {
 
   render() {
     let details = <div>
-                    <button onClick={this.handleClickWalkthrough}>Walkthrough</button>
-                    <button onClick={this.handleClickIngredients}>Ingredients</button>
-                    <button onClick={this.handleClickEquipment}>Equipment</button>
+                    <button class="tabButton" onClick={this.handleClickWalkthrough}>Walkthrough</button>
+                    <button class="tabButton" onClick={this.handleClickIngredients}>Ingredients</button>
+                    <button class="tabButton" onClick={this.handleClickEquipment}>Equipment</button>
                     {this.state.showWalkthrough ? <Walkthrough key={this.props.recipe.id} walkthrough={this.props.recipe.walkthrough} batchSize={this.state.batchSize} specs={this.props.recipe.specs} ingredients={this.props.recipe.ingredients}/> : null }
       {this.state.showIngredients ? <Ingredients key={this.props.recipe.id} ingredients={this.props.recipe.ingredients} batchSize={this.state.batchSize}/> : null }
                     {this.state.showEquipment ? <Equipment key={this.props.recipe.id} equipment={this.props.recipe.equipment}/> : null }
