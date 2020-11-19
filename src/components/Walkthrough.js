@@ -58,12 +58,14 @@ export class Walkthrough extends Component {
     }else{
       return (
         <div className='steps'>
-        <h2>Method:</h2>
+        <h2>Method: Step {this.state.counter + 1}</h2>
         <Step key={this.state.counter} stepNumber={this.state.counter + 1} stepContent={this.props.walkthrough[this.state.counter]} batchSize={this.props.batchSize} specs={this.props.specs} ingredients={this.props.ingredients}/>
         <div class="walkthrough-buttons">
             <button onClick={this.handlePreviousStep}>Previous Step</button>
+          </div>
+          <div>
+            <ProgressBar variant="success" animated now={((100 / ((this.props.walkthrough.length - 1) * (this.props.walkthrough.length - 1)) * (this.props.walkthrough.length - 1)) * this.state.counter)} /> 
             </div>
-        <ProgressBar variant="success" animated now={((100 / ((this.props.walkthrough.length - 1) * (this.props.walkthrough.length - 1)) * (this.props.walkthrough.length - 1)) * this.state.counter)} /> 
       </div>)
     }
   }

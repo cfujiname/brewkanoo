@@ -3,14 +3,12 @@
 } */
 .App {
   position: absolute;
-  font-family: 'Big Shoulders Inline Text, cursive';
+  font-family: "Big Shoulders Inline Text, cursive";
   width: 100vw;
   margin: auto;
   padding: 10px;
   /* text-align: left; */
 }
-
-
 
 h2 {
   font-family: "Big Shoulders Inline Text" !important;
@@ -19,7 +17,6 @@ h2 {
 h4 {
   font-family: "Big Shoulders Inline Text" !important;
 }
-
 
 .allRecipes {
   margin-left: 5px;
@@ -65,7 +62,7 @@ h4 {
 
 .volumeForm {
   position: absolute;
-  left: 25%; 
+  left: 25%;
   top: 20%;
   text-align: center;
   width: 400px;
@@ -78,50 +75,38 @@ h4 {
 }
 
 button {
-  background: #F3E139;
+  background: #f3e139;
   border-radius: 7.45px !important;
   box-shadow: 50px, 100px, #ddddcb !important;
   color: black;
   outline: none !important;
   font-family: "Big Shoulders Inline Text" !important;
-  text-shadow:
-    -1px -1px 0 #F3E139,
-    1px -1px 0 #F3E139,
-    -1px 1px 0 #F3E139,
-    1px 1px 0 #F3E139;
+  text-shadow: -1px -1px 0 #f3e139, 1px -1px 0 #f3e139, -1px 1px 0 #f3e139,
+    1px 1px 0 #f3e139;
 }
 
 button:hover {
   background: rgb(0, 0, 0);
   color: rgb(39, 65, 17);
-  text-shadow:
-    -1px -1px 0 #f8cf5d,
-    1px -1px 0 #f8cf5d,
-    -1px 1px 0 #f8cf5d,
-    1px 1px 0 #f8cf5d; 
+  text-shadow: -1px -1px 0 #f8cf5d, 1px -1px 0 #f8cf5d, -1px 1px 0 #f8cf5d,
+    1px 1px 0 #f8cf5d;
 }
 
 .current-recipe-button {
   position: relative;
   padding: 10px;
   width: 350px;
-  font-size: 30px; 
-  text-shadow:
-    -1px -1px 0 #F3E139,
-    1px -1px 0 #F3E139,
-    -1px 1px 0 #F3E139,
-    1px 1px 0 #F3E139; 
+  font-size: 30px;
+  text-shadow: -1px -1px 0 #f3e139, 1px -1px 0 #f3e139, -1px 1px 0 #f3e139,
+    1px 1px 0 #f3e139;
 }
 
 .recipe-button {
   position: relative;
   padding: 10px;
   width: 350px;
-  text-shadow:
-    -1px -1px 0 #F3E139,
-    1px -1px 0 #F3E139,
-    -1px 1px 0 #F3E139,
-    1px 1px 0 #F3E139; 
+  text-shadow: -1px -1px 0 #f3e139, 1px -1px 0 #f3e139, -1px 1px 0 #f3e139,
+    1px 1px 0 #f3e139;
 }
 
 input {
@@ -136,7 +121,16 @@ input:hover {
   background: rgb(0, 0, 0); /* Green */
   color: white;
   font-family: "Big Shoulders Inline Text" !important;
+}
 
+.abv {
+  margin-top: 200px;
+  text-align: left;
+  position: absolute;
+  font-family: "Big Shoulders Inline Text" !important;
+}
+.abv-result {
+  font-size: 80px;
 }
 
 .progress {
@@ -188,13 +182,11 @@ input:hover {
   margin-bottom: 50px;
   width: 800px;
   font-family: "Big Shoulders Inline Text" !important;
-
 }
 
 .bg-warning {
   background-color: rgb(14, 136, 95);
   font-family: "Big Shoulders Inline Text" !important;
-
 }
 
 .menu {
@@ -205,7 +197,6 @@ input:hover {
   left: 0;
   margin: 0;
   font-family: "Big Shoulders Inline Text" !important;
-
 }
 .linus {
   font-size: large;
@@ -221,13 +212,11 @@ input:hover {
   width: 100%;
   text-align: center;
   font-family: "Big Shoulders Inline Text" !important;
-
 }
 
 .inner {
   display: inline-block;
   font-family: "Big Shoulders Inline Text" !important;
-
 }
 
 /* @media (prefers-reduced-motion: no-preference) {
@@ -255,7 +244,6 @@ input:hover {
   text-indent: -9999px;
   line-height: 0;
   font-family: "Big Shoulders Inline Text" !important;
-
 }
 
 .pause-button::after {
@@ -310,7 +298,7 @@ input:hover {
   /* width: 325%; */
   position: relative;
   font-size: 120px;
-  font-family: "Big Shoulders Inline Text" !important; 
+  font-family: "Big Shoulders Inline Text" !important;
   width: 100vw !important;
   /* display: inline-flex !important; */
   text-align: center;
@@ -319,7 +307,7 @@ input:hover {
 .logo {
   margin-top: 35px;
   position: absolute;
-  width: 200px; 
+  width: 200px;
   display: block;
   /* width: 20vw !important; */
 }
@@ -327,15 +315,14 @@ input:hover {
 .buttonRecipes {
   /* margin-top:35px; */
   position: relative;
-  width: 200px; 
+  width: 200px;
   display: block;
-  margin: auto !important; 
+  margin: auto !important;
   /* /* width: 50% !important;
   /* margin-left: 50%;
   margin-right: 50%; */
   text-align: center;
 }
-
 
 .walkthrough-buttons {
   position: absolute;
@@ -349,4 +336,3 @@ input:hover {
   margin: auto !important; 
   text-align: center;
 } */
-
