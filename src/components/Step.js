@@ -87,8 +87,8 @@ export class Step extends Component {
   }
 
   completedButton() {
-    return this.props.stepContent.map((task) => (
-      <CompletedButton />
+    return this.props.stepContent.map(() => (
+      <CompletedButton stepNumber={this.props.stepNumber}/>
     ))
   }
 }

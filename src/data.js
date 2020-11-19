@@ -54,17 +54,17 @@ export const recipes = [
     title: "Richard's No Nonsense Pale Ale",
     walkthrough: [
 
-      [ { description: "Heat the following amount of water to the temperature provided", strikeWater: 15, info: null}, 
-        { description: "Weigh out the following amount of grain and place inside the fermentation vessel", info: null}
+      [ { description: "Heat the following amount of water to the temperature provided", strikeWater: 15, info: null ,time:0}, 
+        { description: "Weigh out the following amount of grain and place inside the fermentation vessel", info: null,time:0}
       ],
       [ { description: "Add the water to the grains and start the timer", time: 3600, info: null}, 
-        { description: "Check the temperature of the liquid - Add boiling or cold water to adjust the temperature to between 65-68 degrees C.", info: null},
-        { description: "Heat the following amount of sparge water to 77 degrees C", spargeWater: 12, info: null}
+        { description: "Check the temperature of the liquid - Add boiling or cold water to adjust the temperature to between 65-68 degrees C.", info: null ,time:0},
+        { description: "Heat the following amount of sparge water to 77 degrees C", time:0,  spargeWater: 12, info: null}
       ],
-      [ { description: "Strain the liquid back into the boiling pot" , info: null},
-        { description: "In a few batches rinse the grains with the sparge water, each time pouring the amber liquid into the boiling pot", info: null }
+      [ { description: "Strain the liquid back into the boiling pot" ,time:0,  info: null},
+        { description: "In a few batches rinse the grains with the sparge water, each time pouring the amber liquid into the boiling pot", time:0, info: null }
       ],
-      [ { description: "Begin boiling - move to the next step when a rolling boil achieved", info: null },
+      [ { description: "Begin boiling - move to the next step when a rolling boil achieved",time:0 ,info: null },
         { description: "Weigh out the bittering hops" }
       ],
       [ { description: "Add bittering hops and start the timer", time: 1800, info: null },
@@ -76,12 +76,12 @@ export const recipes = [
       [ { description: "Add aroma hops and start the timer", time: 600 , info: null},
         { description: "After the timer is complete, Add the Finings and begin to cool the liquid" , info: null}
       ],
-      [ { description: "Strain the wort into the fermentation vessel, leaving behind the cold break matter at the bottom", info: null },
+      [ { description: "Strain the wort into the fermentation vessel, leaving behind the cold break matter at the bottom",time:0 ,info: null },
         { description: "Take a hydrometer reading - this will allow you to know when your beer is ready and also to work out the ABV%" , info: null},
-        { description: "If the temp has reached 25 degrees, sprinkle the dried yeast on top", info: null },
+        { description: "If the temp has reached 25 degrees, sprinkle the dried yeast on top",time:0 ,info: null },
         { description: "Fit the airlock and close the container", info: null }
       ],
-      [ { description: "When the hydrometer reading has stabilised (around 1-2 weeks), bottle or keg the beer.", info: null }]
+      [ { description: "When the hydrometer reading has stabilised (around 1-2 weeks), bottle or keg the beer.", time:0 ,info: null }]
 
     ],
     ingredients: {
@@ -105,18 +105,18 @@ export const recipes = [
     walkthrough: [
 
 
-      [ { description: "Heat the following amount of water to the temperature provided", strikeWater: 15, info: null}, 
+      [ { description: "Heat the following amount of water to the temperature provided", time:0, strikeWater: 15, info: null}, 
         { description: "Weigh out the following amount of grain and place inside the fermentation vessel", info: null}
       ],
       [ { description: "Add the water to the grains and start the timer", time: 3600, info: null}, 
         { description: "Check the temperature of the liquid - Add boiling or cold water to adjust the temperature to between 65-68 degrees C.", info: null},
-        { description: "Heat the following amount of sparge water to 77 degrees C", spargeWater: 12, info: null}
+        { description: "Heat the following amount of sparge water to 77 degrees C", time:0, spargeWater: 12, info: null}
 
       ],
-      [ { description: "Strain the liquid back into the boiling pot", info: null },
+      [ { description: "Strain the liquid back into the boiling pot", time:0,  info: null },
         { description: "In a few batches rinse the grains with the sparge water, each time pouring the amber liquid into the boiling pot" , info: null}
       ],
-      [ { description: "Begin boiling - move to the next step when a rolling boil achieved", info: null },
+      [ { description: "Begin boiling - move to the next step when a rolling boil achieved",time:0,  info: null },
         { description: "Weigh out the bittering hops", info: null }
       ],
       [ { description: "Add bittering hops and start the timer", time: 1800, info: null },
@@ -128,12 +128,12 @@ export const recipes = [
       [ { description: "Add aroma hops and start the timer", time: 600, info: null },
         { description: "After the timer is complete, Add the Finings and begin to cool the liquid", info: null }
       ],
-      [ { description: "Strain the wort into the fermentation vessel, leaving behind the cold break matter at the bottom", info: null },
+      [ { description: "Strain the wort into the fermentation vessel, leaving behind the cold break matter at the bottom",time:0, info: null },
         { description: "Take a hydrometer reading - this will allow you to know when your beer is ready and also to work out the ABV%", info: null },
-        { description: "If the temp has reached 25 degrees, sprinkle the dried yeast on top", info: null },
+        { description: "If the temp has reached 25 degrees, sprinkle the dried yeast on top",time:0, info: null },
         { description: "Fit the airlock and close the container" , info: null}
       ],
-      [ { description: "When the hydrometer reading has stabilised (around 1-2 weeks), bottle or keg the beer." , info: null}]
+      [ { description: "When the hydrometer reading has stabilised (around 1-2 weeks), bottle or keg the beer." , time:0,info: null}]
 
     ],
     ingredients: {
@@ -157,17 +157,17 @@ export const recipes = [
     walkthrough: [
 
 
-      [ { description: "Heat the following amount of water to the temperature provided", strikeWater: 15, info: null}, 
+      [ { description: "Heat the following amount of water to the temperature provided",time:0, strikeWater: 15, info: null}, 
         { description: "Weigh out the following amount of grain and place inside the fermentation vessel", info: null}
       ],
       [ { description: "Add the water to the grains and start the timer", time: 3600, info: null}, 
         { description: "Check the temperature of the liquid - Add boiling or cold water to adjust the temperature to between 65-68 degrees C.", info: null},
-        { description: "Heat the following amount of sparge water to 77 degrees C", spargeWater: 12, info: null}
+        { description: "Heat the following amount of sparge water to 77 degrees C",time:0, spargeWater: 12, info: null}
       ],
-      [ { description: "Strain the liquid back into the boiling pot" , info: null},
+      [ { description: "Strain the liquid back into the boiling pot" ,time:0, info: null},
         { description: "In a few batches rinse the grains with the sparge water, each time pouring the amber liquid into the boiling pot", info: null }
       ],
-      [ { description: "Begin boiling - move to the next step when a rolling boil achieved" , info: null},
+      [ { description: "Begin boiling - move to the next step when a rolling boil achieved" ,time:0, info: null},
         { description: "Weigh out the bittering hops" , info: null}
       ],
       [ { description: "Add bittering hops and start the timer", time: 1800 , info: null},
@@ -179,9 +179,9 @@ export const recipes = [
       [ { description: "Add aroma hops and start the timer", time: 600 , info: null},
         { description: "After the timer is complete, Add the Finings and begin to cool the liquid", info: null }
       ],
-      [ { description: "Strain the wort into the fermentation vessel, leaving behind the cold break matter at the bottom" , info: null},
+      [ { description: "Strain the wort into the fermentation vessel, leaving behind the cold break matter at the bottom" , time:0,info: null},
         { description: "Take a hydrometer reading - this will allow you to know when your beer is ready and also to work out the ABV%", info: null },
-        { description: "If the temp has reached 25 degrees, sprinkle the dried yeast on top", info: null },
+        { description: "If the temp has reached 25 degrees, sprinkle the dried yeast on top",time:0, info: null },
         { description: "Fit the airlock and close the container", info: null }
       ],
       [ { description: "When the hydrometer reading has stabilised (around 1-2 weeks), bottle or keg the beer.", info: null }]

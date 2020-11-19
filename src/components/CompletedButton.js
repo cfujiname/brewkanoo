@@ -1,4 +1,6 @@
+
 import React, { Component } from 'react';
+
 import Alert from 'react-bootstrap/Alert'
 
 export class CompletedButton extends Component {
@@ -19,12 +21,24 @@ export class CompletedButton extends Component {
 
 
   render() {
-    return (
-      <div class="completed-button">
-        <button onClick={this.completed} >{this.state.complete ? "Certainly!" : "Working on it...."}</button>
-        {this.state.complete ? <Alert.Heading>Well done - Enjoy your beer!</Alert.Heading> : null }
-      </div>
-    )
+
+    if (this.props.stepNumber !== 9) {
+      return (
+        <div class="completed-button">
+        
+          <button onClick={this.completed} >{this.state.complete ? "Certainly" : "Working on it...."}</button>
+        </div>
+      )
+    } else {
+      return (
+        <div class="completed-button">
+        
+          <button onClick={this.completed} >{this.state.complete ? <Alert.Heading>Well done - Enjoy your beer!</Alert.Heading> : "Working on it...."}</button>
+        </div>
+      )
+      
+    }
+
   }
 }
 

@@ -105,9 +105,9 @@ export class TaskDetails extends Component {
   }
 
   formatPrimingSugar() {
-    if (this.props.task.description.includes("bottle")) {
-      return (<p>{this.props.ingredients.primingSugar} g of priming sugar per 500mL bottle</p>)
-    }
+    // if (this.props.task.description.includes("bottle")) {
+    //   return (<p>{this.props.ingredients.primingSugar} g of priming sugar per 500mL bottle</p>)
+    // }
   }
 
   formatBitteringHops() {
