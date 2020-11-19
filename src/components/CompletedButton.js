@@ -33,7 +33,7 @@ export class CompletedButton extends Component {
       return (
         <div class="completed-button">
         
-          <button onClick={this.completed} >{this.state.complete ? <Alert.Heading>Well done - Enjoy your beer!</Alert.Heading> : "Working on it...."}</button>
+          <button onClick={this.completed} >{this.state.complete ? <Alert.Heading>Well done Enjoy your beer!</Alert.Heading> : "Working on it...."}</button>
         </div>
       )
       
