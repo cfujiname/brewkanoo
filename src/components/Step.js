@@ -40,9 +40,9 @@ export class Step extends Component {
             <td>{this.taskDescription()}</td>
             <td>{this.taskDetails()}</td>
             <td>{this.completedButton()}</td>
-            {this.timer()}
             </tr>
         </table>
+        {this.timer()}
         <div class="abv"> {this.props.stepNumber === 9 ? this.formatABVForm() : null }</div>
       </div>
     )
