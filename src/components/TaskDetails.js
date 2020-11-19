@@ -1,4 +1,9 @@
 import React, { Component } from 'react'
+import Alert from 'react-bootstrap/Alert'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+
 
 export class TaskDetails extends Component {
 
@@ -84,7 +89,7 @@ export class TaskDetails extends Component {
 
   showButton(){
       if(this.props.task.info !== null ) {
-      return<button type="button" class="help-button" data-toggle="tooltip" data-placement="top" title= {this.props.task.info} > ? </button>
+      return<button class="help-button" data-toggle="tooltip" data-placement="top" title={this.props.task.info} > ? </button>
     }
   }
 
