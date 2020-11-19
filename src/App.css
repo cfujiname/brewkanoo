@@ -1,6 +1,15 @@
 /* .App {
   text-align: left;
 } */
+.App {
+  position: absolute;
+  font-family: 'Big Shoulders Inline Text, cursive';
+  width: 100vw;
+  margin: auto;
+  padding: 10px;
+  /* text-align: left; */
+}
+
 
 h2 {
   font-family: "Big Shoulders Inline Text" !important;
@@ -211,29 +220,40 @@ input:hover {
 }
 
 .title {
-  /* margin: 0 auto !important; */
+  margin: auto !important;
   /* width: 325%; */
   position: relative;
   font-size: 120px;
-  /* font-family: "Big Shoulders Inline Text" !important;  */
-  margin: auto !important;
-  width: 50% !important;
-  display: inline-flex;
+  font-family: "Big Shoulders Inline Text" !important; 
+  width: 100vw !important;
+  /* display: inline-flex !important; */
+  text-align: center;
 }
 
 .logo {
-  margin-top:35px;
-  position: relative;
+  margin-top: 35px;
+  position: absolute;
   width: 200px; 
   display: block;
-
+  /* width: 20vw !important; */
 }
 
 .buttonRecipes {
   /* margin-top:35px; */
   position: relative;
-  /* width: 50px;  */
-  display: inline-flex;
-  /* margin: auto !important; */
-  width: 50% !important;
+  width: 200px; 
+  display: block;
+  margin: auto !important; 
+  /* /* width: 50% !important;
+  /* margin-left: 50%;
+  margin-right: 50%; */
+  text-align: center;
 }
+
+/* .outerRecipesButtonLayer {
+  position: relative;
+  width: 200px; 
+  display: block;
+  margin: auto !important; 
+  text-align: center;
+} */

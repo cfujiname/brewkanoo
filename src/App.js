@@ -9,7 +9,7 @@ class App extends Component {
   render() {
     return (
       
-      <div className="App" style={appStyle}>
+      <div class="App" >
         <div class="title" ><img class='logo' src="logo1.png"></img> BrewKanoo</div>
            <RecipesButton recipes={recipes} /> 
       </div>
@@ -19,9 +19,5 @@ class App extends Component {
 }
 
 
-const appStyle = {
-  position: 'relative',
-  fontFamily: 'Big Shoulders Inline Text, cursive',
 
-}
 export default App;
