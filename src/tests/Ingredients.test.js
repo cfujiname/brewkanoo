@@ -17,5 +17,5 @@ it("should display the list of ingredients", () => {
       }
     render(<Ingredients batchSize = {10} ingredients={ mockIngredients }/>);
     const grains = screen.getByText("0.88 kg's of Great Western Wheat Malt");
-    eqwxpect(grains).toBeInTheDocument();
-  });
+    expect(grains).toBeInTheDocument();
+  });g
